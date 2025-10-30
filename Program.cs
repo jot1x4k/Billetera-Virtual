@@ -48,6 +48,7 @@ namespace testForms
                 {
                     if (ctrl is PictureBox pic) { continue; }
                     if (ctrl is placeHolderBox) { continue; }
+                    if (ctrl is Label) { continue; }
                     // Intentar establecer AutoSize = true si existe la propiedad
                     var prop = ctrl.GetType().GetProperty("AutoSize");
                     if (prop != null && prop.CanWrite)

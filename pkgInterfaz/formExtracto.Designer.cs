@@ -181,7 +181,7 @@
             this.dgvMovimientos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMovimientos.Enabled = false;
             this.dgvMovimientos.GridColor = System.Drawing.Color.White;
-            this.dgvMovimientos.Location = new System.Drawing.Point(0, 338);
+            this.dgvMovimientos.Location = new System.Drawing.Point(0, 352);
             this.dgvMovimientos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMovimientos.Name = "dgvMovimientos";
             this.dgvMovimientos.ReadOnly = true;
@@ -190,7 +190,7 @@
             this.dgvMovimientos.RowTemplate.Height = 24;
             this.dgvMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvMovimientos.Size = new System.Drawing.Size(1284, 473);
+            this.dgvMovimientos.Size = new System.Drawing.Size(1284, 459);
             this.dgvMovimientos.TabIndex = 49;
             this.dgvMovimientos.Visible = false;
             // 
