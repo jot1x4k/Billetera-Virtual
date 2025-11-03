@@ -16,6 +16,11 @@ namespace testForms.pkgInterfaz
         Datos data = new Datos();
         long id_usuarioActual = 0;
         DateTime fechaInicio, fechaFin;
+
+        public formExtracto()
+        {
+            InitializeComponent();
+        }
         public formExtracto(DateTime fechaInicio, DateTime fechaFin, decimal saldoInicio, decimal ingresos, decimal egresos, decimal saldoFin, string titular, int numeroCuenta, long prm_idUsuario)
         {
             InitializeComponent();

@@ -16,6 +16,12 @@ namespace testForms.pkgInterfaz
     {
         Datos data = new Datos();
         long id_usuarioActual = 0;
+
+        public formMovimientos()
+        {
+            InitializeComponent();
+        }
+
         public formMovimientos(long prm_idUsuario)
         {
             InitializeComponent();

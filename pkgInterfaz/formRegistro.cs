@@ -138,11 +138,12 @@ namespace testForms
             if (!fechaValida)
             {
                 camposValidos = false;
-
+                lblFechaIncompleta.Show();
                 lblFechaIncompleta.Text = "La fecha no es válida (e.g., día no existe en el mes).";
             }
             else
             {
+                lblFechaIncompleta.Show();
                 lblFechaIncompleta.Text = "Fecha incompleta";
             }
 
@@ -160,6 +161,12 @@ namespace testForms
 
                 lblDatosObligatorios.Visible = !camposValidos;
                 lblFechaIncompleta.Visible = !fechaCompleta;
+            }
+
+            if(fechaCompleta && !fechaValida)
+            {
+                lblFechaIncompleta.Show();
+                lblFechaIncompleta.Text = "La fecha no es válida (e.g., día no existe en el mes).";
             }
         }
 

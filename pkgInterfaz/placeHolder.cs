@@ -26,7 +26,6 @@ namespace testForms.pkgInterfaz
         public placeHolderBox()
         {
             this.MinimumSize = new Size(250, 10);
-            this.Font = new Font("Codec Pro", 20);
             this.AutoSize = false;
             this.Padding = new Padding(0, 120, 0, 0);
         }

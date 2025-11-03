@@ -40,10 +40,10 @@ namespace testForms.pkgInterfaz
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
@@ -52,7 +52,7 @@ namespace testForms.pkgInterfaz
             this.placeHolderBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.placeHolderBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderBox1.Font = new System.Drawing.Font("Codec Pro", 15F);
+            this.placeHolderBox1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.placeHolderBox1.ForeColor = System.Drawing.Color.Black;
             this.placeHolderBox1.Location = new System.Drawing.Point(19, 19);
             this.placeHolderBox1.MinimumSize = new System.Drawing.Size(250, 10);

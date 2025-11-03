@@ -52,12 +52,11 @@
             this.btnVolver.BorderSize = 2;
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1419, 10);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Location = new System.Drawing.Point(1064, 8);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(171, 39);
+            this.btnVolver.Size = new System.Drawing.Size(128, 48);
             this.btnVolver.TabIndex = 52;
             this.btnVolver.Text = "Volver al inicio";
             this.btnVolver.TextColor = System.Drawing.Color.White;
@@ -102,8 +101,8 @@
             this.dgvMovimientos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMovimientos.EnableHeadersVisualStyles = false;
             this.dgvMovimientos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.dgvMovimientos.Location = new System.Drawing.Point(11, 197);
-            this.dgvMovimientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMovimientos.Location = new System.Drawing.Point(8, 160);
+            this.dgvMovimientos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMovimientos.MultiSelect = false;
             this.dgvMovimientos.Name = "dgvMovimientos";
             this.dgvMovimientos.ReadOnly = true;
@@ -126,18 +125,20 @@
             this.dgvMovimientos.RowTemplate.Height = 24;
             this.dgvMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMovimientos.Size = new System.Drawing.Size(1579, 414);
+            this.dgvMovimientos.Size = new System.Drawing.Size(1184, 336);
             this.dgvMovimientos.TabIndex = 31;
             // 
             // lblNoMovimientos
             // 
+            this.lblNoMovimientos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNoMovimientos.AutoSize = true;
             this.lblNoMovimientos.BackColor = System.Drawing.Color.Transparent;
-            this.lblNoMovimientos.Font = new System.Drawing.Font("Codec Pro Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoMovimientos.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoMovimientos.ForeColor = System.Drawing.Color.Black;
-            this.lblNoMovimientos.Location = new System.Drawing.Point(404, 148);
+            this.lblNoMovimientos.Location = new System.Drawing.Point(303, 120);
+            this.lblNoMovimientos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoMovimientos.Name = "lblNoMovimientos";
-            this.lblNoMovimientos.Size = new System.Drawing.Size(756, 42);
+            this.lblNoMovimientos.Size = new System.Drawing.Size(606, 32);
             this.lblNoMovimientos.TabIndex = 53;
             this.lblNoMovimientos.Text = "No se han encontrado movimientos recientes";
             // 
@@ -145,11 +146,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 20);
+            this.label1.Location = new System.Drawing.Point(0, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(750, 82);
+            this.label1.Size = new System.Drawing.Size(727, 77);
             this.label1.TabIndex = 54;
             this.label1.Text = "Movimientos recientes";
             // 
@@ -160,29 +162,31 @@
             this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pDegradado3.Controls.Add(this.btnVolver);
             this.pDegradado3.Controls.Add(this.label1);
+            this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pDegradado3.HexColor1 = "#4450c9";
             this.pDegradado3.HexColor2 = "#5C69F5";
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1600, 138);
+            this.pDegradado3.Size = new System.Drawing.Size(1200, 112);
             this.pDegradado3.TabIndex = 56;
             // 
             // formMovimientos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1600, 615);
+            this.ClientSize = new System.Drawing.Size(1200, 500);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.lblNoMovimientos);
             this.Controls.Add(this.dgvMovimientos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formMovimientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fromMovimientos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formMovimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).EndInit();
             this.pDegradado3.ResumeLayout(false);

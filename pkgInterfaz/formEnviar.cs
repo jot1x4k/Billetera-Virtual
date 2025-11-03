@@ -37,6 +37,11 @@ namespace testForms.pkgInterfaz
             }
         }
 
+        public formEnviar()
+        {
+            InitializeComponent();
+        }
+
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             Datos data = new Datos();
@@ -112,11 +117,6 @@ namespace testForms.pkgInterfaz
                 lblErrorCuenta.Visible = !cuentaValida;
                 lblMismaCuenta.Visible = !mismaCuenta;
             }   
-        }
-
-        private void pBoton2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pBoton1_Click(object sender, EventArgs e)

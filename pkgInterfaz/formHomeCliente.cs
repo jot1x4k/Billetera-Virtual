@@ -18,6 +18,11 @@ namespace testForms.pkgInterfaz
         long id_usuarioActual = 0;
         decimal saldo = 0;
 
+        public formHomeCliente()
+        {
+            InitializeComponent();
+        }
+
         public formHomeCliente(long prm_idUsuarioActual)
         {
             id_usuarioActual = prm_idUsuarioActual;

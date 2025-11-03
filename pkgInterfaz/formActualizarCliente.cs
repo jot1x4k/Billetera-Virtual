@@ -17,6 +17,11 @@ namespace testForms.pkgInterfaz
         long id_usuarioActual = 0;
         string clave;
         Datos data = new Datos();
+
+        public formActualizarCliente()
+        {
+            InitializeComponent();
+        }
         public formActualizarCliente(long prm_usuarioActual)
         {
             InitializeComponent();

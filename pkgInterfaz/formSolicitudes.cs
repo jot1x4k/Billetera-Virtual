@@ -24,6 +24,11 @@ namespace testForms.pkgInterfaz
         DateTime fechaCreacion;
         DateTime fechaActual;
 
+        public formSolicitudes()
+        {
+            InitializeComponent();
+        }
+
         public formSolicitudes(long prm_idUsuarioActual)
         {
             InitializeComponent();
