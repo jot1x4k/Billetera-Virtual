@@ -39,12 +39,12 @@
             this.pBoton1 = new testForms.pkgInterfaz.pBoton();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
             this.btnRecargar = new testForms.pkgInterfaz.pBoton();
+            this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picFotoCliente = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -237,6 +237,27 @@
             this.btnRecargar.UseVisualStyleBackColor = false;
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
+            // pBoton2
+            // 
+            this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton2.BackColor = System.Drawing.Color.DimGray;
+            this.pBoton2.BackgroundColor = System.Drawing.Color.DimGray;
+            this.pBoton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(80)))), ((int)(((byte)(201)))));
+            this.pBoton2.BorderRadius = 5;
+            this.pBoton2.BorderSize = 0;
+            this.pBoton2.FlatAppearance.BorderSize = 0;
+            this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.ForeColor = System.Drawing.Color.White;
+            this.pBoton2.Location = new System.Drawing.Point(1054, 8);
+            this.pBoton2.Name = "pBoton2";
+            this.pBoton2.Size = new System.Drawing.Size(38, 26);
+            this.pBoton2.TabIndex = 54;
+            this.pBoton2.Text = "-";
+            this.pBoton2.TextColor = System.Drawing.Color.White;
+            this.pBoton2.UseVisualStyleBackColor = false;
+            this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -269,7 +290,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
@@ -285,7 +306,7 @@
             // picFotoCliente
             // 
             this.picFotoCliente.BackColor = System.Drawing.Color.Transparent;
-            this.picFotoCliente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picFotoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFotoCliente.Image = ((System.Drawing.Image)(resources.GetObject("picFotoCliente.Image")));
             this.picFotoCliente.Location = new System.Drawing.Point(0, 0);
             this.picFotoCliente.Margin = new System.Windows.Forms.Padding(2);
@@ -308,27 +329,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
-            // 
-            // pBoton2
-            // 
-            this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBoton2.BackColor = System.Drawing.Color.DimGray;
-            this.pBoton2.BackgroundColor = System.Drawing.Color.DimGray;
-            this.pBoton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(80)))), ((int)(((byte)(201)))));
-            this.pBoton2.BorderRadius = 5;
-            this.pBoton2.BorderSize = 0;
-            this.pBoton2.FlatAppearance.BorderSize = 0;
-            this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pBoton2.ForeColor = System.Drawing.Color.White;
-            this.pBoton2.Location = new System.Drawing.Point(1054, 8);
-            this.pBoton2.Name = "pBoton2";
-            this.pBoton2.Size = new System.Drawing.Size(38, 26);
-            this.pBoton2.TabIndex = 54;
-            this.pBoton2.Text = "-";
-            this.pBoton2.TextColor = System.Drawing.Color.White;
-            this.pBoton2.UseVisualStyleBackColor = false;
-            this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
             // 
             // label5
             // 

@@ -69,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(316, 69);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(168, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,7 @@
             this.picMostrarClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClave.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClave.Image")));
             this.picMostrarClave.Location = new System.Drawing.Point(568, 392);
-            this.picMostrarClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picMostrarClave.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClave.Name = "picMostrarClave";
             this.picMostrarClave.Size = new System.Drawing.Size(36, 28);
             this.picMostrarClave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +123,7 @@
             this.picOcultarClave.Enabled = false;
             this.picOcultarClave.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClave.Image")));
             this.picOcultarClave.Location = new System.Drawing.Point(568, 392);
-            this.picOcultarClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picOcultarClave.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClave.Name = "picOcultarClave";
             this.picOcultarClave.Size = new System.Drawing.Size(36, 28);
             this.picOcultarClave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +179,6 @@
             this.pDegradado1.Angle = 90F;
             this.pDegradado1.Controls.Add(this.lblNoRegistrado);
             this.pDegradado1.Controls.Add(this.bntRegistrarse);
-            this.pDegradado1.Controls.Add(this.btnIniciarSesion);
             this.pDegradado1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pDegradado1.HexColor1 = "#E6E6E6";
             this.pDegradado1.HexColor2 = "#5C69F5";
@@ -237,7 +236,7 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(324, 10);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(325, 456);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(151, 49);
             this.btnIniciarSesion.TabIndex = 42;
@@ -255,7 +254,7 @@
             this.txtClave.label = "Contraseña";
             this.txtClave.limiteCaracteres = 50;
             this.txtClave.Location = new System.Drawing.Point(244, 368);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4);
             this.txtClave.Name = "txtClave";
             this.txtClave.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtClave.placeholder = " ";
@@ -273,7 +272,7 @@
             this.txtUsuario.label = "Usuario";
             this.txtUsuario.limiteCaracteres = 50;
             this.txtUsuario.Location = new System.Drawing.Point(244, 288);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtUsuario.placeholder = " ";
@@ -291,6 +290,7 @@
             this.ClientSize = new System.Drawing.Size(800, 700);
             this.Controls.Add(this.pBoton2);
             this.Controls.Add(this.pBoton1);
+            this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.pDegradado1);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
@@ -302,7 +302,7 @@
             this.Controls.Add(this.lblEntrar);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formComprobante));
             this.lblTransferencia = new System.Windows.Forms.Label();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,14 +40,16 @@
             this.lblReferencia = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.button1 = new testForms.pkgInterfaz.pBoton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pDegradado1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransferencia
             // 
             this.lblTransferencia.AutoSize = true;
             this.lblTransferencia.Font = new System.Drawing.Font("Codec Pro Bold", 30F);
-            this.lblTransferencia.Location = new System.Drawing.Point(84, 16);
+            this.lblTransferencia.Location = new System.Drawing.Point(0, 24);
             this.lblTransferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTransferencia.Name = "lblTransferencia";
             this.lblTransferencia.Size = new System.Drawing.Size(433, 49);
@@ -196,6 +199,19 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(472, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 96);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 52;
+            this.pictureBox2.TabStop = false;
+            // 
             // formComprobante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +219,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pDegradado1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTransferencia);
@@ -212,6 +229,7 @@
             this.Text = "formComprobante";
             this.pDegradado1.ResumeLayout(false);
             this.pDegradado1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +248,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private pDegradado pDegradado1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

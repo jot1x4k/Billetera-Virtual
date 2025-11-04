@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formEnviar));
             this.label1 = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
             this.lblErrorMonto = new System.Windows.Forms.Label();
@@ -42,9 +41,7 @@
             this.pBoton1 = new testForms.pkgInterfaz.pBoton();
             this.lblMismaCuenta = new System.Windows.Forms.Label();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pDegradado1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -248,7 +245,6 @@
             this.pDegradado1.Controls.Add(this.pBoton2);
             this.pDegradado1.Controls.Add(this.pBoton1);
             this.pDegradado1.Controls.Add(this.label1);
-            this.pDegradado1.Controls.Add(this.pictureBox2);
             this.pDegradado1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pDegradado1.HexColor1 = "#4450c9";
             this.pDegradado1.HexColor2 = "#5C69F5";
@@ -256,19 +252,6 @@
             this.pDegradado1.Name = "pDegradado1";
             this.pDegradado1.Size = new System.Drawing.Size(1101, 232);
             this.pDegradado1.TabIndex = 56;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(885, 24);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(208, 192);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
             // 
             // formEnviar
             // 
@@ -295,7 +278,6 @@
             this.Load += new System.EventHandler(this.formEnviar_Load);
             this.pDegradado1.ResumeLayout(false);
             this.pDegradado1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,6 +298,5 @@
         private pBoton pBoton1;
         private System.Windows.Forms.Label lblMismaCuenta;
         private pDegradado pDegradado1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -78,11 +78,10 @@ namespace testForms
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             using (formRegistro frmReg = new formRegistro(this))
             {
                 frmReg.ShowDialog();
+                this.Hide();
             }
 
             this.Show();
@@ -101,10 +100,10 @@ namespace testForms
             {
                 if(u.fnc_verificarAdmin(idUsuario) == "admin")
                 {
-                    this.Hide();
                     using (var frmHomeAdmin = new formHomeAdmin())
                     {
                         frmHomeAdmin.ShowDialog();
+                        this.Hide();
                     }
                     this.Show();
                 }
