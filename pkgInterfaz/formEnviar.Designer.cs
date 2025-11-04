@@ -105,7 +105,7 @@
             this.txtMonto.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtMonto.esClave = false;
             this.txtMonto.label = "Monto";
-            this.txtMonto.limiteCaracteres = 10;
+            this.txtMonto.limiteCaracteres = 8;
             this.txtMonto.Location = new System.Drawing.Point(424, 480);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4);
             this.txtMonto.Name = "txtMonto";

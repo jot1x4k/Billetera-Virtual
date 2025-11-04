@@ -41,18 +41,21 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.button1 = new testForms.pkgInterfaz.pBoton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.pDegradado1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pDegradado3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTransferencia
             // 
             this.lblTransferencia.AutoSize = true;
-            this.lblTransferencia.Font = new System.Drawing.Font("Codec Pro Bold", 30F);
-            this.lblTransferencia.Location = new System.Drawing.Point(0, 24);
+            this.lblTransferencia.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransferencia.ForeColor = System.Drawing.Color.White;
+            this.lblTransferencia.Location = new System.Drawing.Point(0, 32);
             this.lblTransferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTransferencia.Name = "lblTransferencia";
-            this.lblTransferencia.Size = new System.Drawing.Size(433, 49);
+            this.lblTransferencia.Size = new System.Drawing.Size(431, 47);
             this.lblTransferencia.TabIndex = 1;
             this.lblTransferencia.Text = "Transferencia exitosa";
             // 
@@ -60,6 +63,7 @@
             // 
             this.pDegradado1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pDegradado1.Angle = 90F;
+            this.pDegradado1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pDegradado1.Controls.Add(this.label1);
             this.pDegradado1.Controls.Add(this.label4);
             this.pDegradado1.Controls.Add(this.lblCuentaDestino);
@@ -72,7 +76,7 @@
             this.pDegradado1.HexColor2 = "white";
             this.pDegradado1.Location = new System.Drawing.Point(0, 96);
             this.pDegradado1.Name = "pDegradado1";
-            this.pDegradado1.Size = new System.Drawing.Size(600, 216);
+            this.pDegradado1.Size = new System.Drawing.Size(600, 232);
             this.pDegradado1.TabIndex = 51;
             // 
             // label1
@@ -81,7 +85,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(24, 39);
+            this.label1.Location = new System.Drawing.Point(24, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 25);
@@ -94,7 +98,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 135);
+            this.label4.Location = new System.Drawing.Point(12, 144);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 25);
@@ -107,7 +111,7 @@
             this.lblCuentaDestino.BackColor = System.Drawing.Color.Transparent;
             this.lblCuentaDestino.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuentaDestino.ForeColor = System.Drawing.Color.Black;
-            this.lblCuentaDestino.Location = new System.Drawing.Point(156, 40);
+            this.lblCuentaDestino.Location = new System.Drawing.Point(156, 49);
             this.lblCuentaDestino.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCuentaDestino.Name = "lblCuentaDestino";
             this.lblCuentaDestino.Size = new System.Drawing.Size(163, 24);
@@ -120,7 +124,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(59, 103);
+            this.label3.Location = new System.Drawing.Point(59, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 25);
@@ -133,7 +137,7 @@
             this.lblMonto.BackColor = System.Drawing.Color.Transparent;
             this.lblMonto.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonto.ForeColor = System.Drawing.Color.Black;
-            this.lblMonto.Location = new System.Drawing.Point(156, 72);
+            this.lblMonto.Location = new System.Drawing.Point(156, 81);
             this.lblMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(77, 24);
@@ -146,7 +150,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(27, 71);
+            this.label2.Location = new System.Drawing.Point(27, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
@@ -159,7 +163,7 @@
             this.lblReferencia.BackColor = System.Drawing.Color.Transparent;
             this.lblReferencia.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReferencia.ForeColor = System.Drawing.Color.Black;
-            this.lblReferencia.Location = new System.Drawing.Point(156, 136);
+            this.lblReferencia.Location = new System.Drawing.Point(156, 145);
             this.lblReferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReferencia.Name = "lblReferencia";
             this.lblReferencia.Size = new System.Drawing.Size(122, 24);
@@ -172,7 +176,7 @@
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(156, 104);
+            this.lblFecha.Location = new System.Drawing.Point(156, 113);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(75, 24);
@@ -190,9 +194,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(225, 336);
+            this.button1.Location = new System.Drawing.Point(240, 336);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 49);
+            this.button1.Size = new System.Drawing.Size(119, 49);
             this.button1.TabIndex = 44;
             this.button1.Text = "Aceptar";
             this.button1.TextColor = System.Drawing.Color.White;
@@ -204,13 +208,31 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(472, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(512, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 96);
+            this.pictureBox2.Size = new System.Drawing.Size(88, 72);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
+            // 
+            // pDegradado3
+            // 
+            this.pDegradado3.Angle = 90F;
+            this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
+            this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pDegradado3.Controls.Add(this.button1);
+            this.pDegradado3.Controls.Add(this.pictureBox2);
+            this.pDegradado3.Controls.Add(this.pDegradado1);
+            this.pDegradado3.Controls.Add(this.lblTransferencia);
+            this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pDegradado3.HexColor1 = "#4450c9";
+            this.pDegradado3.HexColor2 = "#5C69F5";
+            this.pDegradado3.Location = new System.Drawing.Point(0, 0);
+            this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
+            this.pDegradado3.Name = "pDegradado3";
+            this.pDegradado3.Size = new System.Drawing.Size(600, 400);
+            this.pDegradado3.TabIndex = 60;
             // 
             // formComprobante
             // 
@@ -219,10 +241,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pDegradado1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblTransferencia);
+            this.Controls.Add(this.pDegradado3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formComprobante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -230,8 +249,9 @@
             this.pDegradado1.ResumeLayout(false);
             this.pDegradado1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pDegradado3.ResumeLayout(false);
+            this.pDegradado3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -249,5 +269,6 @@
         private System.Windows.Forms.Label label4;
         private pDegradado pDegradado1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private pDegradado pDegradado3;
     }
 }
