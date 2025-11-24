@@ -38,15 +38,38 @@
             this.cmbAnio = new System.Windows.Forms.ComboBox();
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblEntrar = new System.Windows.Forms.Label();
+            this.tabProductos = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabProductos = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtPNombre = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtSNombre = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtSApellido = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtPApellido = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtId = new testForms.pkgInterfaz.pLineaTextBox();
+            this.cmbExpMes = new System.Windows.Forms.ComboBox();
+            this.cmbExpAnio = new System.Windows.Forms.ComboBox();
+            this.cmbExpDia = new System.Windows.Forms.ComboBox();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.cmbNacAnio = new System.Windows.Forms.ComboBox();
+            this.cmbNacDia = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbNacMes = new System.Windows.Forms.ComboBox();
+            this.cmbEstudios = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIngresos = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtEgresos = new testForms.pkgInterfaz.pLineaTextBox();
+            this.pLineaTextBox1 = new testForms.pkgInterfaz.pLineaTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pLineaTextBox2 = new testForms.pkgInterfaz.pLineaTextBox();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabExtracto.SuspendLayout();
-            this.pDegradado3.SuspendLayout();
             this.tabProductos.SuspendLayout();
+            this.pDegradado3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,7 +85,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1140, 659);
+            this.tabControl1.Size = new System.Drawing.Size(1548, 830);
             this.tabControl1.TabIndex = 0;
             // 
             // tabExtracto
@@ -82,7 +105,7 @@
             this.tabExtracto.Location = new System.Drawing.Point(4, 34);
             this.tabExtracto.Margin = new System.Windows.Forms.Padding(0);
             this.tabExtracto.Name = "tabExtracto";
-            this.tabExtracto.Size = new System.Drawing.Size(1132, 621);
+            this.tabExtracto.Size = new System.Drawing.Size(1540, 792);
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
@@ -203,6 +226,53 @@
             this.lblEntrar.TabIndex = 1;
             this.lblEntrar.Text = "Generar extracto de cuenta";
             // 
+            // tabProductos
+            // 
+            this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.tabProductos.Controls.Add(this.label9);
+            this.tabProductos.Controls.Add(this.cmbProducto);
+            this.tabProductos.Controls.Add(this.pLineaTextBox2);
+            this.tabProductos.Controls.Add(this.label8);
+            this.tabProductos.Controls.Add(this.label7);
+            this.tabProductos.Controls.Add(this.pLineaTextBox1);
+            this.tabProductos.Controls.Add(this.txtEgresos);
+            this.tabProductos.Controls.Add(this.txtIngresos);
+            this.tabProductos.Controls.Add(this.label6);
+            this.tabProductos.Controls.Add(this.cmbEstudios);
+            this.tabProductos.Controls.Add(this.cmbNacAnio);
+            this.tabProductos.Controls.Add(this.cmbNacDia);
+            this.tabProductos.Controls.Add(this.label5);
+            this.tabProductos.Controls.Add(this.cmbNacMes);
+            this.tabProductos.Controls.Add(this.cmbExpAnio);
+            this.tabProductos.Controls.Add(this.cmbExpDia);
+            this.tabProductos.Controls.Add(this.lblFechaNac);
+            this.tabProductos.Controls.Add(this.cmbExpMes);
+            this.tabProductos.Controls.Add(this.txtId);
+            this.tabProductos.Controls.Add(this.txtSApellido);
+            this.tabProductos.Controls.Add(this.txtPApellido);
+            this.tabProductos.Controls.Add(this.txtSNombre);
+            this.tabProductos.Controls.Add(this.txtPNombre);
+            this.tabProductos.Controls.Add(this.label2);
+            this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.tabProductos.Location = new System.Drawing.Point(4, 34);
+            this.tabProductos.Name = "tabProductos";
+            this.tabProductos.Size = new System.Drawing.Size(1540, 792);
+            this.tabProductos.TabIndex = 1;
+            this.tabProductos.Text = "Productos financieros";
+            this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(832, 72);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Solicitud de productos financieros";
+            // 
             // btnVolver
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,7 +285,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1019, 8);
+            this.btnVolver.Location = new System.Drawing.Point(1427, 8);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(128, 48);
             this.btnVolver.TabIndex = 53;
@@ -237,7 +307,7 @@
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1155, 120);
+            this.pDegradado3.Size = new System.Drawing.Size(1563, 120);
             this.pDegradado3.TabIndex = 57;
             // 
             // label4
@@ -253,27 +323,454 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Solicitudes";
             // 
-            // tabProductos
+            // txtPNombre
             // 
-            this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.tabProductos.Controls.Add(this.label2);
-            this.tabProductos.Location = new System.Drawing.Point(4, 34);
-            this.tabProductos.Name = "tabProductos";
-            this.tabProductos.Size = new System.Drawing.Size(1132, 621);
-            this.tabProductos.TabIndex = 1;
-            this.tabProductos.Text = "Productos financieros";
+            this.txtPNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtPNombre.esClave = false;
+            this.txtPNombre.label = "Primer nombre";
+            this.txtPNombre.limiteCaracteres = 20;
+            this.txtPNombre.Location = new System.Drawing.Point(16, 72);
+            this.txtPNombre.Name = "txtPNombre";
+            this.txtPNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtPNombre.placeholder = " ";
+            this.txtPNombre.Radius = 8;
+            this.txtPNombre.Size = new System.Drawing.Size(496, 56);
+            this.txtPNombre.TabIndex = 3;
+            this.txtPNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
             // 
-            // label2
+            // txtSNombre
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(832, 72);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Solicitud de productos financieros";
+            this.txtSNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtSNombre.esClave = false;
+            this.txtSNombre.label = "Segundo nombre";
+            this.txtSNombre.limiteCaracteres = 20;
+            this.txtSNombre.Location = new System.Drawing.Point(528, 72);
+            this.txtSNombre.Name = "txtSNombre";
+            this.txtSNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtSNombre.placeholder = "(opcional)";
+            this.txtSNombre.Radius = 8;
+            this.txtSNombre.Size = new System.Drawing.Size(496, 56);
+            this.txtSNombre.TabIndex = 4;
+            this.txtSNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtSApellido
+            // 
+            this.txtSApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtSApellido.esClave = false;
+            this.txtSApellido.label = "Segundo apellido";
+            this.txtSApellido.limiteCaracteres = 20;
+            this.txtSApellido.Location = new System.Drawing.Point(528, 144);
+            this.txtSApellido.Name = "txtSApellido";
+            this.txtSApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtSApellido.placeholder = "(opcional)";
+            this.txtSApellido.Radius = 8;
+            this.txtSApellido.Size = new System.Drawing.Size(496, 56);
+            this.txtSApellido.TabIndex = 6;
+            this.txtSApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtPApellido
+            // 
+            this.txtPApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtPApellido.esClave = false;
+            this.txtPApellido.label = "Primer apellido";
+            this.txtPApellido.limiteCaracteres = 20;
+            this.txtPApellido.Location = new System.Drawing.Point(16, 144);
+            this.txtPApellido.Name = "txtPApellido";
+            this.txtPApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtPApellido.placeholder = "  ";
+            this.txtPApellido.Radius = 8;
+            this.txtPApellido.Size = new System.Drawing.Size(496, 56);
+            this.txtPApellido.TabIndex = 5;
+            this.txtPApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtId.esClave = false;
+            this.txtId.label = "Numero de identificacion";
+            this.txtId.limiteCaracteres = 15;
+            this.txtId.Location = new System.Drawing.Point(16, 216);
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtId.placeholder = "Maximo 15 digitos";
+            this.txtId.Radius = 8;
+            this.txtId.Size = new System.Drawing.Size(496, 56);
+            this.txtId.TabIndex = 7;
+            this.txtId.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            this.txtId.Load += new System.EventHandler(this.pLineaTextBox5_Load);
+            // 
+            // cmbExpMes
+            // 
+            this.cmbExpMes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbExpMes.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExpMes.FormattingEnabled = true;
+            this.cmbExpMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbExpMes.Location = new System.Drawing.Point(803, 210);
+            this.cmbExpMes.Name = "cmbExpMes";
+            this.cmbExpMes.Size = new System.Drawing.Size(120, 33);
+            this.cmbExpMes.TabIndex = 49;
+            // 
+            // cmbExpAnio
+            // 
+            this.cmbExpAnio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbExpAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExpAnio.FormattingEnabled = true;
+            this.cmbExpAnio.Location = new System.Drawing.Point(939, 210);
+            this.cmbExpAnio.Name = "cmbExpAnio";
+            this.cmbExpAnio.Size = new System.Drawing.Size(82, 33);
+            this.cmbExpAnio.TabIndex = 52;
+            // 
+            // cmbExpDia
+            // 
+            this.cmbExpDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbExpDia.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExpDia.FormattingEnabled = true;
+            this.cmbExpDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbExpDia.Location = new System.Drawing.Point(707, 210);
+            this.cmbExpDia.Name = "cmbExpDia";
+            this.cmbExpDia.Size = new System.Drawing.Size(82, 33);
+            this.cmbExpDia.TabIndex = 51;
+            // 
+            // lblFechaNac
+            // 
+            this.lblFechaNac.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFechaNac.CausesValidation = false;
+            this.lblFechaNac.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.ForeColor = System.Drawing.Color.Black;
+            this.lblFechaNac.Location = new System.Drawing.Point(528, 216);
+            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(174, 23);
+            this.lblFechaNac.TabIndex = 50;
+            this.lblFechaNac.Text = "Fecha de expedicion";
+            this.lblFechaNac.Click += new System.EventHandler(this.lblFechaNac_Click);
+            // 
+            // cmbNacAnio
+            // 
+            this.cmbNacAnio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbNacAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNacAnio.FormattingEnabled = true;
+            this.cmbNacAnio.Location = new System.Drawing.Point(939, 250);
+            this.cmbNacAnio.Name = "cmbNacAnio";
+            this.cmbNacAnio.Size = new System.Drawing.Size(82, 33);
+            this.cmbNacAnio.TabIndex = 56;
+            // 
+            // cmbNacDia
+            // 
+            this.cmbNacDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbNacDia.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNacDia.FormattingEnabled = true;
+            this.cmbNacDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbNacDia.Location = new System.Drawing.Point(707, 250);
+            this.cmbNacDia.Name = "cmbNacDia";
+            this.cmbNacDia.Size = new System.Drawing.Size(82, 33);
+            this.cmbNacDia.TabIndex = 55;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.CausesValidation = false;
+            this.label5.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(528, 256);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 23);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Fecha de nacimiento";
+            // 
+            // cmbNacMes
+            // 
+            this.cmbNacMes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbNacMes.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNacMes.FormattingEnabled = true;
+            this.cmbNacMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbNacMes.Location = new System.Drawing.Point(803, 250);
+            this.cmbNacMes.Name = "cmbNacMes";
+            this.cmbNacMes.Size = new System.Drawing.Size(120, 33);
+            this.cmbNacMes.TabIndex = 53;
+            // 
+            // cmbEstudios
+            // 
+            this.cmbEstudios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbEstudios.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstudios.FormattingEnabled = true;
+            this.cmbEstudios.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbEstudios.Location = new System.Drawing.Point(160, 288);
+            this.cmbEstudios.Name = "cmbEstudios";
+            this.cmbEstudios.Size = new System.Drawing.Size(138, 33);
+            this.cmbEstudios.TabIndex = 57;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.CausesValidation = false;
+            this.label6.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(16, 293);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 23);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "Nivel de estudios";
+            // 
+            // txtIngresos
+            // 
+            this.txtIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtIngresos.esClave = false;
+            this.txtIngresos.label = "Ingresos mensuales";
+            this.txtIngresos.limiteCaracteres = 15;
+            this.txtIngresos.Location = new System.Drawing.Point(40, 483);
+            this.txtIngresos.Name = "txtIngresos";
+            this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtIngresos.placeholder = " ";
+            this.txtIngresos.Radius = 8;
+            this.txtIngresos.Size = new System.Drawing.Size(472, 56);
+            this.txtIngresos.TabIndex = 59;
+            this.txtIngresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtEgresos
+            // 
+            this.txtEgresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtEgresos.esClave = false;
+            this.txtEgresos.label = "Egresos mensuales";
+            this.txtEgresos.limiteCaracteres = 15;
+            this.txtEgresos.Location = new System.Drawing.Point(552, 483);
+            this.txtEgresos.Name = "txtEgresos";
+            this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtEgresos.placeholder = " ";
+            this.txtEgresos.Radius = 8;
+            this.txtEgresos.Size = new System.Drawing.Size(472, 56);
+            this.txtEgresos.TabIndex = 60;
+            this.txtEgresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // pLineaTextBox1
+            // 
+            this.pLineaTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pLineaTextBox1.esClave = false;
+            this.pLineaTextBox1.label = "Numero telefonico";
+            this.pLineaTextBox1.limiteCaracteres = 10;
+            this.pLineaTextBox1.Location = new System.Drawing.Point(16, 547);
+            this.pLineaTextBox1.Name = "pLineaTextBox1";
+            this.pLineaTextBox1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.pLineaTextBox1.placeholder = "Maximo 10 digitos";
+            this.pLineaTextBox1.Radius = 8;
+            this.pLineaTextBox1.Size = new System.Drawing.Size(496, 56);
+            this.pLineaTextBox1.TabIndex = 61;
+            this.pLineaTextBox1.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.CausesValidation = false;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(16, 499);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 23);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "$";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.CausesValidation = false;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(528, 499);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 23);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "$";
+            // 
+            // pLineaTextBox2
+            // 
+            this.pLineaTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pLineaTextBox2.esClave = false;
+            this.pLineaTextBox2.label = "Correo Electronico";
+            this.pLineaTextBox2.limiteCaracteres = 50;
+            this.pLineaTextBox2.Location = new System.Drawing.Point(528, 547);
+            this.pLineaTextBox2.Name = "pLineaTextBox2";
+            this.pLineaTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.pLineaTextBox2.placeholder = "ej: example@mail.com";
+            this.pLineaTextBox2.Radius = 8;
+            this.pLineaTextBox2.Size = new System.Drawing.Size(496, 56);
+            this.pLineaTextBox2.TabIndex = 64;
+            this.pLineaTextBox2.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
+            // 
+            // cmbProducto
+            // 
+            this.cmbProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbProducto.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbProducto.Location = new System.Drawing.Point(176, 611);
+            this.cmbProducto.Name = "cmbProducto";
+            this.cmbProducto.Size = new System.Drawing.Size(418, 33);
+            this.cmbProducto.TabIndex = 65;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.CausesValidation = false;
+            this.label9.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(16, 616);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(160, 23);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "Producto de interes";
             // 
             // formSolicitudes
             // 
@@ -281,7 +778,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1155, 795);
+            this.ClientSize = new System.Drawing.Size(1563, 966);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -292,9 +789,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabExtracto.ResumeLayout(false);
             this.tabExtracto.PerformLayout();
+            this.tabProductos.ResumeLayout(false);
             this.pDegradado3.ResumeLayout(false);
             this.pDegradado3.PerformLayout();
-            this.tabProductos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -316,5 +813,28 @@
         private pBoton btnGenerarExtracto;
         private System.Windows.Forms.TabPage tabProductos;
         private System.Windows.Forms.Label label2;
+        private pLineaTextBox txtId;
+        private pLineaTextBox txtSApellido;
+        private pLineaTextBox txtPApellido;
+        private pLineaTextBox txtSNombre;
+        private pLineaTextBox txtPNombre;
+        private System.Windows.Forms.ComboBox cmbNacAnio;
+        private System.Windows.Forms.ComboBox cmbNacDia;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbNacMes;
+        private System.Windows.Forms.ComboBox cmbExpAnio;
+        private System.Windows.Forms.ComboBox cmbExpDia;
+        private System.Windows.Forms.Label lblFechaNac;
+        private System.Windows.Forms.ComboBox cmbExpMes;
+        private pLineaTextBox txtEgresos;
+        private pLineaTextBox txtIngresos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbEstudios;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private pLineaTextBox pLineaTextBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbProducto;
+        private pLineaTextBox pLineaTextBox2;
     }
 }

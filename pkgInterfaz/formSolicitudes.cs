@@ -167,5 +167,20 @@ namespace testForms.pkgInterfaz
         {
             this.Close();
         }
+
+        private void tabProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pLineaTextBox5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaNac_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
