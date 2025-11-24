@@ -134,20 +134,22 @@ namespace testForms.pkgInterfaz
             titular = ti.ToTitleCase(nombreLimpio.ToLower());
 
             int numeroCuenta = int.Parse(infoCuenta.Value.cuentaNum.ToString());
-            formExtracto frmExtracto = new formExtracto (
-                fechaInicio,
-                fechaFin,
-                saldoInicio,
-                ingresos,
-                egresos,
-                saldoFin,
-                titular,
-                numeroCuenta,
-                id_usuarioActual
-                    );
-
+            using   (formExtracto frmExtracto = new formExtracto (
+                                                                fechaInicio,
+                                                                fechaFin,
+                                                                saldoInicio,
+                                                                ingresos,
+                                                                egresos,
+                                                                saldoFin,
+                                                                titular,
+                                                                numeroCuenta,
+                                                                id_usuarioActual)
+                    )
+            {
+                frmExtracto.ShowDialog();
+            }
+            
             this.Close();
-            frmExtracto.ShowDialog();
 
         }
 

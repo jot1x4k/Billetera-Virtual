@@ -41,9 +41,12 @@
             this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.label4 = new System.Windows.Forms.Label();
+            this.tabProductos = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabExtracto.SuspendLayout();
             this.pDegradado3.SuspendLayout();
+            this.tabProductos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -52,6 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabExtracto);
+            this.tabControl1.Controls.Add(this.tabProductos);
             this.tabControl1.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 136);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
@@ -249,6 +253,28 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Solicitudes";
             // 
+            // tabProductos
+            // 
+            this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.tabProductos.Controls.Add(this.label2);
+            this.tabProductos.Location = new System.Drawing.Point(4, 34);
+            this.tabProductos.Name = "tabProductos";
+            this.tabProductos.Size = new System.Drawing.Size(1132, 621);
+            this.tabProductos.TabIndex = 1;
+            this.tabProductos.Text = "Productos financieros";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(832, 72);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Solicitud de productos financieros";
+            // 
             // formSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +294,7 @@
             this.tabExtracto.PerformLayout();
             this.pDegradado3.ResumeLayout(false);
             this.pDegradado3.PerformLayout();
+            this.tabProductos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -287,5 +314,7 @@
         private pDegradado pDegradado3;
         private System.Windows.Forms.Label label4;
         private pBoton btnGenerarExtracto;
+        private System.Windows.Forms.TabPage tabProductos;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,13 +19,10 @@ namespace testForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Suscribirse al evento Application.ThreadExit para limpieza (opcional)
             Application.ThreadExit += (s, e) => { };
 
-            // Crear un manejador global para cuando se crea cualquier formulario
             Application.ApplicationExit += (s, e) => { };
 
-            // Hook global: cada vez que se muestra un form, aplicamos la configuración
             Application.OpenForms.Cast<Form>().ToList().ForEach(AutoConfigurarControles);
             Application.Idle += (s, e) =>
             {
@@ -34,7 +31,9 @@ namespace testForms
                     AutoConfigurarControles(frm);
                 }
             };
-            Application.Run(new formLogin());
+
+            //Application.Run(new formLogin()); //flujo normal
+            Application.Run(new formSolicitudes(123456789012345));
         }
 
         /// <summary>
