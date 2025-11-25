@@ -423,7 +423,7 @@
             this.pDegradado1.HexColor2 = "#5C69F5";
             this.pDegradado1.Location = new System.Drawing.Point(0, 753);
             this.pDegradado1.Name = "pDegradado1";
-            this.pDegradado1.Size = new System.Drawing.Size(887, 125);
+            this.pDegradado1.Size = new System.Drawing.Size(904, 125);
             this.pDegradado1.TabIndex = 50;
             // 
             // label1
@@ -433,7 +433,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 12F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(358, 24);
+            this.label1.Location = new System.Drawing.Point(367, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 20);
@@ -454,7 +454,7 @@
             this.btnLoginBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginBack.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginBack.ForeColor = System.Drawing.Color.White;
-            this.btnLoginBack.Location = new System.Drawing.Point(369, 48);
+            this.btnLoginBack.Location = new System.Drawing.Point(378, 48);
             this.btnLoginBack.Name = "btnLoginBack";
             this.btnLoginBack.Size = new System.Drawing.Size(148, 37);
             this.btnLoginBack.TabIndex = 44;
@@ -469,7 +469,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(904, 868);
+            this.ClientSize = new System.Drawing.Size(921, 868);
             this.Controls.Add(this.picMostrarClave);
             this.Controls.Add(this.picOcultarClave);
             this.Controls.Add(this.pBoton2);

@@ -23,6 +23,9 @@ namespace testForms.pkgInterfaz
         Dictionary<string, int> diccionarioMeses = new Dictionary<string, int>();
         DateTime fechaCreacion;
         DateTime fechaActual;
+        DateTime fechaExp;
+        DateTime fechaNac;
+        string cadenaFechaExp, cadenaFechaNac;
 
         public formSolicitudes()
         {
@@ -153,6 +156,200 @@ namespace testForms.pkgInterfaz
 
         }
 
+        private void btnSolicitarProducto_Click(object sender, EventArgs e)
+        {
+
+            string v_nombre = txtPNombre.TextBoxInterno.Text + " " + txtSNombre.TextBoxInterno.Text;
+            string v_apellido = txtPApellido.TextBoxInterno.Text + " " + txtSApellido.TextBoxInterno.Text;
+            string v_remitente = v_nombre + " " +  v_apellido;
+            string v_fechaExp = cadenaFechaExp;
+            string v_estudios = cmbEstudios.Text;
+            string v_fechaNac = cadenaFechaNac;
+            long v_telefono = long.Parse(txtTelefono.TextBoxInterno.Text);
+            string v_correo = txtCorreo.TextBoxInterno.Text;
+            long v_ingresos = long.Parse(txtIngresos.TextBoxInterno.Text);
+            long v_egresos = long.Parse(txtEgresos.TextBoxInterno.Text);
+            string v_producto = cmbProducto.Text;
+
+
+            int resultadoDml = data.fnc_registrarProducto(v_remitente, id_usuarioActual, v_fechaExp, v_estudios, v_fechaNac, v_telefono, v_correo, v_ingresos, v_egresos, v_producto);
+
+        }
+
+        private void fnc_validarCampos(object sender, EventArgs e)
+        {
+            bool camposValidos = true;
+            bool fechaExpCompleta = !string.IsNullOrWhiteSpace(cmbExpDia.Text) &&
+                                    !string.IsNullOrWhiteSpace(cmbExpMes.Text) &&
+                                    !string.IsNullOrWhiteSpace(cmbExpAnio.Text);
+            bool fechaNacCompleta = !string.IsNullOrWhiteSpace(cmbNacDia.Text) &&
+                                    !string.IsNullOrWhiteSpace(cmbNacMes.Text) &&
+                                    !string.IsNullOrWhiteSpace(cmbNacAnio.Text);
+
+            foreach (Control ctrl in tabProductos.Controls)
+            {
+                if (ctrl is pLineaTextBox linea)
+                {
+                    bool valido = ValidarCampoEspecifico(linea);
+                    if (!valido) camposValidos = false;
+                }
+            }
+
+            int mesExp, mesNac = 0;
+            diccionarioMeses.TryGetValue(cmbExpMes.Text, out mesExp);
+            cadenaFechaExp = $"{cmbExpDia.Text}/{mesExp}/{cmbExpAnio.Text}";
+            bool fechaExpValida = DateTime.TryParseExact(
+                cadenaFechaExp,
+                "d/M/yyyy",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None,
+                out fechaExp);
+
+            diccionarioMeses.TryGetValue(cmbNacMes.Text, out mesNac);
+            cadenaFechaNac = $"{cmbNacDia.Text}/{mesNac}/{cmbNacAnio.Text}";
+            bool fechaNacValida = DateTime.TryParseExact(
+                cadenaFechaNac,
+                "d/M/yyyy",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None,
+                out fechaNac) && fechaNac <= DateTime.Today.AddYears(-18);
+
+            if (!fechaExpValida)
+            {
+                camposValidos = false;
+                lblExp.Show();
+                lblExp.Text = "La fecha de expedicion no es valida.";
+            }
+            else
+            {
+                lblExp.Show();
+                lblExp.Text = "Fecha incompleta";
+            }
+
+            if (!fechaNacValida)
+            {
+                camposValidos = false;
+                lblNac.Show();
+                lblNac.Text = "La fecha de nacimiento no es valida.";
+            }
+            else
+            {
+                lblNac.Show();
+                lblNac.Text = "Fecha incompleta";
+            }
+
+            if (camposValidos && fechaExpCompleta && fechaExpValida && fechaNacValida && fechaNacValida)
+            {
+                btnSolicitarProducto.Enabled = true;
+                btnSolicitarProducto.BackColor = ColorTranslator.FromHtml("#5C69F5");
+                lblDatosObligatorios.Hide();
+                lblNac.Hide();
+                lblExp.Hide();
+            }
+            else
+            {
+                btnSolicitarProducto.Enabled = false;
+                btnSolicitarProducto.BackColor = Color.DimGray;
+
+                lblDatosObligatorios.Visible = !camposValidos;
+                lblExp.Visible = !fechaExpCompleta;
+                lblNac.Visible = !fechaNacCompleta;
+            }
+
+            if (fechaExpCompleta && !fechaExpValida)
+            {
+                lblExp.Show();
+                lblExp.Text = "La fecha de expedicion no es valida (e.g., día no existe en el mes).";
+            }
+            if (fechaNacCompleta && !fechaNacValida)
+            {
+                lblNac.Show();
+                lblNac.Text = "La fecha de nacimiento no es valida (e.g., día no existe en el mes, no es mayor de edad).";
+            }
+        }
+
+        private bool ValidarCampoEspecifico(pLineaTextBox linea)
+        {
+            string texto = linea.TextBoxInterno.Text.Trim();
+
+            bool valido = false;
+
+            switch (linea.Name)
+            {
+                case "txtPNombre":
+                case "txtPApellido":
+                    valido = texto.All(char.IsLetter) && texto.Length > 1;
+                    break;
+
+                case "txtSNombre":
+                case "txtSApellido":
+                    valido = true; 
+                    break;
+
+                case "txtId":
+                    valido = long.TryParse(texto, out _) && texto.Length >= 5;
+                    break;
+
+                case "txtCorreo":
+                    valido = texto.Contains("@") && texto.Contains(".") && texto.Length >= 5;
+                    break;
+
+                case "txtTelefono":
+                    valido = texto.Length == 10;
+                    break;
+
+                case "txtIngresos":
+                case "txtEgresos":
+                    valido = texto.Length >= 1 && !texto.StartsWith("0");
+                    break;
+
+                default:
+                    valido = !string.IsNullOrWhiteSpace(texto);
+                    break;
+            }
+
+            linea.BackColor = valido ? Color.FromArgb(0, 120, 215) : Color.FromArgb(220, 53, 69);
+
+            return valido;
+        }
+
+        private void tabProductos_Enter(object sender, EventArgs e)
+        {
+            lblDatosObligatorios.Hide();
+            lblExp.Hide();
+
+            DateTime fechaMinima = DateTime.Today.AddYears(-100);
+
+            cmbExpAnio.Items.Clear();
+            cmbNacAnio.Items.Clear();
+            for (int anio = fechaMinima.Year; anio <= DateTime.Today.Year; anio++)
+            {
+                cmbExpAnio.Items.Add(anio.ToString());
+                cmbNacAnio.Items.Add(anio.ToString());
+            }
+
+            int aux = 1;
+            diccionarioMeses.Clear();
+            foreach (string mes in cmbMes.Items)
+            {
+                diccionarioMeses.Add(mes, aux);
+                aux++;
+            }
+
+            foreach (Control ctrl in tabProductos.Controls)
+            {
+                if (ctrl is pLineaTextBox linea)
+                {
+                    linea.TextBoxInterno.TextChanged += fnc_validarCampos;
+                }
+
+                if (ctrl is System.Windows.Forms.ComboBox cmb)
+                {
+                    cmb.SelectedValueChanged += fnc_validarCampos;
+                }
+            }
+        }
+
         private void cmbAnio_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -182,5 +379,6 @@ namespace testForms.pkgInterfaz
         {
 
         }
+
     }
 }
