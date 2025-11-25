@@ -82,5 +82,9 @@ namespace testForms.pkgLogica
         {
             return data.fnc_select("Usuarios");
         }
+        public DataTable fnc_consultarSolicitudes()
+        {
+            return data.fnc_select("solicitudproducto");
+        }
     }
 }

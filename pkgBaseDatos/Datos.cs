@@ -347,5 +347,29 @@ namespace testForms.pkgBaseDatos
                 }
             }
         }
+
+        public DataTable fnc_consultarSolicitudes()
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            using (var cmd = new MySqlCommand("prc_consultarSolicitudes", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var adapter = new MySqlDataAdapter(cmd))
+                {
+                    DataTable tabla = new DataTable();
+                    try
+                    {
+                        adapter.Fill(tabla);
+                        return tabla;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error BD: " + ex.Message);
+                        return null;
+                    }
+                }
+            }
+        }
     }
 }
