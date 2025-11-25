@@ -26,6 +26,8 @@ namespace testForms.pkgInterfaz
         DateTime fechaExp;
         DateTime fechaNac;
         string cadenaFechaExp, cadenaFechaNac;
+        bool campoEst;
+        bool campoProd;
 
         public formSolicitudes()
         {
@@ -52,6 +54,9 @@ namespace testForms.pkgInterfaz
 
             cmbMes.SelectionChangeCommitted += validarSeleccion;
             cmbAnio.SelectionChangeCommitted += validarSeleccion;
+
+            cmbEstudios.SelectionChangeCommitted += validarCmbSolicitud;
+            cmbProducto.SelectionChangeCommitted += validarCmbSolicitud;
         }
 
         private void validarSeleccion(object sender, EventArgs e)
@@ -155,6 +160,36 @@ namespace testForms.pkgInterfaz
             this.Close();
 
         }
+        /**
+        FIN PAGE EXTRACTO +=============================================================================================================
+         **/
+        private void validarCmbSolicitud(object sender, EventArgs e)
+        {
+            campoEst = false;
+            campoProd = false;
+
+            campoEst = cmbEstudios.SelectedItem != null;
+            campoProd = cmbProducto.SelectedItem != null;
+
+            if (campoEst && campoProd)
+            {
+                lblEst.Hide();
+                lblProd.Hide();
+
+                btnSolicitarProducto.Enabled = true;
+                btnSolicitarProducto.BackColor = Color.RoyalBlue;
+            }
+            else
+            {
+                btnSolicitarProducto.Enabled = campoEst && campoProd;
+                btnSolicitarProducto.BackColor = Color.DimGray;
+                lblEst.Visible = !campoEst;
+                lblEst.Text = "Seleccione una opcion de la lista";
+                lblProd.Visible = !campoProd;
+                lblProd.Text = "Seleccione el producto que desea solicitar";
+            }
+        }
+
 
         private void btnSolicitarProducto_Click(object sender, EventArgs e)
         {
@@ -171,9 +206,18 @@ namespace testForms.pkgInterfaz
             long v_egresos = long.Parse(txtEgresos.TextBoxInterno.Text);
             string v_producto = cmbProducto.Text;
 
-
-            int resultadoDml = data.fnc_registrarProducto(v_remitente, id_usuarioActual, v_fechaExp, v_estudios, v_fechaNac, v_telefono, v_correo, v_ingresos, v_egresos, v_producto);
-
+            try
+            {
+                int resultadoDml = data.fnc_registrarProducto(v_remitente, id_usuarioActual, v_fechaExp, v_estudios, v_fechaNac, v_telefono, v_correo, v_ingresos, v_egresos, v_producto);
+                if (resultadoDml > 0) 
+                {
+                    MessageBox.Show("Solicitud realizada con exito");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ya ha realizado una solicitud de este producto" + ex);
+            }
         }
 
         private void fnc_validarCampos(object sender, EventArgs e)
@@ -192,6 +236,10 @@ namespace testForms.pkgInterfaz
                 {
                     bool valido = ValidarCampoEspecifico(linea);
                     if (!valido) camposValidos = false;
+                }
+                if (ctrl is System.Windows.Forms.ComboBox cmb)
+                {
+
                 }
             }
 
@@ -238,7 +286,7 @@ namespace testForms.pkgInterfaz
                 lblNac.Text = "Fecha incompleta";
             }
 
-            if (camposValidos && fechaExpCompleta && fechaExpValida && fechaNacValida && fechaNacValida)
+            if (camposValidos && fechaExpCompleta && fechaExpValida && fechaNacValida && fechaNacValida && campoEst && campoProd)
             {
                 btnSolicitarProducto.Enabled = true;
                 btnSolicitarProducto.BackColor = ColorTranslator.FromHtml("#5C69F5");
@@ -341,6 +389,7 @@ namespace testForms.pkgInterfaz
                 if (ctrl is pLineaTextBox linea)
                 {
                     linea.TextBoxInterno.TextChanged += fnc_validarCampos;
+                    linea.TextBoxInterno.TextChanged += validarCmbSolicitud;
                 }
 
                 if (ctrl is System.Windows.Forms.ComboBox cmb)
@@ -373,6 +422,46 @@ namespace testForms.pkgInterfaz
         private void pLineaTextBox5_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbExpDia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbExpMes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbExpAnio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbNacDia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbNacMes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbNacAnio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbEstudios_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         private void lblFechaNac_Click(object sender, EventArgs e)

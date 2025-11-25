@@ -39,6 +39,8 @@
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblEntrar = new System.Windows.Forms.Label();
             this.tabProductos = new System.Windows.Forms.TabPage();
+            this.lblProd = new System.Windows.Forms.Label();
+            this.lblEst = new System.Windows.Forms.Label();
             this.lblDatosObligatorios = new System.Windows.Forms.Label();
             this.lblNac = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.label4 = new System.Windows.Forms.Label();
             this.btnVolver = new testForms.pkgInterfaz.pBoton();
-            this.lblEstudios = new System.Windows.Forms.Label();
-            this.lblProd = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabExtracto.SuspendLayout();
             this.tabProductos.SuspendLayout();
@@ -238,7 +238,7 @@
             // 
             this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.tabProductos.Controls.Add(this.lblProd);
-            this.tabProductos.Controls.Add(this.lblEstudios);
+            this.tabProductos.Controls.Add(this.lblEst);
             this.tabProductos.Controls.Add(this.lblDatosObligatorios);
             this.tabProductos.Controls.Add(this.lblNac);
             this.tabProductos.Controls.Add(this.lblExp);
@@ -277,6 +277,36 @@
             this.tabProductos.Text = "Productos financieros";
             this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
             this.tabProductos.Enter += new System.EventHandler(this.tabProductos_Enter);
+            // 
+            // lblProd
+            // 
+            this.lblProd.AutoSize = true;
+            this.lblProd.CausesValidation = false;
+            this.lblProd.Font = new System.Drawing.Font("Codec Pro", 10F);
+            this.lblProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblProd.Location = new System.Drawing.Point(483, 680);
+            this.lblProd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProd.Name = "lblProd";
+            this.lblProd.Size = new System.Drawing.Size(75, 17);
+            this.lblProd.TabIndex = 75;
+            this.lblProd.Text = "error prod";
+            this.lblProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProd.Visible = false;
+            // 
+            // lblEst
+            // 
+            this.lblEst.AutoSize = true;
+            this.lblEst.CausesValidation = false;
+            this.lblEst.Font = new System.Drawing.Font("Codec Pro", 10F);
+            this.lblEst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEst.Location = new System.Drawing.Point(728, 368);
+            this.lblEst.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEst.Name = "lblEst";
+            this.lblEst.Size = new System.Drawing.Size(64, 17);
+            this.lblEst.TabIndex = 74;
+            this.lblEst.Text = "error est";
+            this.lblEst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEst.Visible = false;
             // 
             // lblDatosObligatorios
             // 
@@ -406,6 +436,7 @@
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(834, 33);
             this.cmbProducto.TabIndex = 65;
+            this.cmbProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProducto_KeyPress);
             // 
             // txtCorreo
             // 
@@ -529,6 +560,7 @@
             this.cmbEstudios.Name = "cmbEstudios";
             this.cmbEstudios.Size = new System.Drawing.Size(392, 33);
             this.cmbEstudios.TabIndex = 57;
+            this.cmbEstudios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEstudios_KeyPress);
             // 
             // cmbNacAnio
             // 
@@ -538,6 +570,7 @@
             this.cmbNacAnio.Name = "cmbNacAnio";
             this.cmbNacAnio.Size = new System.Drawing.Size(120, 33);
             this.cmbNacAnio.TabIndex = 56;
+            this.cmbNacAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacAnio_KeyPress);
             // 
             // cmbNacDia
             // 
@@ -579,6 +612,7 @@
             this.cmbNacDia.Name = "cmbNacDia";
             this.cmbNacDia.Size = new System.Drawing.Size(120, 33);
             this.cmbNacDia.TabIndex = 55;
+            this.cmbNacDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacDia_KeyPress);
             // 
             // label5
             // 
@@ -613,6 +647,7 @@
             this.cmbNacMes.Name = "cmbNacMes";
             this.cmbNacMes.Size = new System.Drawing.Size(120, 33);
             this.cmbNacMes.TabIndex = 53;
+            this.cmbNacMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacMes_KeyPress);
             // 
             // cmbExpAnio
             // 
@@ -622,6 +657,7 @@
             this.cmbExpAnio.Name = "cmbExpAnio";
             this.cmbExpAnio.Size = new System.Drawing.Size(120, 33);
             this.cmbExpAnio.TabIndex = 52;
+            this.cmbExpAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpAnio_KeyPress);
             // 
             // cmbExpDia
             // 
@@ -663,6 +699,7 @@
             this.cmbExpDia.Name = "cmbExpDia";
             this.cmbExpDia.Size = new System.Drawing.Size(120, 33);
             this.cmbExpDia.TabIndex = 51;
+            this.cmbExpDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpDia_KeyPress);
             // 
             // lblFechaNac
             // 
@@ -698,6 +735,7 @@
             this.cmbExpMes.Name = "cmbExpMes";
             this.cmbExpMes.Size = new System.Drawing.Size(120, 33);
             this.cmbExpMes.TabIndex = 49;
+            this.cmbExpMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpMes_KeyPress);
             // 
             // txtSApellido
             // 
@@ -821,36 +859,6 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // lblEstudios
-            // 
-            this.lblEstudios.AutoSize = true;
-            this.lblEstudios.CausesValidation = false;
-            this.lblEstudios.Font = new System.Drawing.Font("Codec Pro", 10F);
-            this.lblEstudios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstudios.Location = new System.Drawing.Point(728, 368);
-            this.lblEstudios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEstudios.Name = "lblEstudios";
-            this.lblEstudios.Size = new System.Drawing.Size(64, 17);
-            this.lblEstudios.TabIndex = 74;
-            this.lblEstudios.Text = "error est";
-            this.lblEstudios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEstudios.Visible = false;
-            // 
-            // lblProd
-            // 
-            this.lblProd.AutoSize = true;
-            this.lblProd.CausesValidation = false;
-            this.lblProd.Font = new System.Drawing.Font("Codec Pro", 10F);
-            this.lblProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblProd.Location = new System.Drawing.Point(483, 680);
-            this.lblProd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProd.Name = "lblProd";
-            this.lblProd.Size = new System.Drawing.Size(75, 17);
-            this.lblProd.TabIndex = 75;
-            this.lblProd.Text = "error prod";
-            this.lblProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblProd.Visible = false;
-            // 
             // formSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -922,7 +930,7 @@
         private System.Windows.Forms.Label lblNac;
         private System.Windows.Forms.Label lblExp;
         private System.Windows.Forms.Label lblDatosObligatorios;
-        private System.Windows.Forms.Label lblEstudios;
+        private System.Windows.Forms.Label lblEst;
         private System.Windows.Forms.Label lblProd;
     }
 }
