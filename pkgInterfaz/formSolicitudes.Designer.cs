@@ -82,18 +82,16 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabExtracto);
             this.tabControl1.Controls.Add(this.tabProductos);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 136);
+            this.tabControl1.Location = new System.Drawing.Point(0, 120);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1548, 830);
+            this.tabControl1.Size = new System.Drawing.Size(1117, 517);
             this.tabControl1.TabIndex = 0;
             // 
             // tabExtracto
@@ -114,7 +112,7 @@
             this.tabExtracto.Location = new System.Drawing.Point(4, 34);
             this.tabExtracto.Margin = new System.Windows.Forms.Padding(0);
             this.tabExtracto.Name = "tabExtracto";
-            this.tabExtracto.Size = new System.Drawing.Size(1540, 792);
+            this.tabExtracto.Size = new System.Drawing.Size(1109, 479);
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
@@ -274,7 +272,7 @@
             this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabProductos.Location = new System.Drawing.Point(4, 34);
             this.tabProductos.Name = "tabProductos";
-            this.tabProductos.Size = new System.Drawing.Size(1540, 792);
+            this.tabProductos.Size = new System.Drawing.Size(1109, 421);
             this.tabProductos.TabIndex = 1;
             this.tabProductos.Text = "Productos financieros";
             this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
@@ -317,7 +315,7 @@
             this.lblDatosObligatorios.CausesValidation = false;
             this.lblDatosObligatorios.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblDatosObligatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDatosObligatorios.Location = new System.Drawing.Point(348, 768);
+            this.lblDatosObligatorios.Location = new System.Drawing.Point(459, 768);
             this.lblDatosObligatorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosObligatorios.Name = "lblDatosObligatorios";
             this.lblDatosObligatorios.Size = new System.Drawing.Size(345, 17);
@@ -824,7 +822,7 @@
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1563, 128);
+            this.pDegradado3.Size = new System.Drawing.Size(1117, 120);
             this.pDegradado3.TabIndex = 57;
             // 
             // label4
@@ -852,7 +850,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1427, 8);
+            this.btnVolver.Location = new System.Drawing.Point(981, 8);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(128, 48);
             this.btnVolver.TabIndex = 53;
@@ -867,7 +865,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1563, 966);
+            this.ClientSize = new System.Drawing.Size(1117, 637);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
