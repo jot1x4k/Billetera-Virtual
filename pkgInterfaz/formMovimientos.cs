@@ -114,5 +114,10 @@ namespace testForms.pkgInterfaz
                 }
             }
         }
+
+        private void dgvMovimientos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvMovimientos.ClearSelection();
+        }
     }
 }

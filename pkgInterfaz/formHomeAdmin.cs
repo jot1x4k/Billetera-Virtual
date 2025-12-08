@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace testForms.pkgInterfaz
     {
         Datos db = new Datos();
         DataTable tabla;
+        DataView vista;
 
         public formHomeAdmin()
         {
@@ -53,10 +55,10 @@ namespace testForms.pkgInterfaz
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            DataView dv = new DataView(tabla);
+            vista = new DataView(tabla);
 
-            dgvSolicitudes.DataSource = dv;
-            if (dv.Count == 0)
+            dgvSolicitudes.DataSource = vista;
+            if (vista.Count == 0)
             {
                 dgvSolicitudes.Visible = false;
                 lblNoSolicitudes.Visible = true;
@@ -82,10 +84,65 @@ namespace testForms.pkgInterfaz
             }
         }
 
-        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        private void pLineaTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            DataView dv = tabla.DefaultView;
-            dv.RowFilter = "Convert([ID del solicitante], 'System.String') LIKE '%" + txtFiltro.TextBoxInterno.Text + "%'";
+            vista.RowFilter = "Convert([ID del solicitante], 'System.String') LIKE '%" + txtFiltro.TextBoxInterno.Text + "%'";
         }
+
+        private void dgvSolicitudes_SelectionChanged(object sender, EventArgs e)
+        {
+            bool hayFilaSeleccionada = dgvSolicitudes.SelectedRows.Count > 0;
+
+            btnAprobar.Visible = hayFilaSeleccionada;
+            btnRechazar.Visible = hayFilaSeleccionada;
+        }
+
+        private void dgvSolicitudes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvSolicitudes.ClearSelection();
+        }
+
+        private void btnAprobar_Click(object sender, EventArgs e)
+        {
+            ActualizarEstadoSolicitud("Aprobada");
+        }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+            ActualizarEstadoSolicitud("Rechazada");
+        }
+
+        private void ActualizarEstadoSolicitud(string nuevoEstado)
+        {
+            if (dgvSolicitudes.CurrentCell == null)
+            {
+                MessageBox.Show("Debe seleccionar una solicitud.");
+                return;
+            }
+
+            int filaActual = dgvSolicitudes.CurrentCell.RowIndex;
+
+            int idRemitente = int.Parse(
+                dgvSolicitudes.Rows[filaActual].Cells["Referencia"].Value.ToString()
+            );
+
+            int resultado = db.fnc_actualizarSolicitud(idRemitente, nuevoEstado);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show($"La solicitud fue {nuevoEstado.ToLower()} correctamente.");
+
+                RecargarFormulario();
+            }
+            else
+            {
+                return;
+            }
+        }
+        public void RecargarFormulario()
+        {
+            formHomeAdmin_Load(null, null);
+        }
+
     }
 }

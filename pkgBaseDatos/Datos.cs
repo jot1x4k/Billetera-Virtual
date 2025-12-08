@@ -371,5 +371,36 @@ namespace testForms.pkgBaseDatos
                 }
             }
         }
+
+        public int fnc_actualizarSolicitud(long prm_idUsuario, string prm_estado)
+        {
+            using (var conexion = new MySqlConnection(connectionString))
+            using (var cmd = new MySqlCommand("prc_actualizarSolicitud", conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("prm_id", prm_idUsuario);
+                cmd.Parameters.AddWithValue("prm_estado", prm_estado);
+
+                var p_resultado = new MySqlParameter("p_resultado", MySqlDbType.Int32)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(p_resultado);
+
+                try
+                {
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+                    return Convert.ToInt32(p_resultado.Value);
+                }
+                catch (MySqlException ex)
+                {
+                    string mensaje = ex.Message;
+                    MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return -1;
+                }
+            }
+        }
     }
 }

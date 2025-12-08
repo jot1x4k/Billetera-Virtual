@@ -129,6 +129,7 @@
             this.dgvMovimientos.RowTemplate.Height = 24;
             this.dgvMovimientos.Size = new System.Drawing.Size(1184, 336);
             this.dgvMovimientos.TabIndex = 31;
+            this.dgvMovimientos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvMovimientos_DataBindingComplete);
             // 
             // lblNoMovimientos
             // 

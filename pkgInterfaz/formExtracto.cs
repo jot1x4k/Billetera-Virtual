@@ -49,6 +49,11 @@ namespace testForms.pkgInterfaz
             this.Close();
         }
 
+        private void dgvMovimientos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvMovimientos.ClearSelection();
+        }
+
         private void formExtracto_Load(object sender, EventArgs e)
         {
             DataTable tabla = data.fnc_consultarMovimientos(id_usuarioActual);
