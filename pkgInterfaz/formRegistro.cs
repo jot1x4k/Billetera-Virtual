@@ -35,7 +35,7 @@ namespace testForms
             lblClaveUsuario.Hide();
             lblFechaIncompleta.Hide();
 
-            DateTime fechaMaxima = DateTime.Today.AddYears(-18);
+            DateTime fechaMaxima = DateTime.Today;
             DateTime fechaMinima = DateTime.Today.AddYears(-100);
 
             cmbAnio.Items.Clear();
@@ -133,13 +133,13 @@ namespace testForms
                 "d/M/yyyy",
                 System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None,
-                out fechaNacimiento);
+                out fechaNacimiento) && fechaNacimiento <= DateTime.Today.AddYears(-18);
 
             if (!fechaValida)
             {
                 camposValidos = false;
                 lblFechaIncompleta.Show();
-                lblFechaIncompleta.Text = "La fecha no es válida (e.g., día no existe en el mes).";
+                lblFechaIncompleta.Text = "La fecha no es valida (Ej: dia no existe en el mes).";
             }
             else
             {
@@ -166,7 +166,7 @@ namespace testForms
             if(fechaCompleta && !fechaValida)
             {
                 lblFechaIncompleta.Show();
-                lblFechaIncompleta.Text = "La fecha no es válida (e.g., día no existe en el mes).";
+                lblFechaIncompleta.Text = "La fecha no es valida (Ej: dia no existe en el mes, no es mayor de edad).";
             }
         }
 
@@ -192,19 +192,19 @@ namespace testForms
                 switch (resultadoDml)
                 {
                     case 1:
-                        MessageBox.Show("Registro completado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registro completado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case -1:
-                        MessageBox.Show("Ya existe una cuenta registrada con el ID que ingresó");
+                        MessageBox.Show("Ya existe una cuenta registrada con el ID que ingreso", "Registro repetido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     case -2:
-                        MessageBox.Show("Ya existe una cuenta registrada con el correo que ingresó");
+                        MessageBox.Show("Ya existe una cuenta registrada con el correo que ingreso", "Registro repetido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     case -3:
-                        MessageBox.Show("Ya existe una cuenta registrada con el usuario que ingresó");
+                        MessageBox.Show("Ya existe una cuenta registrada con el usuario que ingreso", "Registro repetido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     default:
-                        MessageBox.Show("No se pudo completar el registro");
+                        MessageBox.Show("No se pudo completar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
             }

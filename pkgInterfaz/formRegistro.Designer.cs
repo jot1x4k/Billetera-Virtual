@@ -65,7 +65,7 @@
             this.lblRegistroCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistroCliente.Font = new System.Drawing.Font("Codec Pro Bold", 40F);
             this.lblRegistroCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistroCliente.Location = new System.Drawing.Point(179, 153);
+            this.lblRegistroCliente.Location = new System.Drawing.Point(470, 153);
             this.lblRegistroCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistroCliente.Name = "lblRegistroCliente";
             this.lblRegistroCliente.Size = new System.Drawing.Size(439, 67);
@@ -80,7 +80,7 @@
             this.lblDatosObligatorios.CausesValidation = false;
             this.lblDatosObligatorios.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblDatosObligatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDatosObligatorios.Location = new System.Drawing.Point(256, 736);
+            this.lblDatosObligatorios.Location = new System.Drawing.Point(547, 736);
             this.lblDatosObligatorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosObligatorios.Name = "lblDatosObligatorios";
             this.lblDatosObligatorios.Size = new System.Drawing.Size(285, 17);
@@ -93,7 +93,7 @@
             this.lblClaveUsuario.CausesValidation = false;
             this.lblClaveUsuario.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblClaveUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblClaveUsuario.Location = new System.Drawing.Point(90, 544);
+            this.lblClaveUsuario.Location = new System.Drawing.Point(384, 544);
             this.lblClaveUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClaveUsuario.Name = "lblClaveUsuario";
             this.lblClaveUsuario.Size = new System.Drawing.Size(510, 23);
@@ -104,7 +104,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(327, 64);
+            this.pictureBox2.Location = new System.Drawing.Point(618, 64);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(142, 95);
@@ -130,7 +130,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbMes.Location = new System.Drawing.Point(338, 598);
+            this.cmbMes.Location = new System.Drawing.Point(629, 598);
             this.cmbMes.Name = "cmbMes";
             this.cmbMes.Size = new System.Drawing.Size(120, 33);
             this.cmbMes.TabIndex = 45;
@@ -142,7 +142,7 @@
             this.lblFechaNac.CausesValidation = false;
             this.lblFechaNac.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaNac.Location = new System.Drawing.Point(311, 572);
+            this.lblFechaNac.Location = new System.Drawing.Point(602, 572);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(174, 23);
@@ -186,7 +186,7 @@
             "29",
             "30",
             "31"});
-            this.cmbDia.Location = new System.Drawing.Point(242, 598);
+            this.cmbDia.Location = new System.Drawing.Point(536, 598);
             this.cmbDia.Name = "cmbDia";
             this.cmbDia.Size = new System.Drawing.Size(82, 33);
             this.cmbDia.TabIndex = 47;
@@ -197,7 +197,7 @@
             this.cmbAnio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAnio.FormattingEnabled = true;
-            this.cmbAnio.Location = new System.Drawing.Point(474, 598);
+            this.cmbAnio.Location = new System.Drawing.Point(760, 598);
             this.cmbAnio.Name = "cmbAnio";
             this.cmbAnio.Size = new System.Drawing.Size(82, 33);
             this.cmbAnio.TabIndex = 48;
@@ -210,7 +210,7 @@
             this.lblFechaIncompleta.CausesValidation = false;
             this.lblFechaIncompleta.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblFechaIncompleta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblFechaIncompleta.Location = new System.Drawing.Point(242, 640);
+            this.lblFechaIncompleta.Location = new System.Drawing.Point(536, 640);
             this.lblFechaIncompleta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaIncompleta.Name = "lblFechaIncompleta";
             this.lblFechaIncompleta.Size = new System.Drawing.Size(178, 17);
@@ -223,7 +223,7 @@
             this.picOcultarClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picOcultarClave.Enabled = false;
             this.picOcultarClave.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClave.Image")));
-            this.picOcultarClave.Location = new System.Drawing.Point(674, 512);
+            this.picOcultarClave.Location = new System.Drawing.Point(968, 512);
             this.picOcultarClave.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClave.Name = "picOcultarClave";
             this.picOcultarClave.Size = new System.Drawing.Size(36, 28);
@@ -237,7 +237,7 @@
             // 
             this.picMostrarClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClave.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClave.Image")));
-            this.picMostrarClave.Location = new System.Drawing.Point(674, 512);
+            this.picMostrarClave.Location = new System.Drawing.Point(968, 512);
             this.picMostrarClave.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClave.Name = "picMostrarClave";
             this.picMostrarClave.Size = new System.Drawing.Size(36, 28);
@@ -258,7 +258,7 @@
             this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBoton2.ForeColor = System.Drawing.Color.White;
-            this.pBoton2.Location = new System.Drawing.Point(723, 8);
+            this.pBoton2.Location = new System.Drawing.Point(1296, 8);
             this.pBoton2.Name = "pBoton2";
             this.pBoton2.Size = new System.Drawing.Size(38, 24);
             this.pBoton2.TabIndex = 52;
@@ -279,7 +279,7 @@
             this.pBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pBoton1.Font = new System.Drawing.Font("Codec Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBoton1.ForeColor = System.Drawing.Color.White;
-            this.pBoton1.Location = new System.Drawing.Point(763, 8);
+            this.pBoton1.Location = new System.Drawing.Point(1336, 8);
             this.pBoton1.Name = "pBoton1";
             this.pBoton1.Size = new System.Drawing.Size(38, 24);
             this.pBoton1.TabIndex = 51;
@@ -302,7 +302,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(323, 680);
+            this.btnRegistrar.Location = new System.Drawing.Point(614, 680);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(150, 49);
             this.btnRegistrar.TabIndex = 43;
@@ -318,7 +318,7 @@
             this.txtClave.esClave = true;
             this.txtClave.label = "Contraseña";
             this.txtClave.limiteCaracteres = 50;
-            this.txtClave.Location = new System.Drawing.Point(82, 488);
+            this.txtClave.Location = new System.Drawing.Point(376, 488);
             this.txtClave.Margin = new System.Windows.Forms.Padding(4);
             this.txtClave.Name = "txtClave";
             this.txtClave.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -335,7 +335,7 @@
             this.txtUsuario.esClave = false;
             this.txtUsuario.label = "Usuario";
             this.txtUsuario.limiteCaracteres = 50;
-            this.txtUsuario.Location = new System.Drawing.Point(82, 422);
+            this.txtUsuario.Location = new System.Drawing.Point(373, 422);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -352,7 +352,7 @@
             this.txtId.esClave = false;
             this.txtId.label = "Numero de identificacion";
             this.txtId.limiteCaracteres = 15;
-            this.txtId.Location = new System.Drawing.Point(82, 361);
+            this.txtId.Location = new System.Drawing.Point(373, 361);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -369,7 +369,7 @@
             this.txtCorreo.esClave = false;
             this.txtCorreo.label = "Correo electronico";
             this.txtCorreo.limiteCaracteres = 254;
-            this.txtCorreo.Location = new System.Drawing.Point(82, 300);
+            this.txtCorreo.Location = new System.Drawing.Point(373, 300);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -386,7 +386,7 @@
             this.txtPrimerApellido.esClave = false;
             this.txtPrimerApellido.label = "Apellido";
             this.txtPrimerApellido.limiteCaracteres = 30;
-            this.txtPrimerApellido.Location = new System.Drawing.Point(402, 240);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(688, 240);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -403,7 +403,7 @@
             this.txtPrimerNombre.esClave = false;
             this.txtPrimerNombre.label = "Nombre";
             this.txtPrimerNombre.limiteCaracteres = 30;
-            this.txtPrimerNombre.Location = new System.Drawing.Point(82, 240);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(368, 240);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -423,7 +423,7 @@
             this.pDegradado1.HexColor2 = "#5C69F5";
             this.pDegradado1.Location = new System.Drawing.Point(0, 753);
             this.pDegradado1.Name = "pDegradado1";
-            this.pDegradado1.Size = new System.Drawing.Size(904, 125);
+            this.pDegradado1.Size = new System.Drawing.Size(1396, 125);
             this.pDegradado1.TabIndex = 50;
             // 
             // label1
@@ -433,7 +433,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 12F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(367, 24);
+            this.label1.Location = new System.Drawing.Point(613, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 20);
@@ -454,7 +454,7 @@
             this.btnLoginBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginBack.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginBack.ForeColor = System.Drawing.Color.White;
-            this.btnLoginBack.Location = new System.Drawing.Point(378, 48);
+            this.btnLoginBack.Location = new System.Drawing.Point(624, 48);
             this.btnLoginBack.Name = "btnLoginBack";
             this.btnLoginBack.Size = new System.Drawing.Size(148, 37);
             this.btnLoginBack.TabIndex = 44;
@@ -469,7 +469,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(921, 868);
+            this.ClientSize = new System.Drawing.Size(1413, 868);
             this.Controls.Add(this.picMostrarClave);
             this.Controls.Add(this.picOcultarClave);
             this.Controls.Add(this.pBoton2);

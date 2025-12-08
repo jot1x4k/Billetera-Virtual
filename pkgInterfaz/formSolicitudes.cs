@@ -38,6 +38,8 @@ namespace testForms.pkgInterfaz
         {
             InitializeComponent();
             FormHelper.HabilitarMovimiento(this, pDegradado3);
+            tabProductos.AutoScroll = true;
+            tabProductos.AutoScrollMinSize = new Size(0, tabProductos.PreferredSize.Height);
             id_usuarioActual = prm_idUsuarioActual;
 
             int aux = 1;
@@ -307,12 +309,12 @@ namespace testForms.pkgInterfaz
             if (fechaExpCompleta && !fechaExpValida)
             {
                 lblExp.Show();
-                lblExp.Text = "La fecha de expedicion no es valida (e.g., día no existe en el mes).";
+                lblExp.Text = "La fecha de expedicion no es valida (Ej: dia no existe en el mes).";
             }
             if (fechaNacCompleta && !fechaNacValida)
             {
                 lblNac.Show();
-                lblNac.Text = "La fecha de nacimiento no es valida (e.g., día no existe en el mes, no es mayor de edad).";
+                lblNac.Text = "La fecha de nacimiento no es valida (Ej:, dia no existe en el mes, no es mayor de edad).";
             }
         }
 

@@ -198,7 +198,6 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error BD: {ex.Message}");
                     return 0;
                 }
             }
@@ -263,7 +262,6 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error BD: {ex.Message}");
                     return null;
                 }
             }
@@ -342,7 +340,6 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error BD: {ex.Message}");
                     return 0;
                 }
             }

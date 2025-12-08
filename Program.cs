@@ -33,8 +33,8 @@ namespace testForms
             };
 
             //Application.Run(new formLogin()); //flujo normal
-            //Application.Run(new formSolicitudes(314314));
-            Application.Run(new formHomeAdmin());
+            Application.Run(new formSolicitudes(314314));
+            //Application.Run(new formHomeAdmin());
         }
 
         /// <summary>

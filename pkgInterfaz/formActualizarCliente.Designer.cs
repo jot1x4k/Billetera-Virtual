@@ -59,7 +59,7 @@
             this.picOcultarClaveActual.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picOcultarClaveActual.Enabled = false;
             this.picOcultarClaveActual.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClaveActual.Image")));
-            this.picOcultarClaveActual.Location = new System.Drawing.Point(1000, 512);
+            this.picOcultarClaveActual.Location = new System.Drawing.Point(1125, 512);
             this.picOcultarClaveActual.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClaveActual.Name = "picOcultarClaveActual";
             this.picOcultarClaveActual.Size = new System.Drawing.Size(32, 28);
@@ -73,7 +73,7 @@
             // 
             this.picMostrarClaveActual.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClaveActual.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClaveActual.Image")));
-            this.picMostrarClaveActual.Location = new System.Drawing.Point(1000, 512);
+            this.picMostrarClaveActual.Location = new System.Drawing.Point(1125, 512);
             this.picMostrarClaveActual.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClaveActual.Name = "picMostrarClaveActual";
             this.picMostrarClaveActual.Size = new System.Drawing.Size(32, 28);
@@ -86,7 +86,7 @@
             // 
             this.picMostrarClaveNueva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClaveNueva.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClaveNueva.Image")));
-            this.picMostrarClaveNueva.Location = new System.Drawing.Point(1000, 592);
+            this.picMostrarClaveNueva.Location = new System.Drawing.Point(1125, 592);
             this.picMostrarClaveNueva.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClaveNueva.Name = "picMostrarClaveNueva";
             this.picMostrarClaveNueva.Size = new System.Drawing.Size(32, 28);
@@ -100,7 +100,7 @@
             this.picOcultarClaveNueva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picOcultarClaveNueva.Enabled = false;
             this.picOcultarClaveNueva.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClaveNueva.Image")));
-            this.picOcultarClaveNueva.Location = new System.Drawing.Point(1000, 592);
+            this.picOcultarClaveNueva.Location = new System.Drawing.Point(1125, 592);
             this.picOcultarClaveNueva.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClaveNueva.Name = "picOcultarClaveNueva";
             this.picOcultarClaveNueva.Size = new System.Drawing.Size(32, 28);
@@ -150,7 +150,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(748, 664);
+            this.btnGuardar.Location = new System.Drawing.Point(873, 664);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(157, 56);
             this.btnGuardar.TabIndex = 59;
@@ -172,7 +172,7 @@
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1403, 216);
+            this.pDegradado3.Size = new System.Drawing.Size(1366, 216);
             this.pDegradado3.TabIndex = 58;
             // 
             // label4
@@ -200,7 +200,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1264, 8);
+            this.btnVolver.Location = new System.Drawing.Point(1227, 8);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(128, 56);
             this.btnVolver.TabIndex = 53;
@@ -216,7 +216,7 @@
             this.txtClaveNueva.esClave = false;
             this.txtClaveNueva.label = "Nueva contraseña";
             this.txtClaveNueva.limiteCaracteres = 0;
-            this.txtClaveNueva.Location = new System.Drawing.Point(656, 568);
+            this.txtClaveNueva.Location = new System.Drawing.Point(781, 568);
             this.txtClaveNueva.Margin = new System.Windows.Forms.Padding(4);
             this.txtClaveNueva.Name = "txtClaveNueva";
             this.txtClaveNueva.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -233,7 +233,7 @@
             this.txtClaveActual.esClave = false;
             this.txtClaveActual.label = "Contraseña actual";
             this.txtClaveActual.limiteCaracteres = 50;
-            this.txtClaveActual.Location = new System.Drawing.Point(656, 488);
+            this.txtClaveActual.Location = new System.Drawing.Point(781, 488);
             this.txtClaveActual.Margin = new System.Windows.Forms.Padding(4);
             this.txtClaveActual.Name = "txtClaveActual";
             this.txtClaveActual.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -250,7 +250,7 @@
             this.txtCorreo.esClave = false;
             this.txtCorreo.label = "Tu correo electronico";
             this.txtCorreo.limiteCaracteres = 254;
-            this.txtCorreo.Location = new System.Drawing.Point(656, 402);
+            this.txtCorreo.Location = new System.Drawing.Point(781, 402);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -267,7 +267,7 @@
             this.txtUsuario.esClave = false;
             this.txtUsuario.label = "Tu usuario de ingreso";
             this.txtUsuario.limiteCaracteres = 50;
-            this.txtUsuario.Location = new System.Drawing.Point(656, 320);
+            this.txtUsuario.Location = new System.Drawing.Point(781, 320);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -283,7 +283,7 @@
             this.lblUsuarioInvalido.CausesValidation = false;
             this.lblUsuarioInvalido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioInvalido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUsuarioInvalido.Location = new System.Drawing.Point(662, 376);
+            this.lblUsuarioInvalido.Location = new System.Drawing.Point(787, 376);
             this.lblUsuarioInvalido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuarioInvalido.Name = "lblUsuarioInvalido";
             this.lblUsuarioInvalido.Size = new System.Drawing.Size(327, 23);
@@ -298,7 +298,7 @@
             this.lblCorreoInvalido.CausesValidation = false;
             this.lblCorreoInvalido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoInvalido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCorreoInvalido.Location = new System.Drawing.Point(661, 456);
+            this.lblCorreoInvalido.Location = new System.Drawing.Point(786, 456);
             this.lblCorreoInvalido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreoInvalido.Name = "lblCorreoInvalido";
             this.lblCorreoInvalido.Size = new System.Drawing.Size(328, 23);
@@ -313,7 +313,7 @@
             this.lblClaveInvalida.CausesValidation = false;
             this.lblClaveInvalida.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClaveInvalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblClaveInvalida.Location = new System.Drawing.Point(649, 624);
+            this.lblClaveInvalida.Location = new System.Drawing.Point(774, 624);
             this.lblClaveInvalida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClaveInvalida.Name = "lblClaveInvalida";
             this.lblClaveInvalida.Size = new System.Drawing.Size(352, 32);
@@ -343,7 +343,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1403, 830);
+            this.ClientSize = new System.Drawing.Size(1366, 875);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblClaveInvalida);
             this.Controls.Add(this.lblCorreoInvalido);
