@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using testForms.pkgBaseDatos;
 using testForms.pkgLogica;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace testForms.pkgInterfaz
 {
     public partial class formHomeAdmin : Form
     {
         Datos db = new Datos();
+        DataTable tabla;
 
         public formHomeAdmin()
         {
@@ -38,7 +40,7 @@ namespace testForms.pkgInterfaz
 
         private void formHomeAdmin_Load(object sender, EventArgs e)
         {
-            DataTable tabla = db.fnc_consultarSolicitudes();
+            tabla = db.fnc_consultarSolicitudes();
             if (tabla == null || tabla.Rows.Count == 0)
             {
                 dgvSolicitudes.Visible = false;
@@ -78,6 +80,12 @@ namespace testForms.pkgInterfaz
                     this.dgvSolicitudes.Columns["Fecha de solicitud"].DefaultCellStyle.Format = ("D");
                 }
             }
+        }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            DataView dv = tabla.DefaultView;
+            dv.RowFilter = "Convert([ID del solicitante], 'System.String') LIKE '%" + txtFiltro.TextBoxInterno.Text + "%'";
         }
     }
 }

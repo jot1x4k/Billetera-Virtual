@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabExtracto = new System.Windows.Forms.TabPage();
-            this.btnGenerarExtracto = new testForms.pkgInterfaz.pBoton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblErrorAnio = new System.Windows.Forms.Label();
             this.lblErrorMes = new System.Windows.Forms.Label();
@@ -44,18 +43,13 @@
             this.lblDatosObligatorios = new System.Windows.Forms.Label();
             this.lblNac = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
-            this.btnSolicitarProducto = new testForms.pkgInterfaz.pBoton();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
-            this.txtCorreo = new testForms.pkgInterfaz.pLineaTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTelefono = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtEgresos = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtIngresos = new testForms.pkgInterfaz.pLineaTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbEstudios = new System.Windows.Forms.ComboBox();
             this.cmbNacAnio = new System.Windows.Forms.ComboBox();
@@ -66,14 +60,20 @@
             this.cmbExpDia = new System.Windows.Forms.ComboBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.cmbExpMes = new System.Windows.Forms.ComboBox();
-            this.txtSApellido = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtPApellido = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtSNombre = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtPNombre = new testForms.pkgInterfaz.pLineaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.label4 = new System.Windows.Forms.Label();
             this.btnVolver = new testForms.pkgInterfaz.pBoton();
+            this.btnGenerarExtracto = new testForms.pkgInterfaz.pBoton();
+            this.btnSolicitarProducto = new testForms.pkgInterfaz.pBoton();
+            this.txtCorreo = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtTelefono = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtEgresos = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtIngresos = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtSApellido = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtPApellido = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtSNombre = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtPNombre = new testForms.pkgInterfaz.pLineaTextBox();
             this.tabControl1.SuspendLayout();
             this.tabExtracto.SuspendLayout();
             this.tabProductos.SuspendLayout();
@@ -117,27 +117,6 @@
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
-            // 
-            // btnGenerarExtracto
-            // 
-            this.btnGenerarExtracto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnGenerarExtracto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnGenerarExtracto.BorderColor = System.Drawing.Color.Empty;
-            this.btnGenerarExtracto.BorderRadius = 8;
-            this.btnGenerarExtracto.BorderSize = 2;
-            this.btnGenerarExtracto.Enabled = false;
-            this.btnGenerarExtracto.FlatAppearance.BorderSize = 0;
-            this.btnGenerarExtracto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarExtracto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarExtracto.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarExtracto.Location = new System.Drawing.Point(144, 224);
-            this.btnGenerarExtracto.Name = "btnGenerarExtracto";
-            this.btnGenerarExtracto.Size = new System.Drawing.Size(128, 56);
-            this.btnGenerarExtracto.TabIndex = 55;
-            this.btnGenerarExtracto.Text = "Generar extracto";
-            this.btnGenerarExtracto.TextColor = System.Drawing.Color.White;
-            this.btnGenerarExtracto.UseVisualStyleBackColor = false;
-            this.btnGenerarExtracto.Click += new System.EventHandler(this.btnGenerarExtracto_Click);
             // 
             // label3
             // 
@@ -236,24 +215,20 @@
             // 
             // tabProductos
             // 
+            this.tabProductos.AutoScroll = true;
             this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.tabProductos.Controls.Add(this.lblProd);
             this.tabProductos.Controls.Add(this.lblEst);
             this.tabProductos.Controls.Add(this.lblDatosObligatorios);
             this.tabProductos.Controls.Add(this.lblNac);
             this.tabProductos.Controls.Add(this.lblExp);
-            this.tabProductos.Controls.Add(this.btnSolicitarProducto);
             this.tabProductos.Controls.Add(this.label12);
             this.tabProductos.Controls.Add(this.label11);
             this.tabProductos.Controls.Add(this.label10);
             this.tabProductos.Controls.Add(this.label9);
             this.tabProductos.Controls.Add(this.cmbProducto);
-            this.tabProductos.Controls.Add(this.txtCorreo);
             this.tabProductos.Controls.Add(this.label8);
             this.tabProductos.Controls.Add(this.label7);
-            this.tabProductos.Controls.Add(this.txtTelefono);
-            this.tabProductos.Controls.Add(this.txtEgresos);
-            this.tabProductos.Controls.Add(this.txtIngresos);
             this.tabProductos.Controls.Add(this.label6);
             this.tabProductos.Controls.Add(this.cmbEstudios);
             this.tabProductos.Controls.Add(this.cmbNacAnio);
@@ -264,11 +239,16 @@
             this.tabProductos.Controls.Add(this.cmbExpDia);
             this.tabProductos.Controls.Add(this.lblFechaNac);
             this.tabProductos.Controls.Add(this.cmbExpMes);
+            this.tabProductos.Controls.Add(this.label2);
+            this.tabProductos.Controls.Add(this.btnSolicitarProducto);
+            this.tabProductos.Controls.Add(this.txtCorreo);
+            this.tabProductos.Controls.Add(this.txtTelefono);
+            this.tabProductos.Controls.Add(this.txtEgresos);
+            this.tabProductos.Controls.Add(this.txtIngresos);
             this.tabProductos.Controls.Add(this.txtSApellido);
             this.tabProductos.Controls.Add(this.txtPApellido);
             this.tabProductos.Controls.Add(this.txtSNombre);
             this.tabProductos.Controls.Add(this.txtPNombre);
-            this.tabProductos.Controls.Add(this.label2);
             this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabProductos.Location = new System.Drawing.Point(4, 34);
             this.tabProductos.Name = "tabProductos";
@@ -352,28 +332,6 @@
             this.lblExp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblExp.Visible = false;
             // 
-            // btnSolicitarProducto
-            // 
-            this.btnSolicitarProducto.AutoSize = true;
-            this.btnSolicitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnSolicitarProducto.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSolicitarProducto.BorderRadius = 8;
-            this.btnSolicitarProducto.BorderSize = 0;
-            this.btnSolicitarProducto.Enabled = false;
-            this.btnSolicitarProducto.FlatAppearance.BorderSize = 0;
-            this.btnSolicitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitarProducto.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitarProducto.Location = new System.Drawing.Point(445, 712);
-            this.btnSolicitarProducto.Name = "btnSolicitarProducto";
-            this.btnSolicitarProducto.Size = new System.Drawing.Size(150, 49);
-            this.btnSolicitarProducto.TabIndex = 70;
-            this.btnSolicitarProducto.Text = "Solicitar";
-            this.btnSolicitarProducto.TextColor = System.Drawing.Color.White;
-            this.btnSolicitarProducto.UseVisualStyleBackColor = false;
-            this.btnSolicitarProducto.Click += new System.EventHandler(this.btnSolicitarProducto_Click);
-            // 
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
@@ -438,21 +396,6 @@
             this.cmbProducto.TabIndex = 65;
             this.cmbProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProducto_KeyPress);
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtCorreo.esClave = false;
-            this.txtCorreo.label = "Correo Electronico";
-            this.txtCorreo.limiteCaracteres = 50;
-            this.txtCorreo.Location = new System.Drawing.Point(528, 448);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtCorreo.placeholder = "ej: example@mail.com";
-            this.txtCorreo.Radius = 8;
-            this.txtCorreo.Size = new System.Drawing.Size(496, 56);
-            this.txtCorreo.TabIndex = 64;
-            this.txtCorreo.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
-            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.White;
@@ -478,51 +421,6 @@
             this.label7.Size = new System.Drawing.Size(16, 23);
             this.label7.TabIndex = 62;
             this.label7.Text = "$";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtTelefono.esClave = false;
-            this.txtTelefono.label = "Numero telefonico";
-            this.txtTelefono.limiteCaracteres = 10;
-            this.txtTelefono.Location = new System.Drawing.Point(16, 448);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtTelefono.placeholder = "Maximo 10 digitos";
-            this.txtTelefono.Radius = 8;
-            this.txtTelefono.Size = new System.Drawing.Size(496, 56);
-            this.txtTelefono.TabIndex = 61;
-            this.txtTelefono.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
-            // 
-            // txtEgresos
-            // 
-            this.txtEgresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtEgresos.esClave = false;
-            this.txtEgresos.label = "Egresos mensuales";
-            this.txtEgresos.limiteCaracteres = 15;
-            this.txtEgresos.Location = new System.Drawing.Point(536, 576);
-            this.txtEgresos.Name = "txtEgresos";
-            this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtEgresos.placeholder = " ";
-            this.txtEgresos.Radius = 8;
-            this.txtEgresos.Size = new System.Drawing.Size(496, 56);
-            this.txtEgresos.TabIndex = 60;
-            this.txtEgresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
-            // 
-            // txtIngresos
-            // 
-            this.txtIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtIngresos.esClave = false;
-            this.txtIngresos.label = "Ingresos mensuales";
-            this.txtIngresos.limiteCaracteres = 15;
-            this.txtIngresos.Location = new System.Drawing.Point(16, 576);
-            this.txtIngresos.Name = "txtIngresos";
-            this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtIngresos.placeholder = " ";
-            this.txtIngresos.Radius = 8;
-            this.txtIngresos.Size = new System.Drawing.Size(504, 56);
-            this.txtIngresos.TabIndex = 59;
-            this.txtIngresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
             // 
             // label6
             // 
@@ -737,66 +635,6 @@
             this.cmbExpMes.TabIndex = 49;
             this.cmbExpMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpMes_KeyPress);
             // 
-            // txtSApellido
-            // 
-            this.txtSApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtSApellido.esClave = false;
-            this.txtSApellido.label = "Segundo apellido";
-            this.txtSApellido.limiteCaracteres = 20;
-            this.txtSApellido.Location = new System.Drawing.Point(528, 195);
-            this.txtSApellido.Name = "txtSApellido";
-            this.txtSApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtSApellido.placeholder = "(opcional)";
-            this.txtSApellido.Radius = 8;
-            this.txtSApellido.Size = new System.Drawing.Size(496, 56);
-            this.txtSApellido.TabIndex = 6;
-            this.txtSApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtPApellido
-            // 
-            this.txtPApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtPApellido.esClave = false;
-            this.txtPApellido.label = "Primer apellido";
-            this.txtPApellido.limiteCaracteres = 20;
-            this.txtPApellido.Location = new System.Drawing.Point(16, 195);
-            this.txtPApellido.Name = "txtPApellido";
-            this.txtPApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtPApellido.placeholder = "  ";
-            this.txtPApellido.Radius = 8;
-            this.txtPApellido.Size = new System.Drawing.Size(496, 56);
-            this.txtPApellido.TabIndex = 5;
-            this.txtPApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtSNombre
-            // 
-            this.txtSNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtSNombre.esClave = false;
-            this.txtSNombre.label = "Segundo nombre";
-            this.txtSNombre.limiteCaracteres = 20;
-            this.txtSNombre.Location = new System.Drawing.Point(528, 123);
-            this.txtSNombre.Name = "txtSNombre";
-            this.txtSNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtSNombre.placeholder = "(opcional)";
-            this.txtSNombre.Radius = 8;
-            this.txtSNombre.Size = new System.Drawing.Size(496, 56);
-            this.txtSNombre.TabIndex = 4;
-            this.txtSNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtPNombre
-            // 
-            this.txtPNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtPNombre.esClave = false;
-            this.txtPNombre.label = "Primer nombre";
-            this.txtPNombre.limiteCaracteres = 20;
-            this.txtPNombre.Location = new System.Drawing.Point(16, 123);
-            this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtPNombre.placeholder = " ";
-            this.txtPNombre.Radius = 8;
-            this.txtPNombre.Size = new System.Drawing.Size(496, 56);
-            this.txtPNombre.TabIndex = 3;
-            this.txtPNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
@@ -858,6 +696,169 @@
             this.btnVolver.TextColor = System.Drawing.Color.White;
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnGenerarExtracto
+            // 
+            this.btnGenerarExtracto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnGenerarExtracto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnGenerarExtracto.BorderColor = System.Drawing.Color.Empty;
+            this.btnGenerarExtracto.BorderRadius = 8;
+            this.btnGenerarExtracto.BorderSize = 2;
+            this.btnGenerarExtracto.Enabled = false;
+            this.btnGenerarExtracto.FlatAppearance.BorderSize = 0;
+            this.btnGenerarExtracto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarExtracto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarExtracto.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarExtracto.Location = new System.Drawing.Point(144, 224);
+            this.btnGenerarExtracto.Name = "btnGenerarExtracto";
+            this.btnGenerarExtracto.Size = new System.Drawing.Size(128, 56);
+            this.btnGenerarExtracto.TabIndex = 55;
+            this.btnGenerarExtracto.Text = "Generar extracto";
+            this.btnGenerarExtracto.TextColor = System.Drawing.Color.White;
+            this.btnGenerarExtracto.UseVisualStyleBackColor = false;
+            this.btnGenerarExtracto.Click += new System.EventHandler(this.btnGenerarExtracto_Click);
+            // 
+            // btnSolicitarProducto
+            // 
+            this.btnSolicitarProducto.AutoSize = true;
+            this.btnSolicitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnSolicitarProducto.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSolicitarProducto.BorderRadius = 8;
+            this.btnSolicitarProducto.BorderSize = 0;
+            this.btnSolicitarProducto.Enabled = false;
+            this.btnSolicitarProducto.FlatAppearance.BorderSize = 0;
+            this.btnSolicitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitarProducto.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitarProducto.Location = new System.Drawing.Point(445, 712);
+            this.btnSolicitarProducto.Name = "btnSolicitarProducto";
+            this.btnSolicitarProducto.Size = new System.Drawing.Size(150, 49);
+            this.btnSolicitarProducto.TabIndex = 70;
+            this.btnSolicitarProducto.Text = "Solicitar";
+            this.btnSolicitarProducto.TextColor = System.Drawing.Color.White;
+            this.btnSolicitarProducto.UseVisualStyleBackColor = false;
+            this.btnSolicitarProducto.Click += new System.EventHandler(this.btnSolicitarProducto_Click);
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtCorreo.esClave = false;
+            this.txtCorreo.label = "Correo Electronico";
+            this.txtCorreo.limiteCaracteres = 50;
+            this.txtCorreo.Location = new System.Drawing.Point(528, 448);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtCorreo.placeholder = "ej: example@mail.com";
+            this.txtCorreo.Radius = 8;
+            this.txtCorreo.Size = new System.Drawing.Size(496, 56);
+            this.txtCorreo.TabIndex = 64;
+            this.txtCorreo.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtTelefono.esClave = false;
+            this.txtTelefono.label = "Numero telefonico";
+            this.txtTelefono.limiteCaracteres = 10;
+            this.txtTelefono.Location = new System.Drawing.Point(16, 448);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtTelefono.placeholder = "Maximo 10 digitos";
+            this.txtTelefono.Radius = 8;
+            this.txtTelefono.Size = new System.Drawing.Size(496, 56);
+            this.txtTelefono.TabIndex = 61;
+            this.txtTelefono.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtEgresos
+            // 
+            this.txtEgresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtEgresos.esClave = false;
+            this.txtEgresos.label = "Egresos mensuales";
+            this.txtEgresos.limiteCaracteres = 15;
+            this.txtEgresos.Location = new System.Drawing.Point(536, 576);
+            this.txtEgresos.Name = "txtEgresos";
+            this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtEgresos.placeholder = " ";
+            this.txtEgresos.Radius = 8;
+            this.txtEgresos.Size = new System.Drawing.Size(496, 56);
+            this.txtEgresos.TabIndex = 60;
+            this.txtEgresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtIngresos
+            // 
+            this.txtIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtIngresos.esClave = false;
+            this.txtIngresos.label = "Ingresos mensuales";
+            this.txtIngresos.limiteCaracteres = 15;
+            this.txtIngresos.Location = new System.Drawing.Point(16, 576);
+            this.txtIngresos.Name = "txtIngresos";
+            this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtIngresos.placeholder = " ";
+            this.txtIngresos.Radius = 8;
+            this.txtIngresos.Size = new System.Drawing.Size(504, 56);
+            this.txtIngresos.TabIndex = 59;
+            this.txtIngresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtSApellido
+            // 
+            this.txtSApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtSApellido.esClave = false;
+            this.txtSApellido.label = "Segundo apellido";
+            this.txtSApellido.limiteCaracteres = 20;
+            this.txtSApellido.Location = new System.Drawing.Point(528, 195);
+            this.txtSApellido.Name = "txtSApellido";
+            this.txtSApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtSApellido.placeholder = "(opcional)";
+            this.txtSApellido.Radius = 8;
+            this.txtSApellido.Size = new System.Drawing.Size(496, 56);
+            this.txtSApellido.TabIndex = 6;
+            this.txtSApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtPApellido
+            // 
+            this.txtPApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtPApellido.esClave = false;
+            this.txtPApellido.label = "Primer apellido";
+            this.txtPApellido.limiteCaracteres = 20;
+            this.txtPApellido.Location = new System.Drawing.Point(16, 195);
+            this.txtPApellido.Name = "txtPApellido";
+            this.txtPApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtPApellido.placeholder = "  ";
+            this.txtPApellido.Radius = 8;
+            this.txtPApellido.Size = new System.Drawing.Size(496, 56);
+            this.txtPApellido.TabIndex = 5;
+            this.txtPApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtSNombre
+            // 
+            this.txtSNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtSNombre.esClave = false;
+            this.txtSNombre.label = "Segundo nombre";
+            this.txtSNombre.limiteCaracteres = 20;
+            this.txtSNombre.Location = new System.Drawing.Point(528, 123);
+            this.txtSNombre.Name = "txtSNombre";
+            this.txtSNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtSNombre.placeholder = "(opcional)";
+            this.txtSNombre.Radius = 8;
+            this.txtSNombre.Size = new System.Drawing.Size(496, 56);
+            this.txtSNombre.TabIndex = 4;
+            this.txtSNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            // 
+            // txtPNombre
+            // 
+            this.txtPNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtPNombre.esClave = false;
+            this.txtPNombre.label = "Primer nombre";
+            this.txtPNombre.limiteCaracteres = 20;
+            this.txtPNombre.Location = new System.Drawing.Point(16, 123);
+            this.txtPNombre.Name = "txtPNombre";
+            this.txtPNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtPNombre.placeholder = " ";
+            this.txtPNombre.Radius = 8;
+            this.txtPNombre.Size = new System.Drawing.Size(496, 56);
+            this.txtPNombre.TabIndex = 3;
+            this.txtPNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
             // 
             // formSolicitudes
             // 
