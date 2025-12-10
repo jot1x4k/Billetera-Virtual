@@ -31,9 +31,10 @@ namespace testForms
                     AutoConfigurarControles(frm);
                 }
             };
-            //Application.Run(new formLogin()); //flujo normal
 
-            Application.Run(new formRegistro());
+            Application.Run(new formLogin()); //flujo normal
+
+            //Application.Run(new formHomeCliente(123456789012345));
 
             //Application.Run(new formSolicitudes(123456789012345));
 

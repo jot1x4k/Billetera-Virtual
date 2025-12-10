@@ -12,8 +12,8 @@ namespace testForms.pkgBaseDatos
         public Datos()
         {
             var cfg = AppConfig.Load();
-            connectionString = "Server=localhost;Port=3306;Database=testforms;Uid=root;Pwd=admin";
-            //connectionString = $"Server={cfg.Server};Port={cfg.Port};Database={cfg.Database};Uid={cfg.User};Pwd={cfg.Password};";
+            //connectionString = "Server=localhost;Port=3306;Database=testforms;Uid=root;Pwd=admin";
+            connectionString = $"Server={cfg.Server};Port={cfg.Port};Database={cfg.Database};Uid={cfg.User};Pwd={cfg.Password};";
         }
 
         public int fnc_dml(string prmConsulta)
@@ -262,6 +262,7 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
+                    MessageBox.Show("Error BD: " + ex);
                     return null;
                 }
             }

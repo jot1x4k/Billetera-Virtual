@@ -77,7 +77,7 @@
             this.lblErrorMonto.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMonto.ForeColor = System.Drawing.Color.Brown;
-            this.lblErrorMonto.Location = new System.Drawing.Point(432, 536);
+            this.lblErrorMonto.Location = new System.Drawing.Point(408, 504);
             this.lblErrorMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblErrorMonto.Name = "lblErrorMonto";
             this.lblErrorMonto.Size = new System.Drawing.Size(166, 17);
@@ -91,7 +91,7 @@
             this.lblErrorCuenta.AutoSize = true;
             this.lblErrorCuenta.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblErrorCuenta.ForeColor = System.Drawing.Color.Brown;
-            this.lblErrorCuenta.Location = new System.Drawing.Point(432, 456);
+            this.lblErrorCuenta.Location = new System.Drawing.Point(424, 424);
             this.lblErrorCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblErrorCuenta.Name = "lblErrorCuenta";
             this.lblErrorCuenta.Size = new System.Drawing.Size(247, 17);
@@ -106,7 +106,7 @@
             this.txtMonto.esClave = false;
             this.txtMonto.label = "Monto";
             this.txtMonto.limiteCaracteres = 8;
-            this.txtMonto.Location = new System.Drawing.Point(424, 480);
+            this.txtMonto.Location = new System.Drawing.Point(398, 448);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -123,7 +123,7 @@
             this.txtNumeroCuenta.esClave = false;
             this.txtNumeroCuenta.label = "Cuenta destino";
             this.txtNumeroCuenta.limiteCaracteres = 8;
-            this.txtNumeroCuenta.Location = new System.Drawing.Point(424, 400);
+            this.txtNumeroCuenta.Location = new System.Drawing.Point(398, 368);
             this.txtNumeroCuenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroCuenta.Name = "txtNumeroCuenta";
             this.txtNumeroCuenta.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -139,7 +139,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 496);
+            this.label2.Location = new System.Drawing.Point(368, 464);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 26);
@@ -160,7 +160,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(528, 568);
+            this.btnEnviar.Location = new System.Drawing.Point(502, 536);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(96, 56);
             this.btnEnviar.TabIndex = 44;
@@ -230,7 +230,7 @@
             this.lblMismaCuenta.AutoSize = true;
             this.lblMismaCuenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMismaCuenta.ForeColor = System.Drawing.Color.Brown;
-            this.lblMismaCuenta.Location = new System.Drawing.Point(432, 456);
+            this.lblMismaCuenta.Location = new System.Drawing.Point(403, 424);
             this.lblMismaCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMismaCuenta.Name = "lblMismaCuenta";
             this.lblMismaCuenta.Size = new System.Drawing.Size(294, 17);
