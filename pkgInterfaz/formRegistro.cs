@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx.Cursor;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -139,12 +140,13 @@ namespace testForms
             {
                 camposValidos = false;
                 lblFechaIncompleta.Show();
-                lblFechaIncompleta.Text = "La fecha no es valida (Ej: dia no existe en el mes).";
+                lblFechaIncompleta.Text = "La fecha no es valida (dia no existe en el mes).";
             }
-            else
+            if (!fechaCompleta)
             {
+                camposValidos = false;
                 lblFechaIncompleta.Show();
-                lblFechaIncompleta.Text = "Fecha incompleta";
+                lblFechaIncompleta.Text = "La fecha esta incompleta";
             }
 
             if (camposValidos && fechaCompleta && fechaValida)
@@ -166,7 +168,7 @@ namespace testForms
             if(fechaCompleta && !fechaValida)
             {
                 lblFechaIncompleta.Show();
-                lblFechaIncompleta.Text = "La fecha no es valida (Ej: dia no existe en el mes, no es mayor de edad).";
+                lblFechaIncompleta.Text = "La fecha no es valida (Debes ser mayor de edad).";
             }
         }
 

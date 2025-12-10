@@ -124,7 +124,10 @@ namespace testForms.pkgInterfaz
             if (periodo.Month >= DateTime.Now.Month && periodo.Year >= DateTime.Now.Year
                 || periodo <= fechaCreacion)
             {
-                MessageBox.Show($"No existen extractos disponibles para el periodo de {cmbMes.Text} de {cmbAnio.Text}.");
+                MessageBox.Show($"No existen extractos disponibles para el periodo de {cmbMes.Text} de {cmbAnio.Text}.",
+                                "Informacion",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
                 return;
             }
 
@@ -309,12 +312,12 @@ namespace testForms.pkgInterfaz
             if (fechaExpCompleta && !fechaExpValida)
             {
                 lblExp.Show();
-                lblExp.Text = "La fecha de expedicion no es valida (Ej: dia no existe en el mes).";
+                lblExp.Text = "La fecha de expedicion no es valida (dia no existe en el mes).";
             }
             if (fechaNacCompleta && !fechaNacValida)
             {
                 lblNac.Show();
-                lblNac.Text = "La fecha de nacimiento no es valida (Ej:, dia no existe en el mes, no es mayor de edad).";
+                lblNac.Text = "La fecha de nacimiento no es valida (Debes ser mayor de edad).";
             }
         }
 

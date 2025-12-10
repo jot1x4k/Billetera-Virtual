@@ -91,7 +91,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1310, 897);
+            this.tabControl1.Size = new System.Drawing.Size(1327, 897);
             this.tabControl1.TabIndex = 0;
             // 
             // tabExtracto
@@ -112,7 +112,7 @@
             this.tabExtracto.Location = new System.Drawing.Point(4, 34);
             this.tabExtracto.Margin = new System.Windows.Forms.Padding(0);
             this.tabExtracto.Name = "tabExtracto";
-            this.tabExtracto.Size = new System.Drawing.Size(1302, 859);
+            this.tabExtracto.Size = new System.Drawing.Size(1336, 859);
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
@@ -251,7 +251,7 @@
             this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabProductos.Location = new System.Drawing.Point(4, 34);
             this.tabProductos.Name = "tabProductos";
-            this.tabProductos.Size = new System.Drawing.Size(1302, 859);
+            this.tabProductos.Size = new System.Drawing.Size(1319, 859);
             this.tabProductos.TabIndex = 1;
             this.tabProductos.Text = "Productos financieros";
             this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
@@ -294,7 +294,7 @@
             this.lblDatosObligatorios.CausesValidation = false;
             this.lblDatosObligatorios.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblDatosObligatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDatosObligatorios.Location = new System.Drawing.Point(349, 768);
+            this.lblDatosObligatorios.Location = new System.Drawing.Point(357, 768);
             this.lblDatosObligatorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosObligatorios.Name = "lblDatosObligatorios";
             this.lblDatosObligatorios.Size = new System.Drawing.Size(326, 17);
@@ -461,8 +461,10 @@
             // 
             // cmbNacAnio
             // 
+            this.cmbNacAnio.DropDownHeight = 150;
             this.cmbNacAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNacAnio.FormattingEnabled = true;
+            this.cmbNacAnio.IntegralHeight = false;
             this.cmbNacAnio.Location = new System.Drawing.Point(600, 315);
             this.cmbNacAnio.Name = "cmbNacAnio";
             this.cmbNacAnio.Size = new System.Drawing.Size(120, 33);
@@ -471,8 +473,10 @@
             // 
             // cmbNacDia
             // 
+            this.cmbNacDia.DropDownHeight = 200;
             this.cmbNacDia.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNacDia.FormattingEnabled = true;
+            this.cmbNacDia.IntegralHeight = false;
             this.cmbNacDia.Items.AddRange(new object[] {
             "1",
             "2",
@@ -548,8 +552,10 @@
             // 
             // cmbExpAnio
             // 
+            this.cmbExpAnio.DropDownHeight = 150;
             this.cmbExpAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExpAnio.FormattingEnabled = true;
+            this.cmbExpAnio.IntegralHeight = false;
             this.cmbExpAnio.Location = new System.Drawing.Point(600, 272);
             this.cmbExpAnio.Name = "cmbExpAnio";
             this.cmbExpAnio.Size = new System.Drawing.Size(120, 33);
@@ -558,8 +564,10 @@
             // 
             // cmbExpDia
             // 
+            this.cmbExpDia.DropDownHeight = 200;
             this.cmbExpDia.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExpDia.FormattingEnabled = true;
+            this.cmbExpDia.IntegralHeight = false;
             this.cmbExpDia.Items.AddRange(new object[] {
             "1",
             "2",
@@ -659,7 +667,7 @@
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1310, 120);
+            this.pDegradado3.Size = new System.Drawing.Size(1327, 120);
             this.pDegradado3.TabIndex = 57;
             // 
             // label4
@@ -687,7 +695,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1174, 8);
+            this.btnVolver.Location = new System.Drawing.Point(1191, 8);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(128, 48);
             this.btnVolver.TabIndex = 53;
@@ -865,7 +873,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1327, 897);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
