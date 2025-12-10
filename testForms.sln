@@ -5,7 +5,9 @@ VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testForms", "testForms.csproj", "{2896B83A-D651-410F-BBFE-E5521159FC9B}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BilleteraVirtualSP2.setup.release2", "..\BilleteraVirtualSP2.setup.release2\BilleteraVirtualSP2.setup.release2.vdproj", "{15712B61-B14F-2C53-4EAF-1B4D0BC625E9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BilleteraVirtual.setup", "..\BilleteraVirtualSP2.setup.release2\BilleteraVirtualSP2.setup.release2.vdproj", "{15712B61-B14F-2C53-4EAF-1B4D0BC625E9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BilleteraVirtual", "..\BilleteraVirtual\BilleteraVirtual.vdproj", "{E0054DE7-269B-CBBB-0ACC-0D2BBB1AC96B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,8 @@ Global
 		{2896B83A-D651-410F-BBFE-E5521159FC9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{15712B61-B14F-2C53-4EAF-1B4D0BC625E9}.Debug|Any CPU.ActiveCfg = Debug
 		{15712B61-B14F-2C53-4EAF-1B4D0BC625E9}.Release|Any CPU.ActiveCfg = Release
+		{E0054DE7-269B-CBBB-0ACC-0D2BBB1AC96B}.Debug|Any CPU.ActiveCfg = Debug
+		{E0054DE7-269B-CBBB-0ACC-0D2BBB1AC96B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
