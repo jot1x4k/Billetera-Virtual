@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabExtracto = new System.Windows.Forms.TabPage();
+            this.btnGenerarExtracto = new testForms.pkgInterfaz.pBoton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblErrorAnio = new System.Windows.Forms.Label();
             this.lblErrorMes = new System.Windows.Forms.Label();
@@ -38,10 +39,15 @@
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblEntrar = new System.Windows.Forms.Label();
             this.tabProductos = new System.Windows.Forms.TabPage();
+            this.lblTiempo = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbTiempo = new System.Windows.Forms.ComboBox();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbActividad = new System.Windows.Forms.ComboBox();
             this.lblProd = new System.Windows.Forms.Label();
             this.lblEst = new System.Windows.Forms.Label();
             this.lblDatosObligatorios = new System.Windows.Forms.Label();
-            this.lblNac = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -52,28 +58,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbEstudios = new System.Windows.Forms.ComboBox();
-            this.cmbNacAnio = new System.Windows.Forms.ComboBox();
-            this.cmbNacDia = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbNacMes = new System.Windows.Forms.ComboBox();
             this.cmbExpAnio = new System.Windows.Forms.ComboBox();
             this.cmbExpDia = new System.Windows.Forms.ComboBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.cmbExpMes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnVolver = new testForms.pkgInterfaz.pBoton();
-            this.btnGenerarExtracto = new testForms.pkgInterfaz.pBoton();
             this.btnSolicitarProducto = new testForms.pkgInterfaz.pBoton();
             this.txtCorreo = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtTelefono = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtEgresos = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtIngresos = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtSApellido = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtPApellido = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtSNombre = new testForms.pkgInterfaz.pLineaTextBox();
-            this.txtPNombre = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtId = new testForms.pkgInterfaz.pLineaTextBox();
+            this.txtNombre = new testForms.pkgInterfaz.pLineaTextBox();
+            this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.tabControl1.SuspendLayout();
             this.tabExtracto.SuspendLayout();
             this.tabProductos.SuspendLayout();
@@ -91,12 +90,11 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1327, 897);
+            this.tabControl1.Size = new System.Drawing.Size(1327, 960);
             this.tabControl1.TabIndex = 0;
             // 
             // tabExtracto
             // 
-            this.tabExtracto.AutoScroll = true;
             this.tabExtracto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.tabExtracto.Controls.Add(this.btnGenerarExtracto);
             this.tabExtracto.Controls.Add(this.label3);
@@ -112,10 +110,31 @@
             this.tabExtracto.Location = new System.Drawing.Point(4, 34);
             this.tabExtracto.Margin = new System.Windows.Forms.Padding(0);
             this.tabExtracto.Name = "tabExtracto";
-            this.tabExtracto.Size = new System.Drawing.Size(1336, 859);
+            this.tabExtracto.Size = new System.Drawing.Size(1319, 922);
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
+            // 
+            // btnGenerarExtracto
+            // 
+            this.btnGenerarExtracto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnGenerarExtracto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnGenerarExtracto.BorderColor = System.Drawing.Color.Empty;
+            this.btnGenerarExtracto.BorderRadius = 8;
+            this.btnGenerarExtracto.BorderSize = 2;
+            this.btnGenerarExtracto.Enabled = false;
+            this.btnGenerarExtracto.FlatAppearance.BorderSize = 0;
+            this.btnGenerarExtracto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarExtracto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarExtracto.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarExtracto.Location = new System.Drawing.Point(144, 224);
+            this.btnGenerarExtracto.Name = "btnGenerarExtracto";
+            this.btnGenerarExtracto.Size = new System.Drawing.Size(128, 56);
+            this.btnGenerarExtracto.TabIndex = 55;
+            this.btnGenerarExtracto.Text = "Generar extracto";
+            this.btnGenerarExtracto.TextColor = System.Drawing.Color.White;
+            this.btnGenerarExtracto.UseVisualStyleBackColor = false;
+            this.btnGenerarExtracto.Click += new System.EventHandler(this.btnGenerarExtracto_Click);
             // 
             // label3
             // 
@@ -214,12 +233,16 @@
             // 
             // tabProductos
             // 
-            this.tabProductos.AutoScroll = true;
             this.tabProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.tabProductos.Controls.Add(this.lblTiempo);
+            this.tabProductos.Controls.Add(this.label14);
+            this.tabProductos.Controls.Add(this.cmbTiempo);
+            this.tabProductos.Controls.Add(this.lblActividad);
+            this.tabProductos.Controls.Add(this.label13);
+            this.tabProductos.Controls.Add(this.cmbActividad);
             this.tabProductos.Controls.Add(this.lblProd);
             this.tabProductos.Controls.Add(this.lblEst);
             this.tabProductos.Controls.Add(this.lblDatosObligatorios);
-            this.tabProductos.Controls.Add(this.lblNac);
             this.tabProductos.Controls.Add(this.lblExp);
             this.tabProductos.Controls.Add(this.label12);
             this.tabProductos.Controls.Add(this.label11);
@@ -230,10 +253,6 @@
             this.tabProductos.Controls.Add(this.label7);
             this.tabProductos.Controls.Add(this.label6);
             this.tabProductos.Controls.Add(this.cmbEstudios);
-            this.tabProductos.Controls.Add(this.cmbNacAnio);
-            this.tabProductos.Controls.Add(this.cmbNacDia);
-            this.tabProductos.Controls.Add(this.label5);
-            this.tabProductos.Controls.Add(this.cmbNacMes);
             this.tabProductos.Controls.Add(this.cmbExpAnio);
             this.tabProductos.Controls.Add(this.cmbExpDia);
             this.tabProductos.Controls.Add(this.lblFechaNac);
@@ -244,18 +263,117 @@
             this.tabProductos.Controls.Add(this.txtTelefono);
             this.tabProductos.Controls.Add(this.txtEgresos);
             this.tabProductos.Controls.Add(this.txtIngresos);
-            this.tabProductos.Controls.Add(this.txtSApellido);
-            this.tabProductos.Controls.Add(this.txtPApellido);
-            this.tabProductos.Controls.Add(this.txtSNombre);
-            this.tabProductos.Controls.Add(this.txtPNombre);
+            this.tabProductos.Controls.Add(this.txtId);
+            this.tabProductos.Controls.Add(this.txtNombre);
             this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabProductos.Location = new System.Drawing.Point(4, 34);
             this.tabProductos.Name = "tabProductos";
-            this.tabProductos.Size = new System.Drawing.Size(1319, 859);
+            this.tabProductos.Size = new System.Drawing.Size(1319, 922);
             this.tabProductos.TabIndex = 1;
             this.tabProductos.Text = "Productos financieros";
             this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
             this.tabProductos.Enter += new System.EventHandler(this.tabProductos_Enter);
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.CausesValidation = false;
+            this.lblTiempo.Font = new System.Drawing.Font("Codec Pro", 10F);
+            this.lblTiempo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTiempo.Location = new System.Drawing.Point(536, 712);
+            this.lblTiempo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(91, 17);
+            this.lblTiempo.TabIndex = 82;
+            this.lblTiempo.Text = "error tiempo";
+            this.lblTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTiempo.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.CausesValidation = false;
+            this.label14.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(16, 680);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(504, 23);
+            this.label14.TabIndex = 81;
+            this.label14.Text = "Tiempo de la actividad";
+            // 
+            // cmbTiempo
+            // 
+            this.cmbTiempo.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTiempo.FormattingEnabled = true;
+            this.cmbTiempo.Items.AddRange(new object[] {
+            "Menos de 6 meses",
+            "De 6 a 12 meses",
+            "De 1 a 2 años",
+            "De 2 a 3 años",
+            "De 3 a 5 años",
+            "Más de 5 años"});
+            this.cmbTiempo.Location = new System.Drawing.Point(16, 704);
+            this.cmbTiempo.Name = "cmbTiempo";
+            this.cmbTiempo.Size = new System.Drawing.Size(504, 33);
+            this.cmbTiempo.TabIndex = 80;
+            this.cmbTiempo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTiempo_KeyPress);
+            // 
+            // lblActividad
+            // 
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.CausesValidation = false;
+            this.lblActividad.Font = new System.Drawing.Font("Codec Pro", 10F);
+            this.lblActividad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblActividad.Location = new System.Drawing.Point(536, 650);
+            this.lblActividad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(66, 17);
+            this.lblActividad.TabIndex = 79;
+            this.lblActividad.Text = "error act";
+            this.lblActividad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblActividad.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.CausesValidation = false;
+            this.label13.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(16, 618);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(504, 23);
+            this.label13.TabIndex = 78;
+            this.label13.Text = "Actividad economica";
+            // 
+            // cmbActividad
+            // 
+            this.cmbActividad.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbActividad.FormattingEnabled = true;
+            this.cmbActividad.Items.AddRange(new object[] {
+            "Empleado",
+            "Independiente",
+            "Comerciante",
+            "Profesional independiente",
+            "Empresario",
+            "Pensionado",
+            "Estudiante",
+            "Hogar / Ama de casa",
+            "Desempleado",
+            "Rentista de capital",
+            "Agricultor / Ganadero",
+            "Transportador",
+            "Servidor publico",
+            "Empleado del sector privado",
+            "Jubilado (entidad privada)",
+            "Obrero / Tecnico",
+            "Freelancer",
+            "Operario",
+            "Constructor / Maestro de obra"});
+            this.cmbActividad.Location = new System.Drawing.Point(16, 642);
+            this.cmbActividad.Name = "cmbActividad";
+            this.cmbActividad.Size = new System.Drawing.Size(504, 33);
+            this.cmbActividad.TabIndex = 77;
+            this.cmbActividad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbActividad_KeyPress);
             // 
             // lblProd
             // 
@@ -263,7 +381,7 @@
             this.lblProd.CausesValidation = false;
             this.lblProd.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblProd.Location = new System.Drawing.Point(483, 680);
+            this.lblProd.Location = new System.Drawing.Point(536, 586);
             this.lblProd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProd.Name = "lblProd";
             this.lblProd.Size = new System.Drawing.Size(75, 17);
@@ -278,7 +396,7 @@
             this.lblEst.CausesValidation = false;
             this.lblEst.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblEst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEst.Location = new System.Drawing.Point(728, 368);
+            this.lblEst.Location = new System.Drawing.Point(536, 288);
             this.lblEst.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEst.Name = "lblEst";
             this.lblEst.Size = new System.Drawing.Size(64, 17);
@@ -294,27 +412,12 @@
             this.lblDatosObligatorios.CausesValidation = false;
             this.lblDatosObligatorios.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblDatosObligatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDatosObligatorios.Location = new System.Drawing.Point(357, 768);
+            this.lblDatosObligatorios.Location = new System.Drawing.Point(349, 802);
             this.lblDatosObligatorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosObligatorios.Name = "lblDatosObligatorios";
             this.lblDatosObligatorios.Size = new System.Drawing.Size(326, 17);
             this.lblDatosObligatorios.TabIndex = 73;
             this.lblDatosObligatorios.Text = "Ingrese los campos obligatorios para continuar";
-            // 
-            // lblNac
-            // 
-            this.lblNac.AutoSize = true;
-            this.lblNac.CausesValidation = false;
-            this.lblNac.Font = new System.Drawing.Font("Codec Pro", 10F);
-            this.lblNac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNac.Location = new System.Drawing.Point(728, 320);
-            this.lblNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNac.Name = "lblNac";
-            this.lblNac.Size = new System.Drawing.Size(69, 17);
-            this.lblNac.TabIndex = 72;
-            this.lblNac.Text = "error nac";
-            this.lblNac.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNac.Visible = false;
             // 
             // lblExp
             // 
@@ -322,7 +425,7 @@
             this.lblExp.CausesValidation = false;
             this.lblExp.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblExp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblExp.Location = new System.Drawing.Point(728, 280);
+            this.lblExp.Location = new System.Drawing.Point(536, 224);
             this.lblExp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExp.Name = "lblExp";
             this.lblExp.Size = new System.Drawing.Size(67, 17);
@@ -336,7 +439,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(392, 536);
+            this.label12.Location = new System.Drawing.Point(392, 442);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(304, 36);
@@ -348,7 +451,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(408, 400);
+            this.label11.Location = new System.Drawing.Point(408, 328);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(264, 36);
@@ -372,10 +475,10 @@
             this.label9.CausesValidation = false;
             this.label9.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(24, 648);
+            this.label9.Location = new System.Drawing.Point(16, 554);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 23);
+            this.label9.Size = new System.Drawing.Size(504, 23);
             this.label9.TabIndex = 66;
             this.label9.Text = "Producto de interes";
             // 
@@ -389,9 +492,9 @@
             "Cuenta de negocio",
             "Seguro de los Andes",
             "Tarjeta de credito"});
-            this.cmbProducto.Location = new System.Drawing.Point(200, 640);
+            this.cmbProducto.Location = new System.Drawing.Point(16, 578);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(834, 33);
+            this.cmbProducto.Size = new System.Drawing.Size(504, 33);
             this.cmbProducto.TabIndex = 65;
             this.cmbProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProducto_KeyPress);
             // 
@@ -401,7 +504,7 @@
             this.label8.CausesValidation = false;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(536, 592);
+            this.label8.Location = new System.Drawing.Point(536, 506);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 23);
@@ -414,7 +517,7 @@
             this.label7.CausesValidation = false;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(16, 592);
+            this.label7.Location = new System.Drawing.Point(16, 576);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 23);
@@ -426,10 +529,10 @@
             this.label6.CausesValidation = false;
             this.label6.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(160, 368);
+            this.label6.Location = new System.Drawing.Point(16, 256);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 23);
+            this.label6.Size = new System.Drawing.Size(496, 23);
             this.label6.TabIndex = 58;
             this.label6.Text = "Nivel de estudios";
             // 
@@ -453,102 +556,11 @@
             "Especializacion",
             "Maestria",
             "Doctorado"});
-            this.cmbEstudios.Location = new System.Drawing.Point(328, 360);
+            this.cmbEstudios.Location = new System.Drawing.Point(16, 280);
             this.cmbEstudios.Name = "cmbEstudios";
-            this.cmbEstudios.Size = new System.Drawing.Size(392, 33);
+            this.cmbEstudios.Size = new System.Drawing.Size(496, 33);
             this.cmbEstudios.TabIndex = 57;
             this.cmbEstudios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEstudios_KeyPress);
-            // 
-            // cmbNacAnio
-            // 
-            this.cmbNacAnio.DropDownHeight = 150;
-            this.cmbNacAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNacAnio.FormattingEnabled = true;
-            this.cmbNacAnio.IntegralHeight = false;
-            this.cmbNacAnio.Location = new System.Drawing.Point(600, 315);
-            this.cmbNacAnio.Name = "cmbNacAnio";
-            this.cmbNacAnio.Size = new System.Drawing.Size(120, 33);
-            this.cmbNacAnio.TabIndex = 56;
-            this.cmbNacAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacAnio_KeyPress);
-            // 
-            // cmbNacDia
-            // 
-            this.cmbNacDia.DropDownHeight = 200;
-            this.cmbNacDia.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNacDia.FormattingEnabled = true;
-            this.cmbNacDia.IntegralHeight = false;
-            this.cmbNacDia.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbNacDia.Location = new System.Drawing.Point(328, 315);
-            this.cmbNacDia.Name = "cmbNacDia";
-            this.cmbNacDia.Size = new System.Drawing.Size(120, 33);
-            this.cmbNacDia.TabIndex = 55;
-            this.cmbNacDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacDia_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.CausesValidation = false;
-            this.label5.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(130, 321);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 23);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Fecha de nacimiento";
-            // 
-            // cmbNacMes
-            // 
-            this.cmbNacMes.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNacMes.FormattingEnabled = true;
-            this.cmbNacMes.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbNacMes.Location = new System.Drawing.Point(464, 315);
-            this.cmbNacMes.Name = "cmbNacMes";
-            this.cmbNacMes.Size = new System.Drawing.Size(120, 33);
-            this.cmbNacMes.TabIndex = 53;
-            this.cmbNacMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbNacMes_KeyPress);
             // 
             // cmbExpAnio
             // 
@@ -556,9 +568,9 @@
             this.cmbExpAnio.Font = new System.Drawing.Font("Codec Pro Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExpAnio.FormattingEnabled = true;
             this.cmbExpAnio.IntegralHeight = false;
-            this.cmbExpAnio.Location = new System.Drawing.Point(600, 272);
+            this.cmbExpAnio.Location = new System.Drawing.Point(360, 216);
             this.cmbExpAnio.Name = "cmbExpAnio";
-            this.cmbExpAnio.Size = new System.Drawing.Size(120, 33);
+            this.cmbExpAnio.Size = new System.Drawing.Size(152, 33);
             this.cmbExpAnio.TabIndex = 52;
             this.cmbExpAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpAnio_KeyPress);
             // 
@@ -600,9 +612,9 @@
             "29",
             "30",
             "31"});
-            this.cmbExpDia.Location = new System.Drawing.Point(328, 272);
+            this.cmbExpDia.Location = new System.Drawing.Point(16, 216);
             this.cmbExpDia.Name = "cmbExpDia";
-            this.cmbExpDia.Size = new System.Drawing.Size(120, 33);
+            this.cmbExpDia.Size = new System.Drawing.Size(152, 33);
             this.cmbExpDia.TabIndex = 51;
             this.cmbExpDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpDia_KeyPress);
             // 
@@ -611,12 +623,12 @@
             this.lblFechaNac.CausesValidation = false;
             this.lblFechaNac.Font = new System.Drawing.Font("Codec Pro Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaNac.Location = new System.Drawing.Point(18, 280);
+            this.lblFechaNac.Location = new System.Drawing.Point(16, 184);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(286, 23);
+            this.lblFechaNac.Size = new System.Drawing.Size(496, 23);
             this.lblFechaNac.TabIndex = 50;
-            this.lblFechaNac.Text = "Fecha de expedicion del documento";
+            this.lblFechaNac.Text = "Fecha de expedicion del documento de identidad";
             this.lblFechaNac.Click += new System.EventHandler(this.lblFechaNac_Click);
             // 
             // cmbExpMes
@@ -636,9 +648,9 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbExpMes.Location = new System.Drawing.Point(464, 272);
+            this.cmbExpMes.Location = new System.Drawing.Point(192, 216);
             this.cmbExpMes.Name = "cmbExpMes";
-            this.cmbExpMes.Size = new System.Drawing.Size(120, 33);
+            this.cmbExpMes.Size = new System.Drawing.Size(152, 33);
             this.cmbExpMes.TabIndex = 49;
             this.cmbExpMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExpMes_KeyPress);
             // 
@@ -653,6 +665,124 @@
             this.label2.Size = new System.Drawing.Size(832, 72);
             this.label2.TabIndex = 2;
             this.label2.Text = "Solicitud de productos financieros";
+            // 
+            // btnSolicitarProducto
+            // 
+            this.btnSolicitarProducto.AutoSize = true;
+            this.btnSolicitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnSolicitarProducto.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSolicitarProducto.BorderRadius = 8;
+            this.btnSolicitarProducto.BorderSize = 0;
+            this.btnSolicitarProducto.Enabled = false;
+            this.btnSolicitarProducto.FlatAppearance.BorderSize = 0;
+            this.btnSolicitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitarProducto.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitarProducto.Location = new System.Drawing.Point(445, 746);
+            this.btnSolicitarProducto.Name = "btnSolicitarProducto";
+            this.btnSolicitarProducto.Size = new System.Drawing.Size(150, 49);
+            this.btnSolicitarProducto.TabIndex = 70;
+            this.btnSolicitarProducto.Text = "Solicitar";
+            this.btnSolicitarProducto.TextColor = System.Drawing.Color.White;
+            this.btnSolicitarProducto.UseVisualStyleBackColor = false;
+            this.btnSolicitarProducto.Click += new System.EventHandler(this.btnSolicitarProducto_Click);
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtCorreo.esClave = false;
+            this.txtCorreo.label = "Correo Electronico";
+            this.txtCorreo.limiteCaracteres = 50;
+            this.txtCorreo.Location = new System.Drawing.Point(528, 376);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtCorreo.placeholder = "ej: example@mail.com";
+            this.txtCorreo.Radius = 8;
+            this.txtCorreo.Size = new System.Drawing.Size(496, 56);
+            this.txtCorreo.TabIndex = 64;
+            this.txtCorreo.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtTelefono.esClave = false;
+            this.txtTelefono.label = "Numero telefonico";
+            this.txtTelefono.limiteCaracteres = 10;
+            this.txtTelefono.Location = new System.Drawing.Point(16, 376);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtTelefono.placeholder = "Maximo 10 digitos";
+            this.txtTelefono.Radius = 8;
+            this.txtTelefono.Size = new System.Drawing.Size(496, 56);
+            this.txtTelefono.TabIndex = 61;
+            this.txtTelefono.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtEgresos
+            // 
+            this.txtEgresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtEgresos.esClave = false;
+            this.txtEgresos.label = "Egresos mensuales aproximados";
+            this.txtEgresos.limiteCaracteres = 15;
+            this.txtEgresos.Location = new System.Drawing.Point(536, 490);
+            this.txtEgresos.Name = "txtEgresos";
+            this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtEgresos.placeholder = " ";
+            this.txtEgresos.Radius = 8;
+            this.txtEgresos.Size = new System.Drawing.Size(496, 56);
+            this.txtEgresos.TabIndex = 60;
+            this.txtEgresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtIngresos
+            // 
+            this.txtIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.txtIngresos.esClave = false;
+            this.txtIngresos.label = "Ingresos mensuales aproximados";
+            this.txtIngresos.limiteCaracteres = 15;
+            this.txtIngresos.Location = new System.Drawing.Point(16, 490);
+            this.txtIngresos.Name = "txtIngresos";
+            this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtIngresos.placeholder = " ";
+            this.txtIngresos.Radius = 8;
+            this.txtIngresos.Size = new System.Drawing.Size(504, 56);
+            this.txtIngresos.TabIndex = 59;
+            this.txtIngresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.DimGray;
+            this.txtId.esClave = false;
+            this.txtId.ForeColor = System.Drawing.Color.DimGray;
+            this.txtId.label = "Numero de identidad";
+            this.txtId.limiteCaracteres = 20;
+            this.txtId.Location = new System.Drawing.Point(528, 120);
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtId.placeholder = "  id";
+            this.txtId.Radius = 8;
+            this.txtId.Size = new System.Drawing.Size(496, 56);
+            this.txtId.TabIndex = 5;
+            this.txtId.TabStop = false;
+            this.txtId.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            this.txtId.TextBoxKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_TextBoxKeyPress);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.DimGray;
+            this.txtNombre.esClave = false;
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombre.label = "Nombre";
+            this.txtNombre.limiteCaracteres = 100;
+            this.txtNombre.Location = new System.Drawing.Point(16, 120);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtNombre.placeholder = " nombre";
+            this.txtNombre.Radius = 8;
+            this.txtNombre.Size = new System.Drawing.Size(496, 56);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabStop = false;
+            this.txtNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
+            this.txtNombre.TextBoxKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_TextBoxKeyPress);
             // 
             // pDegradado3
             // 
@@ -704,176 +834,13 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // btnGenerarExtracto
-            // 
-            this.btnGenerarExtracto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnGenerarExtracto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnGenerarExtracto.BorderColor = System.Drawing.Color.Empty;
-            this.btnGenerarExtracto.BorderRadius = 8;
-            this.btnGenerarExtracto.BorderSize = 2;
-            this.btnGenerarExtracto.Enabled = false;
-            this.btnGenerarExtracto.FlatAppearance.BorderSize = 0;
-            this.btnGenerarExtracto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarExtracto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarExtracto.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarExtracto.Location = new System.Drawing.Point(144, 224);
-            this.btnGenerarExtracto.Name = "btnGenerarExtracto";
-            this.btnGenerarExtracto.Size = new System.Drawing.Size(128, 56);
-            this.btnGenerarExtracto.TabIndex = 55;
-            this.btnGenerarExtracto.Text = "Generar extracto";
-            this.btnGenerarExtracto.TextColor = System.Drawing.Color.White;
-            this.btnGenerarExtracto.UseVisualStyleBackColor = false;
-            this.btnGenerarExtracto.Click += new System.EventHandler(this.btnGenerarExtracto_Click);
-            // 
-            // btnSolicitarProducto
-            // 
-            this.btnSolicitarProducto.AutoSize = true;
-            this.btnSolicitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnSolicitarProducto.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSolicitarProducto.BorderRadius = 8;
-            this.btnSolicitarProducto.BorderSize = 0;
-            this.btnSolicitarProducto.Enabled = false;
-            this.btnSolicitarProducto.FlatAppearance.BorderSize = 0;
-            this.btnSolicitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitarProducto.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitarProducto.Location = new System.Drawing.Point(445, 712);
-            this.btnSolicitarProducto.Name = "btnSolicitarProducto";
-            this.btnSolicitarProducto.Size = new System.Drawing.Size(150, 49);
-            this.btnSolicitarProducto.TabIndex = 70;
-            this.btnSolicitarProducto.Text = "Solicitar";
-            this.btnSolicitarProducto.TextColor = System.Drawing.Color.White;
-            this.btnSolicitarProducto.UseVisualStyleBackColor = false;
-            this.btnSolicitarProducto.Click += new System.EventHandler(this.btnSolicitarProducto_Click);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtCorreo.esClave = false;
-            this.txtCorreo.label = "Correo Electronico";
-            this.txtCorreo.limiteCaracteres = 50;
-            this.txtCorreo.Location = new System.Drawing.Point(528, 448);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtCorreo.placeholder = "ej: example@mail.com";
-            this.txtCorreo.Radius = 8;
-            this.txtCorreo.Size = new System.Drawing.Size(496, 56);
-            this.txtCorreo.TabIndex = 64;
-            this.txtCorreo.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtTelefono.esClave = false;
-            this.txtTelefono.label = "Numero telefonico";
-            this.txtTelefono.limiteCaracteres = 10;
-            this.txtTelefono.Location = new System.Drawing.Point(16, 448);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtTelefono.placeholder = "Maximo 10 digitos";
-            this.txtTelefono.Radius = 8;
-            this.txtTelefono.Size = new System.Drawing.Size(496, 56);
-            this.txtTelefono.TabIndex = 61;
-            this.txtTelefono.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
-            // 
-            // txtEgresos
-            // 
-            this.txtEgresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtEgresos.esClave = false;
-            this.txtEgresos.label = "Egresos mensuales";
-            this.txtEgresos.limiteCaracteres = 15;
-            this.txtEgresos.Location = new System.Drawing.Point(536, 576);
-            this.txtEgresos.Name = "txtEgresos";
-            this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtEgresos.placeholder = " ";
-            this.txtEgresos.Radius = 8;
-            this.txtEgresos.Size = new System.Drawing.Size(496, 56);
-            this.txtEgresos.TabIndex = 60;
-            this.txtEgresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
-            // 
-            // txtIngresos
-            // 
-            this.txtIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtIngresos.esClave = false;
-            this.txtIngresos.label = "Ingresos mensuales";
-            this.txtIngresos.limiteCaracteres = 15;
-            this.txtIngresos.Location = new System.Drawing.Point(16, 576);
-            this.txtIngresos.Name = "txtIngresos";
-            this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtIngresos.placeholder = " ";
-            this.txtIngresos.Radius = 8;
-            this.txtIngresos.Size = new System.Drawing.Size(504, 56);
-            this.txtIngresos.TabIndex = 59;
-            this.txtIngresos.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
-            // 
-            // txtSApellido
-            // 
-            this.txtSApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtSApellido.esClave = false;
-            this.txtSApellido.label = "Segundo apellido";
-            this.txtSApellido.limiteCaracteres = 20;
-            this.txtSApellido.Location = new System.Drawing.Point(528, 195);
-            this.txtSApellido.Name = "txtSApellido";
-            this.txtSApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtSApellido.placeholder = "(opcional)";
-            this.txtSApellido.Radius = 8;
-            this.txtSApellido.Size = new System.Drawing.Size(496, 56);
-            this.txtSApellido.TabIndex = 6;
-            this.txtSApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtPApellido
-            // 
-            this.txtPApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtPApellido.esClave = false;
-            this.txtPApellido.label = "Primer apellido";
-            this.txtPApellido.limiteCaracteres = 20;
-            this.txtPApellido.Location = new System.Drawing.Point(16, 195);
-            this.txtPApellido.Name = "txtPApellido";
-            this.txtPApellido.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtPApellido.placeholder = "  ";
-            this.txtPApellido.Radius = 8;
-            this.txtPApellido.Size = new System.Drawing.Size(496, 56);
-            this.txtPApellido.TabIndex = 5;
-            this.txtPApellido.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtSNombre
-            // 
-            this.txtSNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtSNombre.esClave = false;
-            this.txtSNombre.label = "Segundo nombre";
-            this.txtSNombre.limiteCaracteres = 20;
-            this.txtSNombre.Location = new System.Drawing.Point(528, 123);
-            this.txtSNombre.Name = "txtSNombre";
-            this.txtSNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtSNombre.placeholder = "(opcional)";
-            this.txtSNombre.Radius = 8;
-            this.txtSNombre.Size = new System.Drawing.Size(496, 56);
-            this.txtSNombre.TabIndex = 4;
-            this.txtSNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
-            // txtPNombre
-            // 
-            this.txtPNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.txtPNombre.esClave = false;
-            this.txtPNombre.label = "Primer nombre";
-            this.txtPNombre.limiteCaracteres = 20;
-            this.txtPNombre.Location = new System.Drawing.Point(16, 123);
-            this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.txtPNombre.placeholder = " ";
-            this.txtPNombre.Radius = 8;
-            this.txtPNombre.Size = new System.Drawing.Size(496, 56);
-            this.txtPNombre.TabIndex = 3;
-            this.txtPNombre.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Texto;
-            // 
             // formSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.ClientSize = new System.Drawing.Size(1344, 990);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -909,14 +876,8 @@
         private pBoton btnGenerarExtracto;
         private System.Windows.Forms.TabPage tabProductos;
         private System.Windows.Forms.Label label2;
-        private pLineaTextBox txtSApellido;
-        private pLineaTextBox txtPApellido;
-        private pLineaTextBox txtSNombre;
-        private pLineaTextBox txtPNombre;
-        private System.Windows.Forms.ComboBox cmbNacAnio;
-        private System.Windows.Forms.ComboBox cmbNacDia;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbNacMes;
+        private pLineaTextBox txtId;
+        private pLineaTextBox txtNombre;
         private System.Windows.Forms.ComboBox cmbExpAnio;
         private System.Windows.Forms.ComboBox cmbExpDia;
         private System.Windows.Forms.Label lblFechaNac;
@@ -935,10 +896,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private pBoton btnSolicitarProducto;
-        private System.Windows.Forms.Label lblNac;
         private System.Windows.Forms.Label lblExp;
         private System.Windows.Forms.Label lblDatosObligatorios;
         private System.Windows.Forms.Label lblEst;
         private System.Windows.Forms.Label lblProd;
+        private System.Windows.Forms.Label lblActividad;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbActividad;
+        private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbTiempo;
     }
 }

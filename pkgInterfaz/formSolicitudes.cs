@@ -18,6 +18,7 @@ namespace testForms.pkgInterfaz
     public partial class formSolicitudes : Form
     {
         long id_usuarioActual = 0;
+        string nombre;
         Usuario user = new Usuario();
         Datos data = new Datos();
         Dictionary<string, int> diccionarioMeses = new Dictionary<string, int>();
@@ -25,9 +26,9 @@ namespace testForms.pkgInterfaz
         DateTime fechaActual;
         DateTime fechaExp;
         DateTime fechaNac;
-        string cadenaFechaExp, cadenaFechaNac;
+        string cadenaFechaExp;
         bool campoEst;
-        bool campoProd;
+        bool campoProd, campoAct, campoTiempo;
 
         public formSolicitudes()
         {
@@ -40,6 +41,8 @@ namespace testForms.pkgInterfaz
             FormHelper.HabilitarMovimiento(this, pDegradado3);
             tabProductos.AutoScroll = true;
             tabProductos.AutoScrollMinSize = new Size(0, tabProductos.PreferredSize.Height);
+            var resultado = data.fnc_obtenerInfoCuenta(prm_idUsuarioActual);
+            nombre = resultado.Value.nombre;
             id_usuarioActual = prm_idUsuarioActual;
 
             int aux = 1;
@@ -170,53 +173,48 @@ namespace testForms.pkgInterfaz
          **/
         private void validarCmbSolicitud(object sender, EventArgs e)
         {
-            campoEst = false;
-            campoProd = false;
-
             campoEst = cmbEstudios.SelectedItem != null;
             campoProd = cmbProducto.SelectedItem != null;
+            campoAct = cmbActividad.SelectedItem != null;
+            campoTiempo = cmbTiempo.SelectedItem != null;
 
-            if (campoEst && campoProd)
-            {
-                lblEst.Hide();
-                lblProd.Hide();
+            bool formularioValido = campoEst && campoProd && campoAct && campoTiempo;
 
-                btnSolicitarProducto.Enabled = true;
-                btnSolicitarProducto.BackColor = Color.RoyalBlue;
-            }
-            else
-            {
-                btnSolicitarProducto.Enabled = campoEst && campoProd;
-                btnSolicitarProducto.BackColor = Color.DimGray;
-                lblEst.Visible = !campoEst;
-                lblEst.Text = "Seleccione una opcion de la lista";
-                lblProd.Visible = !campoProd;
-                lblProd.Text = "Seleccione el producto que desea solicitar";
-            }
+            lblEst.Visible = !campoEst;
+            lblEst.Text = "Seleccione una opción de la lista";
+
+            lblProd.Visible = !campoProd;
+            lblProd.Text = "Seleccione el producto que desea solicitar";
+
+            lblActividad.Visible = !campoAct;
+            lblActividad.Text = "Seleccione su actividad económica";
+
+            lblTiempo.Visible = !campoTiempo;
+            lblTiempo.Text = "Seleccione el tiempo de la actividad";
         }
+
 
 
         private void btnSolicitarProducto_Click(object sender, EventArgs e)
         {
 
-            string v_nombre = txtPNombre.TextBoxInterno.Text + " " + txtSNombre.TextBoxInterno.Text;
-            string v_apellido = txtPApellido.TextBoxInterno.Text + " " + txtSApellido.TextBoxInterno.Text;
-            string v_remitente = v_nombre + " " +  v_apellido;
             string v_fechaExp = cadenaFechaExp;
             string v_estudios = cmbEstudios.Text;
-            string v_fechaNac = cadenaFechaNac;
             long v_telefono = long.Parse(txtTelefono.TextBoxInterno.Text);
             string v_correo = txtCorreo.TextBoxInterno.Text;
             long v_ingresos = long.Parse(txtIngresos.TextBoxInterno.Text);
             long v_egresos = long.Parse(txtEgresos.TextBoxInterno.Text);
             string v_producto = cmbProducto.Text;
+            string v_actividad = cmbActividad.Text;
+            string v_tiempo = cmbTiempo.Text;
 
             try
             {
-                int resultadoDml = data.fnc_registrarProducto(v_remitente, id_usuarioActual, v_fechaExp, v_estudios, v_fechaNac, v_telefono, v_correo, v_ingresos, v_egresos, v_producto);
+                int resultadoDml = data.fnc_registrarProducto(nombre, id_usuarioActual, v_fechaExp, v_estudios, v_telefono, v_correo, v_ingresos, v_egresos, v_producto, v_actividad, v_tiempo);
                 if (resultadoDml > 0) 
                 {
                     MessageBox.Show("Solicitud realizada con exito");
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -231,9 +229,6 @@ namespace testForms.pkgInterfaz
             bool fechaExpCompleta = !string.IsNullOrWhiteSpace(cmbExpDia.Text) &&
                                     !string.IsNullOrWhiteSpace(cmbExpMes.Text) &&
                                     !string.IsNullOrWhiteSpace(cmbExpAnio.Text);
-            bool fechaNacCompleta = !string.IsNullOrWhiteSpace(cmbNacDia.Text) &&
-                                    !string.IsNullOrWhiteSpace(cmbNacMes.Text) &&
-                                    !string.IsNullOrWhiteSpace(cmbNacAnio.Text);
 
             foreach (Control ctrl in tabProductos.Controls)
             {
@@ -248,7 +243,7 @@ namespace testForms.pkgInterfaz
                 }
             }
 
-            int mesExp, mesNac = 0;
+            int mesExp = 0;
             diccionarioMeses.TryGetValue(cmbExpMes.Text, out mesExp);
             cadenaFechaExp = $"{cmbExpDia.Text}/{mesExp}/{cmbExpAnio.Text}";
             bool fechaExpValida = DateTime.TryParseExact(
@@ -257,15 +252,6 @@ namespace testForms.pkgInterfaz
                 System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None,
                 out fechaExp);
-
-            diccionarioMeses.TryGetValue(cmbNacMes.Text, out mesNac);
-            cadenaFechaNac = $"{cmbNacDia.Text}/{mesNac}/{cmbNacAnio.Text}";
-            bool fechaNacValida = DateTime.TryParseExact(
-                cadenaFechaNac,
-                "d/M/yyyy",
-                System.Globalization.CultureInfo.InvariantCulture,
-                System.Globalization.DateTimeStyles.None,
-                out fechaNac) && fechaNac <= DateTime.Today.AddYears(-18);
 
             if (!fechaExpValida)
             {
@@ -279,24 +265,11 @@ namespace testForms.pkgInterfaz
                 lblExp.Text = "Fecha incompleta";
             }
 
-            if (!fechaNacValida)
-            {
-                camposValidos = false;
-                lblNac.Show();
-                lblNac.Text = "La fecha de nacimiento no es valida.";
-            }
-            else
-            {
-                lblNac.Show();
-                lblNac.Text = "Fecha incompleta";
-            }
-
-            if (camposValidos && fechaExpCompleta && fechaExpValida && fechaNacValida && fechaNacValida && campoEst && campoProd)
+            if (camposValidos && fechaExpCompleta && fechaExpValida && campoEst && campoProd && campoAct && campoTiempo)
             {
                 btnSolicitarProducto.Enabled = true;
                 btnSolicitarProducto.BackColor = ColorTranslator.FromHtml("#5C69F5");
                 lblDatosObligatorios.Hide();
-                lblNac.Hide();
                 lblExp.Hide();
             }
             else
@@ -306,18 +279,12 @@ namespace testForms.pkgInterfaz
 
                 lblDatosObligatorios.Visible = !camposValidos;
                 lblExp.Visible = !fechaExpCompleta;
-                lblNac.Visible = !fechaNacCompleta;
             }
 
             if (fechaExpCompleta && !fechaExpValida)
             {
                 lblExp.Show();
                 lblExp.Text = "La fecha de expedicion no es valida (dia no existe en el mes).";
-            }
-            if (fechaNacCompleta && !fechaNacValida)
-            {
-                lblNac.Show();
-                lblNac.Text = "La fecha de nacimiento no es valida (Debes ser mayor de edad).";
             }
         }
 
@@ -329,22 +296,17 @@ namespace testForms.pkgInterfaz
 
             switch (linea.Name)
             {
-                case "txtPNombre":
-                case "txtPApellido":
-                    valido = texto.All(char.IsLetter) && texto.Length > 1;
-                    break;
-
-                case "txtSNombre":
-                case "txtSApellido":
-                    valido = true; 
-                    break;
-
+                case "txtNombre":
                 case "txtId":
-                    valido = long.TryParse(texto, out _) && texto.Length >= 5;
+                    valido = true;
                     break;
 
                 case "txtCorreo":
                     valido = texto.Contains("@") && texto.Contains(".") && texto.Length >= 5;
+                    break;
+
+                case "txtDireccion":
+                    valido = texto.Length >= 5;
                     break;
 
                 case "txtTelefono":
@@ -371,14 +333,15 @@ namespace testForms.pkgInterfaz
             lblDatosObligatorios.Hide();
             lblExp.Hide();
 
+            txtId.TextBoxInterno.Text = id_usuarioActual.ToString();
+            txtNombre.TextBoxInterno.Text = nombre;
+
             DateTime fechaMinima = DateTime.Today.AddYears(-100);
 
             cmbExpAnio.Items.Clear();
-            cmbNacAnio.Items.Clear();
             for (int anio = fechaMinima.Year; anio <= DateTime.Today.Year; anio++)
             {
                 cmbExpAnio.Items.Add(anio.ToString());
-                cmbNacAnio.Items.Add(anio.ToString());
             }
 
             int aux = 1;
@@ -400,6 +363,7 @@ namespace testForms.pkgInterfaz
                 if (ctrl is System.Windows.Forms.ComboBox cmb)
                 {
                     cmb.SelectedValueChanged += fnc_validarCampos;
+                    cmb.SelectedValueChanged += validarCmbSolicitud;
                 }
             }
         }
@@ -444,21 +408,6 @@ namespace testForms.pkgInterfaz
             e.Handled = true;
         }
 
-        private void cmbNacDia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void cmbNacMes_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void cmbNacAnio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
         private void cmbEstudios_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -474,5 +423,24 @@ namespace testForms.pkgInterfaz
 
         }
 
+        private void cmbActividad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbTiempo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtNombre_TextBoxKeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtId_TextBoxKeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

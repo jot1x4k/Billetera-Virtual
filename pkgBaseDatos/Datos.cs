@@ -310,10 +310,10 @@ namespace testForms.pkgBaseDatos
             }
         }
 
-        internal int fnc_registrarProducto(string v_remitente, long v_id, string v_fechaExp, string v_estudios, string v_fechaNac, long v_telefono, string v_correo, decimal v_ingresos, decimal v_egresos, string v_producto)
+        internal int fnc_registrarProducto(string v_remitente, long v_id, string v_fechaExp, string v_estudios, long v_telefono, string v_correo, decimal v_ingresos, decimal v_egresos, string v_producto, string v_actividad, string v_tiempo)
         {
             using (var conn = new MySqlConnection(connectionString))
-            using (var cmd = new MySqlCommand("prc_registrarProducto", conn))
+            using (var cmd = new MySqlCommand("prc_registrarSolicitud", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -321,12 +321,13 @@ namespace testForms.pkgBaseDatos
                 cmd.Parameters.Add("prm_id", MySqlDbType.Int64).Value = v_id;
                 cmd.Parameters.Add("prm_exp", MySqlDbType.Date).Value = DateTime.Parse(v_fechaExp);
                 cmd.Parameters.Add("prm_estudios", MySqlDbType.VarChar, 50).Value = v_estudios;
-                cmd.Parameters.Add("prm_nac", MySqlDbType.Date).Value = DateTime.Parse(v_fechaNac);
                 cmd.Parameters.Add("prm_telefono", MySqlDbType.Int64).Value = v_telefono;
                 cmd.Parameters.Add("prm_correo", MySqlDbType.VarChar, 50).Value = v_correo;
                 cmd.Parameters.Add("prm_ingresos", MySqlDbType.Int64).Value = v_ingresos;
                 cmd.Parameters.Add("prm_egresos", MySqlDbType.Int64).Value = v_egresos;
                 cmd.Parameters.Add("prm_producto", MySqlDbType.VarChar, 50).Value = v_producto;
+                cmd.Parameters.Add("prm_actividad", MySqlDbType.VarChar, 50).Value = v_actividad;
+                cmd.Parameters.Add("prm_tiempo", MySqlDbType.VarChar, 50).Value = v_tiempo;
 
                 cmd.Parameters.Add(new MySqlParameter("prm_resultado", MySqlDbType.Int32) { Direction = ParameterDirection.Output });
 
@@ -341,6 +342,7 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
+                    MessageBox.Show("Error bd: "+ex.Message);
                     return 0;
                 }
             }
