@@ -38,7 +38,6 @@
             this.btnGuardar = new testForms.pkgInterfaz.pBoton();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.txtClaveNueva = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtClaveActual = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtCorreo = new testForms.pkgInterfaz.pLineaTextBox();
@@ -47,6 +46,9 @@
             this.lblCorreoInvalido = new System.Windows.Forms.Label();
             this.lblClaveInvalida = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
+            this.pBoton1 = new testForms.pkgInterfaz.pBoton();
+            this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultarClaveActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrarClaveActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrarClaveNueva)).BeginInit();
@@ -59,7 +61,7 @@
             this.picOcultarClaveActual.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picOcultarClaveActual.Enabled = false;
             this.picOcultarClaveActual.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClaveActual.Image")));
-            this.picOcultarClaveActual.Location = new System.Drawing.Point(1000, 512);
+            this.picOcultarClaveActual.Location = new System.Drawing.Point(1125, 512);
             this.picOcultarClaveActual.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClaveActual.Name = "picOcultarClaveActual";
             this.picOcultarClaveActual.Size = new System.Drawing.Size(32, 28);
@@ -73,7 +75,7 @@
             // 
             this.picMostrarClaveActual.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClaveActual.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClaveActual.Image")));
-            this.picMostrarClaveActual.Location = new System.Drawing.Point(1000, 512);
+            this.picMostrarClaveActual.Location = new System.Drawing.Point(1125, 512);
             this.picMostrarClaveActual.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClaveActual.Name = "picMostrarClaveActual";
             this.picMostrarClaveActual.Size = new System.Drawing.Size(32, 28);
@@ -86,7 +88,7 @@
             // 
             this.picMostrarClaveNueva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picMostrarClaveNueva.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarClaveNueva.Image")));
-            this.picMostrarClaveNueva.Location = new System.Drawing.Point(1000, 592);
+            this.picMostrarClaveNueva.Location = new System.Drawing.Point(1125, 592);
             this.picMostrarClaveNueva.Margin = new System.Windows.Forms.Padding(2);
             this.picMostrarClaveNueva.Name = "picMostrarClaveNueva";
             this.picMostrarClaveNueva.Size = new System.Drawing.Size(32, 28);
@@ -100,7 +102,7 @@
             this.picOcultarClaveNueva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picOcultarClaveNueva.Enabled = false;
             this.picOcultarClaveNueva.Image = ((System.Drawing.Image)(resources.GetObject("picOcultarClaveNueva.Image")));
-            this.picOcultarClaveNueva.Location = new System.Drawing.Point(1000, 592);
+            this.picOcultarClaveNueva.Location = new System.Drawing.Point(1125, 592);
             this.picOcultarClaveNueva.Margin = new System.Windows.Forms.Padding(2);
             this.picOcultarClaveNueva.Name = "picOcultarClaveNueva";
             this.picOcultarClaveNueva.Size = new System.Drawing.Size(32, 28);
@@ -150,7 +152,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(748, 664);
+            this.btnGuardar.Location = new System.Drawing.Point(873, 664);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(157, 56);
             this.btnGuardar.TabIndex = 59;
@@ -164,15 +166,17 @@
             this.pDegradado3.Angle = 90F;
             this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
             this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pDegradado3.Controls.Add(this.btnMax);
+            this.pDegradado3.Controls.Add(this.pBoton1);
+            this.pDegradado3.Controls.Add(this.pBoton2);
             this.pDegradado3.Controls.Add(this.label4);
-            this.pDegradado3.Controls.Add(this.btnVolver);
             this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pDegradado3.HexColor1 = "#4450c9";
             this.pDegradado3.HexColor2 = "#5C69F5";
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1403, 216);
+            this.pDegradado3.Size = new System.Drawing.Size(1366, 216);
             this.pDegradado3.TabIndex = 58;
             // 
             // label4
@@ -188,27 +192,6 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Actualizacion de datos";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnVolver.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnVolver.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
-            this.btnVolver.BorderRadius = 8;
-            this.btnVolver.BorderSize = 2;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1264, 8);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(128, 56);
-            this.btnVolver.TabIndex = 53;
-            this.btnVolver.Text = "Volver al inicio";
-            this.btnVolver.TextColor = System.Drawing.Color.White;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // txtClaveNueva
             // 
             this.txtClaveNueva.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -216,7 +199,7 @@
             this.txtClaveNueva.esClave = false;
             this.txtClaveNueva.label = "Nueva contraseña";
             this.txtClaveNueva.limiteCaracteres = 0;
-            this.txtClaveNueva.Location = new System.Drawing.Point(656, 568);
+            this.txtClaveNueva.Location = new System.Drawing.Point(781, 568);
             this.txtClaveNueva.Margin = new System.Windows.Forms.Padding(4);
             this.txtClaveNueva.Name = "txtClaveNueva";
             this.txtClaveNueva.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -233,7 +216,7 @@
             this.txtClaveActual.esClave = false;
             this.txtClaveActual.label = "Contraseña actual";
             this.txtClaveActual.limiteCaracteres = 50;
-            this.txtClaveActual.Location = new System.Drawing.Point(656, 488);
+            this.txtClaveActual.Location = new System.Drawing.Point(781, 488);
             this.txtClaveActual.Margin = new System.Windows.Forms.Padding(4);
             this.txtClaveActual.Name = "txtClaveActual";
             this.txtClaveActual.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -250,7 +233,7 @@
             this.txtCorreo.esClave = false;
             this.txtCorreo.label = "Tu correo electronico";
             this.txtCorreo.limiteCaracteres = 254;
-            this.txtCorreo.Location = new System.Drawing.Point(656, 402);
+            this.txtCorreo.Location = new System.Drawing.Point(781, 402);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -267,7 +250,7 @@
             this.txtUsuario.esClave = false;
             this.txtUsuario.label = "Tu usuario de ingreso";
             this.txtUsuario.limiteCaracteres = 50;
-            this.txtUsuario.Location = new System.Drawing.Point(656, 320);
+            this.txtUsuario.Location = new System.Drawing.Point(781, 320);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -283,7 +266,7 @@
             this.lblUsuarioInvalido.CausesValidation = false;
             this.lblUsuarioInvalido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioInvalido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUsuarioInvalido.Location = new System.Drawing.Point(662, 376);
+            this.lblUsuarioInvalido.Location = new System.Drawing.Point(787, 376);
             this.lblUsuarioInvalido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuarioInvalido.Name = "lblUsuarioInvalido";
             this.lblUsuarioInvalido.Size = new System.Drawing.Size(327, 23);
@@ -298,7 +281,7 @@
             this.lblCorreoInvalido.CausesValidation = false;
             this.lblCorreoInvalido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoInvalido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCorreoInvalido.Location = new System.Drawing.Point(661, 456);
+            this.lblCorreoInvalido.Location = new System.Drawing.Point(786, 456);
             this.lblCorreoInvalido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreoInvalido.Name = "lblCorreoInvalido";
             this.lblCorreoInvalido.Size = new System.Drawing.Size(328, 23);
@@ -313,7 +296,7 @@
             this.lblClaveInvalida.CausesValidation = false;
             this.lblClaveInvalida.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClaveInvalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblClaveInvalida.Location = new System.Drawing.Point(649, 624);
+            this.lblClaveInvalida.Location = new System.Drawing.Point(774, 624);
             this.lblClaveInvalida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClaveInvalida.Name = "lblClaveInvalida";
             this.lblClaveInvalida.Size = new System.Drawing.Size(352, 32);
@@ -336,6 +319,69 @@
             this.label3.Text = "Debes confirmar tu contraseña para poder realizar la actualizacion de tus datos";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(1200, 12);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 24);
+            this.btnMax.TabIndex = 69;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.White;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // pBoton1
+            // 
+            this.pBoton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pBoton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pBoton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.pBoton1.BorderRadius = 8;
+            this.pBoton1.BorderSize = 2;
+            this.pBoton1.FlatAppearance.BorderSize = 0;
+            this.pBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton1.ForeColor = System.Drawing.Color.White;
+            this.pBoton1.Location = new System.Drawing.Point(1248, 8);
+            this.pBoton1.Name = "pBoton1";
+            this.pBoton1.Size = new System.Drawing.Size(104, 32);
+            this.pBoton1.TabIndex = 68;
+            this.pBoton1.Text = "Ir al menu";
+            this.pBoton1.TextColor = System.Drawing.Color.White;
+            this.pBoton1.UseVisualStyleBackColor = false;
+            this.pBoton1.Click += new System.EventHandler(this.pBoton1_Click);
+            // 
+            // pBoton2
+            // 
+            this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.pBoton2.BorderRadius = 5;
+            this.pBoton2.BorderSize = 0;
+            this.pBoton2.FlatAppearance.BorderSize = 0;
+            this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.ForeColor = System.Drawing.Color.White;
+            this.pBoton2.Location = new System.Drawing.Point(1152, 12);
+            this.pBoton2.Name = "pBoton2";
+            this.pBoton2.Size = new System.Drawing.Size(38, 24);
+            this.pBoton2.TabIndex = 67;
+            this.pBoton2.Text = "-";
+            this.pBoton2.TextColor = System.Drawing.Color.White;
+            this.pBoton2.UseVisualStyleBackColor = false;
+            this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
+            // 
             // formActualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,7 +389,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1403, 830);
+            this.ClientSize = new System.Drawing.Size(1366, 875);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblClaveInvalida);
             this.Controls.Add(this.lblCorreoInvalido);
@@ -387,7 +433,6 @@
         private pLineaTextBox txtClaveNueva;
         private pDegradado pDegradado3;
         private System.Windows.Forms.Label label4;
-        private pBoton btnVolver;
         private pBoton btnGuardar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -395,5 +440,8 @@
         private System.Windows.Forms.Label lblCorreoInvalido;
         private System.Windows.Forms.Label lblClaveInvalida;
         private System.Windows.Forms.Label label3;
+        private pBoton btnMax;
+        private pBoton pBoton1;
+        private pBoton pBoton2;
     }
 }

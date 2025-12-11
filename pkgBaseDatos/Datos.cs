@@ -12,12 +12,10 @@ namespace testForms.pkgBaseDatos
         public Datos()
         {
             var cfg = AppConfig.Load();
-            connectionString = $"Server={cfg.Server};Port={cfg.Port};Database={cfg.Database};Uid={cfg.User};Pwd={cfg.Password};";
+            connectionString = "Server=localhost;Port=3306;Database=testforms;Uid=root;Pwd=admin";
+            //connectionString = $"Server={cfg.Server};Port={cfg.Port};Database={cfg.Database};Uid={cfg.User};Pwd={cfg.Password};";
         }
 
-        // ---------------------------------------------------------------
-        // MÉTODOS AUXILIARES
-        // ---------------------------------------------------------------
         public int fnc_dml(string prmConsulta)
         {
             using (var conexion = new MySqlConnection(connectionString))
@@ -200,7 +198,6 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error BD: {ex.Message}");
                     return 0;
                 }
             }
@@ -265,7 +262,7 @@ namespace testForms.pkgBaseDatos
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error BD: {ex.Message}");
+                    MessageBox.Show("Error BD: " + ex);
                     return null;
                 }
             }
@@ -309,6 +306,99 @@ namespace testForms.pkgBaseDatos
                 {
                     MessageBox.Show($"Error BD: {ex.Message}");
                     return null;
+                }
+            }
+        }
+
+        internal int fnc_registrarProducto(string v_remitente, long v_id, string v_fechaExp, string v_estudios, long v_telefono, string v_correo, decimal v_ingresos, decimal v_egresos, string v_producto, string v_actividad, string v_tiempo)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            using (var cmd = new MySqlCommand("prc_registrarSolicitud", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("prm_nombre", MySqlDbType.VarChar, 100).Value = v_remitente;
+                cmd.Parameters.Add("prm_id", MySqlDbType.Int64).Value = v_id;
+                cmd.Parameters.Add("prm_exp", MySqlDbType.Date).Value = DateTime.Parse(v_fechaExp);
+                cmd.Parameters.Add("prm_estudios", MySqlDbType.VarChar, 50).Value = v_estudios;
+                cmd.Parameters.Add("prm_telefono", MySqlDbType.Int64).Value = v_telefono;
+                cmd.Parameters.Add("prm_correo", MySqlDbType.VarChar, 50).Value = v_correo;
+                cmd.Parameters.Add("prm_ingresos", MySqlDbType.Int64).Value = v_ingresos;
+                cmd.Parameters.Add("prm_egresos", MySqlDbType.Int64).Value = v_egresos;
+                cmd.Parameters.Add("prm_producto", MySqlDbType.VarChar, 50).Value = v_producto;
+                cmd.Parameters.Add("prm_actividad", MySqlDbType.VarChar, 50).Value = v_actividad;
+                cmd.Parameters.Add("prm_tiempo", MySqlDbType.VarChar, 50).Value = v_tiempo;
+
+                cmd.Parameters.Add(new MySqlParameter("prm_resultado", MySqlDbType.Int32) { Direction = ParameterDirection.Output });
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    int resultado = int.Parse(cmd.Parameters["prm_resultado"].Value.ToString());
+
+                    return resultado;
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error bd: "+ex.Message);
+                    return 0;
+                }
+            }
+        }
+
+        public DataTable fnc_consultarSolicitudes()
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            using (var cmd = new MySqlCommand("prc_consultarSolicitudes", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var adapter = new MySqlDataAdapter(cmd))
+                {
+                    DataTable tabla = new DataTable();
+                    try
+                    {
+                        adapter.Fill(tabla);
+                        return tabla;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error BD: " + ex.Message);
+                        return null;
+                    }
+                }
+            }
+        }
+
+        public int fnc_actualizarSolicitud(long prm_idUsuario, string prm_estado)
+        {
+            using (var conexion = new MySqlConnection(connectionString))
+            using (var cmd = new MySqlCommand("prc_actualizarSolicitud", conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("prm_id", prm_idUsuario);
+                cmd.Parameters.AddWithValue("prm_estado", prm_estado);
+
+                var p_resultado = new MySqlParameter("p_resultado", MySqlDbType.Int32)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(p_resultado);
+
+                try
+                {
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+                    return Convert.ToInt32(p_resultado.Value);
+                }
+                catch (MySqlException ex)
+                {
+                    string mensaje = ex.Message;
+                    MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return -1;
                 }
             }
         }

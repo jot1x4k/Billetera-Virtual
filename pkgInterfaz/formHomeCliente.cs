@@ -34,7 +34,7 @@ namespace testForms.pkgInterfaz
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             using (formActualizarCliente formAct = new formActualizarCliente(id_usuarioActual))
             {
                 formAct.ShowDialog();
@@ -47,11 +47,11 @@ namespace testForms.pkgInterfaz
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             using (formEnviar formEnv = new formEnviar(id_usuarioActual, saldo, lblCuentaNum.Text))
             {
                 formEnv.ShowDialog();
-            this.Hide();
+                this.Hide();
             }
 
             fnc_cargarDatosCuenta(id_usuarioActual);
@@ -80,7 +80,7 @@ namespace testForms.pkgInterfaz
 
         private void btnMovimientos_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             using (formMovimientos frmMov = new formMovimientos(id_usuarioActual))
             {
                 frmMov.ShowDialog();
@@ -93,7 +93,7 @@ namespace testForms.pkgInterfaz
 
         private void btnSolicitudes_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             using (formSolicitudes frmSolicitudes = new formSolicitudes(id_usuarioActual))
             {
                 frmSolicitudes.ShowDialog();
@@ -116,6 +116,18 @@ namespace testForms.pkgInterfaz
         private void btnRecargar_Click(object sender, EventArgs e)
         {
             fnc_cargarDatosCuenta(id_usuarioActual);
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }

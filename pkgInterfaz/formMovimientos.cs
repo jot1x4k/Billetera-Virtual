@@ -25,7 +25,7 @@ namespace testForms.pkgInterfaz
         public formMovimientos(long prm_idUsuario)
         {
             InitializeComponent();
-            FormHelper.HabilitarMovimiento(this);
+            FormHelper.HabilitarMovimiento(this, pDegradado3);
             dgvMovimientos.Enabled = false;
             dgvMovimientos.Hide();
 
@@ -112,6 +112,28 @@ namespace testForms.pkgInterfaz
                         }
                     }
                 }
+            }
+        }
+
+        private void dgvMovimientos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+        }
+
+        private void pBoton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
             }
         }
     }

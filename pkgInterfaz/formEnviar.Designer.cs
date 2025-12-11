@@ -38,9 +38,10 @@
             this.btnEnviar = new testForms.pkgInterfaz.pBoton();
             this.label3 = new System.Windows.Forms.Label();
             this.pBoton2 = new testForms.pkgInterfaz.pBoton();
-            this.pBoton1 = new testForms.pkgInterfaz.pBoton();
             this.lblMismaCuenta = new System.Windows.Forms.Label();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
+            this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.pDegradado1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             this.lblErrorMonto.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMonto.ForeColor = System.Drawing.Color.Brown;
-            this.lblErrorMonto.Location = new System.Drawing.Point(432, 536);
+            this.lblErrorMonto.Location = new System.Drawing.Point(408, 504);
             this.lblErrorMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblErrorMonto.Name = "lblErrorMonto";
             this.lblErrorMonto.Size = new System.Drawing.Size(166, 17);
@@ -91,7 +92,7 @@
             this.lblErrorCuenta.AutoSize = true;
             this.lblErrorCuenta.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblErrorCuenta.ForeColor = System.Drawing.Color.Brown;
-            this.lblErrorCuenta.Location = new System.Drawing.Point(432, 456);
+            this.lblErrorCuenta.Location = new System.Drawing.Point(424, 424);
             this.lblErrorCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblErrorCuenta.Name = "lblErrorCuenta";
             this.lblErrorCuenta.Size = new System.Drawing.Size(247, 17);
@@ -106,7 +107,7 @@
             this.txtMonto.esClave = false;
             this.txtMonto.label = "Monto";
             this.txtMonto.limiteCaracteres = 8;
-            this.txtMonto.Location = new System.Drawing.Point(424, 480);
+            this.txtMonto.Location = new System.Drawing.Point(398, 448);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -123,7 +124,7 @@
             this.txtNumeroCuenta.esClave = false;
             this.txtNumeroCuenta.label = "Cuenta destino";
             this.txtNumeroCuenta.limiteCaracteres = 8;
-            this.txtNumeroCuenta.Location = new System.Drawing.Point(424, 400);
+            this.txtNumeroCuenta.Location = new System.Drawing.Point(398, 368);
             this.txtNumeroCuenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroCuenta.Name = "txtNumeroCuenta";
             this.txtNumeroCuenta.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
@@ -139,7 +140,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 496);
+            this.label2.Location = new System.Drawing.Point(368, 464);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 26);
@@ -160,7 +161,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(528, 568);
+            this.btnEnviar.Location = new System.Drawing.Point(502, 536);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(96, 56);
             this.btnEnviar.TabIndex = 44;
@@ -185,16 +186,16 @@
             // pBoton2
             // 
             this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBoton2.BackColor = System.Drawing.Color.DimGray;
-            this.pBoton2.BackgroundColor = System.Drawing.Color.DimGray;
+            this.pBoton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
             this.pBoton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.pBoton2.BorderRadius = 5;
             this.pBoton2.BorderSize = 0;
             this.pBoton2.FlatAppearance.BorderSize = 0;
             this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBoton2.ForeColor = System.Drawing.Color.White;
-            this.pBoton2.Location = new System.Drawing.Point(1016, 8);
+            this.pBoton2.Location = new System.Drawing.Point(896, 12);
             this.pBoton2.Name = "pBoton2";
             this.pBoton2.Size = new System.Drawing.Size(38, 24);
             this.pBoton2.TabIndex = 54;
@@ -203,34 +204,13 @@
             this.pBoton2.UseVisualStyleBackColor = false;
             this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click_1);
             // 
-            // pBoton1
-            // 
-            this.pBoton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pBoton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pBoton1.BorderColor = System.Drawing.Color.White;
-            this.pBoton1.BorderRadius = 5;
-            this.pBoton1.BorderSize = 0;
-            this.pBoton1.FlatAppearance.BorderSize = 0;
-            this.pBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pBoton1.Font = new System.Drawing.Font("Codec Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pBoton1.ForeColor = System.Drawing.Color.White;
-            this.pBoton1.Location = new System.Drawing.Point(1056, 8);
-            this.pBoton1.Name = "pBoton1";
-            this.pBoton1.Size = new System.Drawing.Size(38, 24);
-            this.pBoton1.TabIndex = 53;
-            this.pBoton1.Text = "X";
-            this.pBoton1.TextColor = System.Drawing.Color.White;
-            this.pBoton1.UseVisualStyleBackColor = false;
-            this.pBoton1.Click += new System.EventHandler(this.pBoton1_Click);
-            // 
             // lblMismaCuenta
             // 
             this.lblMismaCuenta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMismaCuenta.AutoSize = true;
             this.lblMismaCuenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMismaCuenta.ForeColor = System.Drawing.Color.Brown;
-            this.lblMismaCuenta.Location = new System.Drawing.Point(432, 456);
+            this.lblMismaCuenta.Location = new System.Drawing.Point(403, 424);
             this.lblMismaCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMismaCuenta.Name = "lblMismaCuenta";
             this.lblMismaCuenta.Size = new System.Drawing.Size(294, 17);
@@ -242,8 +222,9 @@
             // 
             this.pDegradado1.Angle = 180F;
             this.pDegradado1.BackColor = System.Drawing.Color.Transparent;
+            this.pDegradado1.Controls.Add(this.btnMax);
+            this.pDegradado1.Controls.Add(this.btnVolver);
             this.pDegradado1.Controls.Add(this.pBoton2);
-            this.pDegradado1.Controls.Add(this.pBoton1);
             this.pDegradado1.Controls.Add(this.label1);
             this.pDegradado1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pDegradado1.HexColor1 = "#4450c9";
@@ -252,6 +233,48 @@
             this.pDegradado1.Name = "pDegradado1";
             this.pDegradado1.Size = new System.Drawing.Size(1101, 232);
             this.pDegradado1.TabIndex = 56;
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(944, 12);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 24);
+            this.btnMax.TabIndex = 66;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.White;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnVolver.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnVolver.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.btnVolver.BorderRadius = 8;
+            this.btnVolver.BorderSize = 2;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(992, 8);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(104, 32);
+            this.btnVolver.TabIndex = 55;
+            this.btnVolver.Text = "Ir al menu";
+            this.btnVolver.TextColor = System.Drawing.Color.White;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // formEnviar
             // 
@@ -295,8 +318,9 @@
         private pBoton btnEnviar;
         private System.Windows.Forms.Label label3;
         private pBoton pBoton2;
-        private pBoton pBoton1;
         private System.Windows.Forms.Label lblMismaCuenta;
         private pDegradado pDegradado1;
+        private pBoton btnVolver;
+        private pBoton btnMax;
     }
 }

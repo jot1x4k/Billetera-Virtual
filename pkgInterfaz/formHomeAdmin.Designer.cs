@@ -28,143 +28,273 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbcAdmin = new System.Windows.Forms.TabControl();
-            this.tabActualizar = new System.Windows.Forms.TabPage();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.placeHolderBox1 = new testForms.pkgInterfaz.placeHolderBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabSolicitudes = new System.Windows.Forms.TabPage();
+            this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
+            this.lblNoSolicitudes = new System.Windows.Forms.Label();
+            this.btnRechazar = new testForms.pkgInterfaz.pBoton();
+            this.btnAprobar = new testForms.pkgInterfaz.pBoton();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
-            this.tbcAdmin.SuspendLayout();
-            this.tabActualizar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.pBoton1 = new testForms.pkgInterfaz.pBoton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFiltro = new testForms.pkgInterfaz.pLineaTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
+            this.pDegradado1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tbcAdmin
-            // 
-            this.tbcAdmin.Controls.Add(this.tabActualizar);
-            this.tbcAdmin.Controls.Add(this.tabSolicitudes);
-            this.tbcAdmin.Font = new System.Drawing.Font("Codec Pro Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbcAdmin.Location = new System.Drawing.Point(12, 99);
-            this.tbcAdmin.Name = "tbcAdmin";
-            this.tbcAdmin.SelectedIndex = 0;
-            this.tbcAdmin.Size = new System.Drawing.Size(1174, 611);
-            this.tbcAdmin.TabIndex = 23;
-            this.tbcAdmin.Enter += new System.EventHandler(this.tbcAdmin_Enter);
-            // 
-            // tabActualizar
-            // 
-            this.tabActualizar.Controls.Add(this.dgvUsuarios);
-            this.tabActualizar.Controls.Add(this.btnConsultar);
-            this.tabActualizar.Controls.Add(this.placeHolderBox1);
-            this.tabActualizar.Controls.Add(this.label1);
-            this.tabActualizar.Font = new System.Drawing.Font("Codec Pro Bold", 10F);
-            this.tabActualizar.Location = new System.Drawing.Point(4, 30);
-            this.tabActualizar.Name = "tabActualizar";
-            this.tabActualizar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabActualizar.Size = new System.Drawing.Size(1166, 577);
-            this.tabActualizar.TabIndex = 0;
-            this.tabActualizar.Text = "Actualizacion de datos";
-            this.tabActualizar.UseVisualStyleBackColor = true;
-            // 
-            // dgvUsuarios
-            // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(14, 123);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowHeadersWidth = 51;
-            this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1133, 436);
-            this.dgvUsuarios.TabIndex = 3;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.AutoSize = true;
-            this.btnConsultar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(277, 73);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(106, 44);
-            this.btnConsultar.TabIndex = 2;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // placeHolderBox1
-            // 
-            this.placeHolderBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.placeHolderBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.placeHolderBox1.Font = new System.Drawing.Font("Codec Pro", 15F);
-            this.placeHolderBox1.Location = new System.Drawing.Point(14, 81);
-            this.placeHolderBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.placeHolderBox1.MinimumSize = new System.Drawing.Size(250, 10);
-            this.placeHolderBox1.Name = "placeHolderBox1";
-            this.placeHolderBox1.PlaceHolder = "ID del cliente";
-            this.placeHolderBox1.Size = new System.Drawing.Size(250, 29);
-            this.placeHolderBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Codec Pro Bold", 30F);
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(32, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(571, 62);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Actualizacion de datos";
+            this.label1.Size = new System.Drawing.Size(422, 40);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Solicitudes de productos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tabSolicitudes
+            // dgvSolicitudes
             // 
-            this.tabSolicitudes.Location = new System.Drawing.Point(4, 30);
-            this.tabSolicitudes.Name = "tabSolicitudes";
-            this.tabSolicitudes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSolicitudes.Size = new System.Drawing.Size(1166, 577);
-            this.tabSolicitudes.TabIndex = 1;
-            this.tabSolicitudes.Text = "Consulta de solicitudes";
-            this.tabSolicitudes.UseVisualStyleBackColor = true;
+            this.dgvSolicitudes.AllowUserToAddRows = false;
+            this.dgvSolicitudes.AllowUserToDeleteRows = false;
+            this.dgvSolicitudes.AllowUserToResizeColumns = false;
+            this.dgvSolicitudes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSolicitudes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSolicitudes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSolicitudes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSolicitudes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvSolicitudes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSolicitudes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvSolicitudes.EnableHeadersVisualStyles = false;
+            this.dgvSolicitudes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dgvSolicitudes.Location = new System.Drawing.Point(16, 240);
+            this.dgvSolicitudes.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSolicitudes.MultiSelect = false;
+            this.dgvSolicitudes.Name = "dgvSolicitudes";
+            this.dgvSolicitudes.ReadOnly = true;
+            this.dgvSolicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSolicitudes.RowHeadersVisible = false;
+            this.dgvSolicitudes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSolicitudes.RowTemplate.Height = 24;
+            this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSolicitudes.Size = new System.Drawing.Size(1496, 640);
+            this.dgvSolicitudes.TabIndex = 58;
+            this.dgvSolicitudes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSolicitudes_DataBindingComplete);
+            this.dgvSolicitudes.SelectionChanged += new System.EventHandler(this.dgvSolicitudes_SelectionChanged);
+            // 
+            // lblNoSolicitudes
+            // 
+            this.lblNoSolicitudes.AutoSize = true;
+            this.lblNoSolicitudes.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoSolicitudes.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
+            this.lblNoSolicitudes.ForeColor = System.Drawing.Color.Black;
+            this.lblNoSolicitudes.Location = new System.Drawing.Point(504, 232);
+            this.lblNoSolicitudes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoSolicitudes.Name = "lblNoSolicitudes";
+            this.lblNoSolicitudes.Size = new System.Drawing.Size(505, 40);
+            this.lblNoSolicitudes.TabIndex = 59;
+            this.lblNoSolicitudes.Text = "No se encontraron solicitudes";
+            this.lblNoSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNoSolicitudes.Visible = false;
+            // 
+            // btnRechazar
+            // 
+            this.btnRechazar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRechazar.BackColor = System.Drawing.Color.Red;
+            this.btnRechazar.BackgroundColor = System.Drawing.Color.Red;
+            this.btnRechazar.BorderColor = System.Drawing.Color.PapayaWhip;
+            this.btnRechazar.BorderRadius = 10;
+            this.btnRechazar.BorderSize = 0;
+            this.btnRechazar.FlatAppearance.BorderSize = 0;
+            this.btnRechazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRechazar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechazar.ForeColor = System.Drawing.Color.White;
+            this.btnRechazar.Location = new System.Drawing.Point(1360, 166);
+            this.btnRechazar.Name = "btnRechazar";
+            this.btnRechazar.Size = new System.Drawing.Size(150, 40);
+            this.btnRechazar.TabIndex = 61;
+            this.btnRechazar.Text = "Rechazar";
+            this.btnRechazar.TextColor = System.Drawing.Color.White;
+            this.btnRechazar.UseVisualStyleBackColor = false;
+            this.btnRechazar.Visible = false;
+            this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
+            // 
+            // btnAprobar
+            // 
+            this.btnAprobar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAprobar.BackColor = System.Drawing.Color.Green;
+            this.btnAprobar.BackgroundColor = System.Drawing.Color.Green;
+            this.btnAprobar.BorderColor = System.Drawing.Color.PapayaWhip;
+            this.btnAprobar.BorderRadius = 10;
+            this.btnAprobar.BorderSize = 0;
+            this.btnAprobar.FlatAppearance.BorderSize = 0;
+            this.btnAprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAprobar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAprobar.ForeColor = System.Drawing.Color.White;
+            this.btnAprobar.Location = new System.Drawing.Point(1200, 166);
+            this.btnAprobar.Name = "btnAprobar";
+            this.btnAprobar.Size = new System.Drawing.Size(150, 40);
+            this.btnAprobar.TabIndex = 60;
+            this.btnAprobar.Text = "Aprobar";
+            this.btnAprobar.TextColor = System.Drawing.Color.White;
+            this.btnAprobar.UseVisualStyleBackColor = false;
+            this.btnAprobar.Visible = false;
+            this.btnAprobar.Click += new System.EventHandler(this.btnAprobar_Click);
             // 
             // pDegradado1
             // 
             this.pDegradado1.Angle = 45F;
-            this.pDegradado1.HexColor1 = "#00000";
+            this.pDegradado1.Controls.Add(this.pBoton1);
+            this.pDegradado1.Controls.Add(this.label2);
+            this.pDegradado1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pDegradado1.HexColor1 = "#ff7700";
             this.pDegradado1.HexColor2 = "#ffb700";
-            this.pDegradado1.Location = new System.Drawing.Point(1, -5);
-            this.pDegradado1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pDegradado1.Location = new System.Drawing.Point(0, 0);
+            this.pDegradado1.Margin = new System.Windows.Forms.Padding(2);
             this.pDegradado1.Name = "pDegradado1";
-            this.pDegradado1.Size = new System.Drawing.Size(1200, 99);
+            this.pDegradado1.Size = new System.Drawing.Size(1518, 144);
             this.pDegradado1.TabIndex = 22;
+            // 
+            // pBoton1
+            // 
+            this.pBoton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton1.AutoSize = true;
+            this.pBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pBoton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pBoton1.BorderColor = System.Drawing.Color.White;
+            this.pBoton1.BorderRadius = 5;
+            this.pBoton1.BorderSize = 0;
+            this.pBoton1.FlatAppearance.BorderSize = 0;
+            this.pBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton1.ForeColor = System.Drawing.Color.White;
+            this.pBoton1.Location = new System.Drawing.Point(1328, 56);
+            this.pBoton1.Name = "pBoton1";
+            this.pBoton1.Size = new System.Drawing.Size(175, 38);
+            this.pBoton1.TabIndex = 59;
+            this.pBoton1.Text = "Cerrar sesion";
+            this.pBoton1.TextColor = System.Drawing.Color.White;
+            this.pBoton1.UseVisualStyleBackColor = false;
+            this.pBoton1.Click += new System.EventHandler(this.pBoton1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(24, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(591, 56);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Panel de administracion";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFiltro.BackColor = System.Drawing.Color.Orange;
+            this.txtFiltro.esClave = false;
+            this.txtFiltro.label = "Busqueda por ID";
+            this.txtFiltro.limiteCaracteres = 0;
+            this.txtFiltro.Location = new System.Drawing.Point(456, 160);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.txtFiltro.placeholder = "ID del solicitante";
+            this.txtFiltro.Radius = 8;
+            this.txtFiltro.Size = new System.Drawing.Size(728, 56);
+            this.txtFiltro.TabIndex = 63;
+            this.txtFiltro.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Numerico;
+            this.txtFiltro.TextBoxKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pLineaTextBox1_KeyPress);
+            this.txtFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pLineaTextBox1_KeyPress);
             // 
             // formHomeAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1198, 722);
-            this.Controls.Add(this.tbcAdmin);
+            this.ClientSize = new System.Drawing.Size(1518, 885);
+            this.Controls.Add(this.txtFiltro);
+            this.Controls.Add(this.btnRechazar);
+            this.Controls.Add(this.btnAprobar);
+            this.Controls.Add(this.dgvSolicitudes);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pDegradado1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.lblNoSolicitudes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formHomeAdmin";
             this.Text = "formHomeAdmin";
-            this.tbcAdmin.ResumeLayout(false);
-            this.tabActualizar.ResumeLayout(false);
-            this.tabActualizar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.formHomeAdmin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
+            this.pDegradado1.ResumeLayout(false);
+            this.pDegradado1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private pDegradado pDegradado1;
-        private System.Windows.Forms.TabControl tbcAdmin;
-        private System.Windows.Forms.TabPage tabActualizar;
-        private System.Windows.Forms.TabPage tabSolicitudes;
-        private placeHolderBox placeHolderBox1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvSolicitudes;
+        private pBoton pBoton1;
+        private System.Windows.Forms.Label lblNoSolicitudes;
+        private pBoton btnAprobar;
+        private pBoton btnRechazar;
+        private pLineaTextBox txtFiltro;
     }
 }

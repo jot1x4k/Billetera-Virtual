@@ -216,5 +216,27 @@ namespace testForms.pkgInterfaz
                                 MessageBoxIcon.Information);
             }
         }
+
+        private void pBoton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void pBoton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

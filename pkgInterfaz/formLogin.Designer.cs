@@ -43,6 +43,7 @@
             this.btnIniciarSesion = new testForms.pkgInterfaz.pBoton();
             this.txtClave = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtUsuario = new testForms.pkgInterfaz.pLineaTextBox();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrarClave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultarClave)).BeginInit();
@@ -144,7 +145,7 @@
             this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBoton2.ForeColor = System.Drawing.Color.White;
-            this.pBoton2.Location = new System.Drawing.Point(720, 8);
+            this.pBoton2.Location = new System.Drawing.Point(680, 8);
             this.pBoton2.Name = "pBoton2";
             this.pBoton2.Size = new System.Drawing.Size(38, 24);
             this.pBoton2.TabIndex = 50;
@@ -281,6 +282,27 @@
             this.txtUsuario.TabIndex = 38;
             this.txtUsuario.Tipo = testForms.pkgInterfaz.pLineaTextBox.TipoEntrada.Especial;
             // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnMax.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnMax.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(720, 8);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 24);
+            this.btnMax.TabIndex = 56;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.White;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +310,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(800, 700);
+            this.Controls.Add(this.btnMax);
             this.Controls.Add(this.pBoton2);
             this.Controls.Add(this.pBoton1);
             this.Controls.Add(this.btnIniciarSesion);
@@ -334,6 +357,7 @@
         private pkgInterfaz.pDegradado pDegradado1;
         private pkgInterfaz.pBoton pBoton1;
         private pkgInterfaz.pBoton pBoton2;
+        private pkgInterfaz.pBoton btnMax;
     }
 }
 

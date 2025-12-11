@@ -33,11 +33,15 @@
             this.lblSaldo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnEnviar = new testForms.pkgInterfaz.pBoton();
             this.btnSolicitudes = new testForms.pkgInterfaz.pBoton();
             this.btnMovimientos = new testForms.pkgInterfaz.pBoton();
             this.pBoton1 = new testForms.pkgInterfaz.pBoton();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
             this.btnRecargar = new testForms.pkgInterfaz.pBoton();
             this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,9 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.picFotoCliente = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.pDegradado1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -108,6 +109,51 @@
             this.label4.TabIndex = 57;
             this.label4.Text = "Saldo disponible:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(37, 576);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 23);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Enviar dinero";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(192, 576);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 23);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Ver movimientos";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(392, 576);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "Solicitudes";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEnviar
             // 
@@ -201,6 +247,7 @@
             // 
             this.pDegradado1.Angle = 180F;
             this.pDegradado1.BackColor = System.Drawing.Color.Transparent;
+            this.pDegradado1.Controls.Add(this.btnMax);
             this.pDegradado1.Controls.Add(this.btnRecargar);
             this.pDegradado1.Controls.Add(this.pBoton2);
             this.pDegradado1.Controls.Add(this.label2);
@@ -216,6 +263,27 @@
             this.pDegradado1.Size = new System.Drawing.Size(1096, 232);
             this.pDegradado1.TabIndex = 47;
             // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.White;
+            this.btnMax.BackgroundColor = System.Drawing.Color.White;
+            this.btnMax.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.Black;
+            this.btnMax.Location = new System.Drawing.Point(1048, 8);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 26);
+            this.btnMax.TabIndex = 61;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.Black;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // btnRecargar
             // 
             this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,7 +297,7 @@
             this.btnRecargar.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecargar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
-            this.btnRecargar.Location = new System.Drawing.Point(1006, 8);
+            this.btnRecargar.Location = new System.Drawing.Point(952, 8);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(38, 26);
             this.btnRecargar.TabIndex = 56;
@@ -240,21 +308,21 @@
             // pBoton2
             // 
             this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBoton2.BackColor = System.Drawing.Color.DimGray;
-            this.pBoton2.BackgroundColor = System.Drawing.Color.DimGray;
+            this.pBoton2.BackColor = System.Drawing.Color.White;
+            this.pBoton2.BackgroundColor = System.Drawing.Color.White;
             this.pBoton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(80)))), ((int)(((byte)(201)))));
             this.pBoton2.BorderRadius = 5;
             this.pBoton2.BorderSize = 0;
             this.pBoton2.FlatAppearance.BorderSize = 0;
             this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pBoton2.Font = new System.Drawing.Font("Codec Pro Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pBoton2.ForeColor = System.Drawing.Color.White;
-            this.pBoton2.Location = new System.Drawing.Point(1054, 8);
+            this.pBoton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.ForeColor = System.Drawing.Color.Black;
+            this.pBoton2.Location = new System.Drawing.Point(1000, 8);
             this.pBoton2.Name = "pBoton2";
             this.pBoton2.Size = new System.Drawing.Size(38, 26);
             this.pBoton2.TabIndex = 54;
             this.pBoton2.Text = "-";
-            this.pBoton2.TextColor = System.Drawing.Color.White;
+            this.pBoton2.TextColor = System.Drawing.Color.Black;
             this.pBoton2.UseVisualStyleBackColor = false;
             this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
             // 
@@ -330,51 +398,6 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(37, 576);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 23);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Enviar dinero";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(192, 576);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 23);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "Ver movimientos";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(392, 576);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
-            this.label7.TabIndex = 60;
-            this.label7.Text = "Solicitudes";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // formHomeCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -429,5 +452,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private pBoton btnMax;
     }
 }

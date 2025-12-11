@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,7 @@ namespace testForms.pkgInterfaz
         Datos data = new Datos();
         long id_usuarioActual = 0;
         DateTime fechaInicio, fechaFin;
+        string periodo;
 
         public formExtracto()
         {
@@ -26,6 +29,7 @@ namespace testForms.pkgInterfaz
             InitializeComponent();
             FormHelper.HabilitarMovimiento(this, pDegradado3);
             lblPeriodo.Text = $"{fechaInicio.ToString("dd/MM/yyyy")} - {fechaFin.ToString("dd/MM/yyyy")}";
+            periodo = $"{fechaInicio.ToString("dd-MM-yyyy")}_{fechaFin.ToString("dd-MM-yyyy")}";
             lblSaldoInicio.Text = $"{saldoInicio.ToString("C")}";
             lblIngresos.Text = $"{ingresos.ToString("C")}";
             lblEgresos.Text = $"{egresos.ToString("C")}";
@@ -47,6 +51,58 @@ namespace testForms.pkgInterfaz
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvMovimientos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvMovimientos.ClearSelection();
+        }
+
+        public string ObtenerRutaEscritorio()
+        {
+            string rutaEscritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            return rutaEscritorio;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string rutaEscritorio = ObtenerRutaEscritorio();
+
+                string nombreCarpeta = "Documentos - Banco de los Andes";
+
+                string rutaCarpetaCompleta = Path.Combine(rutaEscritorio, nombreCarpeta);
+
+                if (!Directory.Exists(rutaCarpetaCompleta))
+                {
+                    Directory.CreateDirectory(rutaCarpetaCompleta);
+                }
+
+                string nombreArchivo = $"Extracto_{periodo}.png";
+
+                string rutaCompletaArchivo = Path.Combine(rutaCarpetaCompleta, nombreArchivo);
+                button1.Hide();
+                btnVolver.Hide();
+
+                using (Bitmap bmp = new Bitmap(this.Width, this.Height))
+                {
+                    this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+
+                    bmp.Save(rutaCompletaArchivo, ImageFormat.Png);
+
+                    MessageBox.Show("Extracto guardado exitosamente en:\n" + rutaCompletaArchivo,
+                                    "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button1.Hide();
+                }
+                btnVolver.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al guardar el extracto:\n" + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void formExtracto_Load(object sender, EventArgs e)
