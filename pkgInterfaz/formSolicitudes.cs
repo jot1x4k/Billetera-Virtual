@@ -226,9 +226,11 @@ namespace testForms.pkgInterfaz
         private void fnc_validarCampos(object sender, EventArgs e)
         {
             bool camposValidos = true;
-            bool fechaExpCompleta = !string.IsNullOrWhiteSpace(cmbExpDia.Text) &&
-                                    !string.IsNullOrWhiteSpace(cmbExpMes.Text) &&
-                                    !string.IsNullOrWhiteSpace(cmbExpAnio.Text);
+
+            bool fechaExpCompleta =
+                !string.IsNullOrWhiteSpace(cmbExpDia.Text) &&
+                !string.IsNullOrWhiteSpace(cmbExpMes.Text) &&
+                !string.IsNullOrWhiteSpace(cmbExpAnio.Text);
 
             foreach (Control ctrl in tabProductos.Controls)
             {
@@ -237,56 +239,66 @@ namespace testForms.pkgInterfaz
                     bool valido = ValidarCampoEspecifico(linea);
                     if (!valido) camposValidos = false;
                 }
-                if (ctrl is System.Windows.Forms.ComboBox cmb)
-                {
-
-                }
             }
 
             int mesExp = 0;
             diccionarioMeses.TryGetValue(cmbExpMes.Text, out mesExp);
-            cadenaFechaExp = $"{cmbExpDia.Text}/{mesExp}/{cmbExpAnio.Text}";
-            bool fechaExpValida = DateTime.TryParseExact(
-                cadenaFechaExp,
-                "d/M/yyyy",
-                System.Globalization.CultureInfo.InvariantCulture,
-                System.Globalization.DateTimeStyles.None,
-                out fechaExp);
 
-            if (!fechaExpValida)
+            cadenaFechaExp = $"{cmbExpDia.Text}/{mesExp}/{cmbExpAnio.Text}";
+
+            bool fechaExpValida = false;
+
+            if (fechaExpCompleta)
             {
-                camposValidos = false;
+                fechaExpValida = DateTime.TryParseExact(
+                    cadenaFechaExp,
+                    "d/M/yyyy",
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None,
+                    out fechaExp
+                );
+            }
+
+            if (!fechaExpCompleta)
+            {
                 lblExp.Show();
-                lblExp.Text = "La fecha de expedicion no es valida.";
+                lblExp.Text = "Fecha incompleta.";
+                camposValidos = false;
+            }
+            else if (!fechaExpValida)
+            {
+                lblExp.Show();
+                lblExp.Text = "La fecha de expedición no es válida.";
+                camposValidos = false;
             }
             else
             {
-                lblExp.Show();
-                lblExp.Text = "Fecha incompleta";
+                lblExp.Hide();
             }
 
-            if (camposValidos && fechaExpCompleta && fechaExpValida && campoEst && campoProd && campoAct && campoTiempo)
+            bool formularioCompleto =
+                camposValidos &&
+                fechaExpCompleta &&
+                fechaExpValida &&
+                campoEst &&
+                campoProd &&
+                campoAct &&
+                campoTiempo;
+
+            if (formularioCompleto)
             {
                 btnSolicitarProducto.Enabled = true;
                 btnSolicitarProducto.BackColor = ColorTranslator.FromHtml("#5C69F5");
                 lblDatosObligatorios.Hide();
-                lblExp.Hide();
             }
             else
             {
                 btnSolicitarProducto.Enabled = false;
                 btnSolicitarProducto.BackColor = Color.DimGray;
-
-                lblDatosObligatorios.Visible = !camposValidos;
-                lblExp.Visible = !fechaExpCompleta;
-            }
-
-            if (fechaExpCompleta && !fechaExpValida)
-            {
-                lblExp.Show();
-                lblExp.Text = "La fecha de expedicion no es valida (dia no existe en el mes).";
+                lblDatosObligatorios.Visible = true;
             }
         }
+
 
         private bool ValidarCampoEspecifico(pLineaTextBox linea)
         {
@@ -362,8 +374,10 @@ namespace testForms.pkgInterfaz
 
                 if (ctrl is System.Windows.Forms.ComboBox cmb)
                 {
-                    cmb.SelectedValueChanged += fnc_validarCampos;
+                    cmb.SelectedIndexChanged += fnc_validarCampos;
+                    cmb.SelectedIndexChanged += validarCmbSolicitud;
                     cmb.SelectedValueChanged += validarCmbSolicitud;
+                    cmb.SelectedValueChanged += fnc_validarCampos;
                 }
             }
         }
