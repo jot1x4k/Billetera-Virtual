@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formComprobante));
-            this.lblTransferencia = new System.Windows.Forms.Label();
+            this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
+            this.pBoton1 = new testForms.pkgInterfaz.pBoton();
+            this.button1 = new testForms.pkgInterfaz.pBoton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pDegradado1 = new testForms.pkgInterfaz.pDegradado();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,29 +42,89 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblReferencia = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.button1 = new testForms.pkgInterfaz.pBoton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
-            this.pDegradado1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lblTransferencia = new System.Windows.Forms.Label();
             this.pDegradado3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pDegradado1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTransferencia
+            // pDegradado3
             // 
-            this.lblTransferencia.AutoSize = true;
-            this.lblTransferencia.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransferencia.ForeColor = System.Drawing.Color.White;
-            this.lblTransferencia.Location = new System.Drawing.Point(0, 32);
-            this.lblTransferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTransferencia.Name = "lblTransferencia";
-            this.lblTransferencia.Size = new System.Drawing.Size(431, 47);
-            this.lblTransferencia.TabIndex = 1;
-            this.lblTransferencia.Text = "Transferencia exitosa";
+            this.pDegradado3.Angle = 90F;
+            this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
+            this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pDegradado3.Controls.Add(this.pBoton1);
+            this.pDegradado3.Controls.Add(this.button1);
+            this.pDegradado3.Controls.Add(this.pictureBox2);
+            this.pDegradado3.Controls.Add(this.pDegradado1);
+            this.pDegradado3.Controls.Add(this.lblTransferencia);
+            this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pDegradado3.HexColor1 = "#4450c9";
+            this.pDegradado3.HexColor2 = "#5C69F5";
+            this.pDegradado3.Location = new System.Drawing.Point(0, 0);
+            this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
+            this.pDegradado3.Name = "pDegradado3";
+            this.pDegradado3.Size = new System.Drawing.Size(600, 400);
+            this.pDegradado3.TabIndex = 60;
+            // 
+            // pBoton1
+            // 
+            this.pBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pBoton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.pBoton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.pBoton1.BorderRadius = 8;
+            this.pBoton1.BorderSize = 2;
+            this.pBoton1.FlatAppearance.BorderSize = 0;
+            this.pBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton1.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton1.ForeColor = System.Drawing.Color.White;
+            this.pBoton1.Location = new System.Drawing.Point(8, 344);
+            this.pBoton1.Name = "pBoton1";
+            this.pBoton1.Size = new System.Drawing.Size(119, 49);
+            this.pBoton1.TabIndex = 53;
+            this.pBoton1.Text = "Cerrar";
+            this.pBoton1.TextColor = System.Drawing.Color.White;
+            this.pBoton1.UseVisualStyleBackColor = false;
+            this.pBoton1.Click += new System.EventHandler(this.pBoton1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.button1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
+            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.button1.BorderRadius = 8;
+            this.button1.BorderSize = 2;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(136, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 49);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Guardar comprobante";
+            this.button1.TextColor = System.Drawing.Color.White;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(488, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 52;
+            this.pictureBox2.TabStop = false;
             // 
             // pDegradado1
             // 
-            this.pDegradado1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pDegradado1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pDegradado1.Angle = 90F;
             this.pDegradado1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pDegradado1.Controls.Add(this.label1);
@@ -183,56 +246,17 @@
             this.lblFecha.TabIndex = 37;
             this.lblFecha.Text = "Fecha";
             // 
-            // button1
+            // lblTransferencia
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.button1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(176)))));
-            this.button1.BorderRadius = 8;
-            this.button1.BorderSize = 2;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Codec Pro Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(240, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 49);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Aceptar";
-            this.button1.TextColor = System.Drawing.Color.White;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(512, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 52;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pDegradado3
-            // 
-            this.pDegradado3.Angle = 90F;
-            this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
-            this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pDegradado3.Controls.Add(this.button1);
-            this.pDegradado3.Controls.Add(this.pictureBox2);
-            this.pDegradado3.Controls.Add(this.pDegradado1);
-            this.pDegradado3.Controls.Add(this.lblTransferencia);
-            this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pDegradado3.HexColor1 = "#4450c9";
-            this.pDegradado3.HexColor2 = "#5C69F5";
-            this.pDegradado3.Location = new System.Drawing.Point(0, 0);
-            this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
-            this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(600, 400);
-            this.pDegradado3.TabIndex = 60;
+            this.lblTransferencia.AutoSize = true;
+            this.lblTransferencia.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransferencia.ForeColor = System.Drawing.Color.White;
+            this.lblTransferencia.Location = new System.Drawing.Point(0, 32);
+            this.lblTransferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTransferencia.Name = "lblTransferencia";
+            this.lblTransferencia.Size = new System.Drawing.Size(431, 47);
+            this.lblTransferencia.TabIndex = 1;
+            this.lblTransferencia.Text = "Transferencia exitosa";
             // 
             // formComprobante
             // 
@@ -246,11 +270,11 @@
             this.Name = "formComprobante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formComprobante";
-            this.pDegradado1.ResumeLayout(false);
-            this.pDegradado1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pDegradado3.ResumeLayout(false);
             this.pDegradado3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pDegradado1.ResumeLayout(false);
+            this.pDegradado1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +294,6 @@
         private pDegradado pDegradado1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private pDegradado pDegradado3;
+        private pBoton pBoton1;
     }
 }

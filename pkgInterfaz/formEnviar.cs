@@ -20,7 +20,7 @@ namespace testForms.pkgInterfaz
         public formEnviar(long prm_usuarioActual, decimal prm_saldo, string prm_cuentaActual)
         {
             InitializeComponent();
-            FormHelper.HabilitarMovimiento(this);
+            FormHelper.HabilitarMovimiento(this, pDegradado1);
 
             lblSaldo.Text = prm_saldo.ToString("C2");
 
@@ -132,6 +132,23 @@ namespace testForms.pkgInterfaz
         private void pBoton2_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }

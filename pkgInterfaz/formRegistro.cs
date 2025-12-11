@@ -271,5 +271,17 @@ namespace testForms
         {
             e.Handled = true;
         }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
     }
 }

@@ -38,6 +38,8 @@
             this.lblNoMovimientos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
+            this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).BeginInit();
             this.pDegradado3.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +56,11 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1064, 8);
+            this.btnVolver.Location = new System.Drawing.Point(1088, 8);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(128, 48);
+            this.btnVolver.Size = new System.Drawing.Size(104, 32);
             this.btnVolver.TabIndex = 52;
-            this.btnVolver.Text = "Volver al inicio";
+            this.btnVolver.Text = "Ir al menu";
             this.btnVolver.TextColor = System.Drawing.Color.White;
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -163,6 +165,8 @@
             this.pDegradado3.Angle = 90F;
             this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
             this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pDegradado3.Controls.Add(this.btnMax);
+            this.pDegradado3.Controls.Add(this.pBoton2);
             this.pDegradado3.Controls.Add(this.btnVolver);
             this.pDegradado3.Controls.Add(this.label1);
             this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -173,6 +177,48 @@
             this.pDegradado3.Name = "pDegradado3";
             this.pDegradado3.Size = new System.Drawing.Size(1200, 112);
             this.pDegradado3.TabIndex = 56;
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(1040, 11);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 26);
+            this.btnMax.TabIndex = 63;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.White;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // pBoton2
+            // 
+            this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(80)))), ((int)(((byte)(201)))));
+            this.pBoton2.BorderRadius = 5;
+            this.pBoton2.BorderSize = 0;
+            this.pBoton2.FlatAppearance.BorderSize = 0;
+            this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.ForeColor = System.Drawing.Color.White;
+            this.pBoton2.Location = new System.Drawing.Point(992, 11);
+            this.pBoton2.Name = "pBoton2";
+            this.pBoton2.Size = new System.Drawing.Size(38, 26);
+            this.pBoton2.TabIndex = 62;
+            this.pBoton2.Text = "-";
+            this.pBoton2.TextColor = System.Drawing.Color.White;
+            this.pBoton2.UseVisualStyleBackColor = false;
+            this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
             // 
             // formMovimientos
             // 
@@ -205,5 +251,7 @@
         private System.Windows.Forms.Label lblNoMovimientos;
         private System.Windows.Forms.Label label1;
         private pDegradado pDegradado3;
+        private pBoton btnMax;
+        private pBoton pBoton2;
     }
 }

@@ -71,6 +71,8 @@
             this.txtId = new testForms.pkgInterfaz.pLineaTextBox();
             this.txtNombre = new testForms.pkgInterfaz.pLineaTextBox();
             this.pDegradado3 = new testForms.pkgInterfaz.pDegradado();
+            this.btnMax = new testForms.pkgInterfaz.pBoton();
+            this.pBoton2 = new testForms.pkgInterfaz.pBoton();
             this.label4 = new System.Windows.Forms.Label();
             this.btnVolver = new testForms.pkgInterfaz.pBoton();
             this.tabControl1.SuspendLayout();
@@ -90,7 +92,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1327, 960);
+            this.tabControl1.Size = new System.Drawing.Size(1310, 960);
             this.tabControl1.TabIndex = 0;
             // 
             // tabExtracto
@@ -110,7 +112,7 @@
             this.tabExtracto.Location = new System.Drawing.Point(4, 34);
             this.tabExtracto.Margin = new System.Windows.Forms.Padding(0);
             this.tabExtracto.Name = "tabExtracto";
-            this.tabExtracto.Size = new System.Drawing.Size(1319, 922);
+            this.tabExtracto.Size = new System.Drawing.Size(1302, 922);
             this.tabExtracto.TabIndex = 0;
             this.tabExtracto.Text = "Extracto de cuenta";
             this.tabExtracto.Enter += new System.EventHandler(this.tabExtracto_Enter);
@@ -268,7 +270,7 @@
             this.tabProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabProductos.Location = new System.Drawing.Point(4, 34);
             this.tabProductos.Name = "tabProductos";
-            this.tabProductos.Size = new System.Drawing.Size(1319, 922);
+            this.tabProductos.Size = new System.Drawing.Size(1302, 922);
             this.tabProductos.TabIndex = 1;
             this.tabProductos.Text = "Productos financieros";
             this.tabProductos.Click += new System.EventHandler(this.tabProductos_Click);
@@ -412,12 +414,13 @@
             this.lblDatosObligatorios.CausesValidation = false;
             this.lblDatosObligatorios.Font = new System.Drawing.Font("Codec Pro", 10F);
             this.lblDatosObligatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDatosObligatorios.Location = new System.Drawing.Point(349, 802);
+            this.lblDatosObligatorios.Location = new System.Drawing.Point(341, 802);
             this.lblDatosObligatorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosObligatorios.Name = "lblDatosObligatorios";
             this.lblDatosObligatorios.Size = new System.Drawing.Size(326, 17);
             this.lblDatosObligatorios.TabIndex = 73;
             this.lblDatosObligatorios.Text = "Ingrese los campos obligatorios para continuar";
+            this.lblDatosObligatorios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblExp
             // 
@@ -669,8 +672,8 @@
             // btnSolicitarProducto
             // 
             this.btnSolicitarProducto.AutoSize = true;
-            this.btnSolicitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
-            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(105)))), ((int)(((byte)(245)))));
+            this.btnSolicitarProducto.BackColor = System.Drawing.Color.DimGray;
+            this.btnSolicitarProducto.BackgroundColor = System.Drawing.Color.DimGray;
             this.btnSolicitarProducto.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSolicitarProducto.BorderRadius = 8;
             this.btnSolicitarProducto.BorderSize = 0;
@@ -681,7 +684,7 @@
             this.btnSolicitarProducto.ForeColor = System.Drawing.Color.White;
             this.btnSolicitarProducto.Location = new System.Drawing.Point(445, 746);
             this.btnSolicitarProducto.Name = "btnSolicitarProducto";
-            this.btnSolicitarProducto.Size = new System.Drawing.Size(150, 49);
+            this.btnSolicitarProducto.Size = new System.Drawing.Size(153, 49);
             this.btnSolicitarProducto.TabIndex = 70;
             this.btnSolicitarProducto.Text = "Solicitar";
             this.btnSolicitarProducto.TextColor = System.Drawing.Color.White;
@@ -695,6 +698,7 @@
             this.txtCorreo.label = "Correo Electronico";
             this.txtCorreo.limiteCaracteres = 50;
             this.txtCorreo.Location = new System.Drawing.Point(528, 376);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtCorreo.placeholder = "ej: example@mail.com";
@@ -710,6 +714,7 @@
             this.txtTelefono.label = "Numero telefonico";
             this.txtTelefono.limiteCaracteres = 10;
             this.txtTelefono.Location = new System.Drawing.Point(16, 376);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtTelefono.placeholder = "Maximo 10 digitos";
@@ -725,6 +730,7 @@
             this.txtEgresos.label = "Egresos mensuales aproximados";
             this.txtEgresos.limiteCaracteres = 15;
             this.txtEgresos.Location = new System.Drawing.Point(536, 490);
+            this.txtEgresos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEgresos.Name = "txtEgresos";
             this.txtEgresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtEgresos.placeholder = " ";
@@ -740,6 +746,7 @@
             this.txtIngresos.label = "Ingresos mensuales aproximados";
             this.txtIngresos.limiteCaracteres = 15;
             this.txtIngresos.Location = new System.Drawing.Point(16, 490);
+            this.txtIngresos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIngresos.Name = "txtIngresos";
             this.txtIngresos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtIngresos.placeholder = " ";
@@ -756,6 +763,7 @@
             this.txtId.label = "Numero de identidad";
             this.txtId.limiteCaracteres = 20;
             this.txtId.Location = new System.Drawing.Point(528, 120);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
             this.txtId.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtId.placeholder = "  id";
@@ -774,6 +782,7 @@
             this.txtNombre.label = "Nombre";
             this.txtNombre.limiteCaracteres = 100;
             this.txtNombre.Location = new System.Drawing.Point(16, 120);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.txtNombre.placeholder = " nombre";
@@ -789,6 +798,8 @@
             this.pDegradado3.Angle = 90F;
             this.pDegradado3.BackColor = System.Drawing.Color.Transparent;
             this.pDegradado3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pDegradado3.Controls.Add(this.btnMax);
+            this.pDegradado3.Controls.Add(this.pBoton2);
             this.pDegradado3.Controls.Add(this.label4);
             this.pDegradado3.Controls.Add(this.btnVolver);
             this.pDegradado3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -797,8 +808,50 @@
             this.pDegradado3.Location = new System.Drawing.Point(0, 0);
             this.pDegradado3.Margin = new System.Windows.Forms.Padding(0);
             this.pDegradado3.Name = "pDegradado3";
-            this.pDegradado3.Size = new System.Drawing.Size(1327, 120);
+            this.pDegradado3.Size = new System.Drawing.Size(1310, 120);
             this.pDegradado3.TabIndex = 57;
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.btnMax.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMax.BorderRadius = 5;
+            this.btnMax.BorderSize = 0;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(1137, 19);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(38, 26);
+            this.btnMax.TabIndex = 65;
+            this.btnMax.Text = "[]";
+            this.btnMax.TextColor = System.Drawing.Color.White;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // pBoton2
+            // 
+            this.pBoton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBoton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(57)))), ((int)(((byte)(117)))));
+            this.pBoton2.BorderRadius = 5;
+            this.pBoton2.BorderSize = 0;
+            this.pBoton2.FlatAppearance.BorderSize = 0;
+            this.pBoton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBoton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBoton2.ForeColor = System.Drawing.Color.White;
+            this.pBoton2.Location = new System.Drawing.Point(1089, 19);
+            this.pBoton2.Name = "pBoton2";
+            this.pBoton2.Size = new System.Drawing.Size(38, 26);
+            this.pBoton2.TabIndex = 64;
+            this.pBoton2.Text = "-";
+            this.pBoton2.TextColor = System.Drawing.Color.White;
+            this.pBoton2.UseVisualStyleBackColor = false;
+            this.pBoton2.Click += new System.EventHandler(this.pBoton2_Click);
             // 
             // label4
             // 
@@ -825,11 +878,11 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(1191, 8);
+            this.btnVolver.Location = new System.Drawing.Point(1185, 16);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(128, 48);
+            this.btnVolver.Size = new System.Drawing.Size(100, 32);
             this.btnVolver.TabIndex = 53;
-            this.btnVolver.Text = "Volver al inicio";
+            this.btnVolver.Text = "Ir al menu";
             this.btnVolver.TextColor = System.Drawing.Color.White;
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -840,7 +893,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1344, 990);
+            this.ClientSize = new System.Drawing.Size(1327, 715);
             this.Controls.Add(this.pDegradado3);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -906,5 +959,7 @@
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbTiempo;
+        private pBoton btnMax;
+        private pBoton pBoton2;
     }
 }

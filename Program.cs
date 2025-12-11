@@ -34,9 +34,9 @@ namespace testForms
 
             //Application.Run(new formLogin()); //flujo normal3
 
-            //Application.Run(new formHomeCliente(123456789012345));
+            Application.Run(new formHomeCliente(123456789012345));
 
-            Application.Run(new formSolicitudes(314314));
+            //Application.Run(new formSolicitudes(314314));
 
             //Application.Run(new formHomeAdmin());
         }

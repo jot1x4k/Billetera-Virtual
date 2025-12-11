@@ -30,6 +30,7 @@ namespace testForms.pkgInterfaz
         bool campoEst;
         bool campoProd, campoAct, campoTiempo;
 
+
         public formSolicitudes()
         {
             InitializeComponent();
@@ -445,6 +446,23 @@ namespace testForms.pkgInterfaz
         private void cmbTiempo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void pBoton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void txtNombre_TextBoxKeyPress(object sender, KeyPressEventArgs e)
